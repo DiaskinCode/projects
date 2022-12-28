@@ -6,6 +6,7 @@ import { StartTable } from '../Components/StartTable';
 import { CalendarDate } from '../Components/CalendarDate';
 import { DateList } from '../Components/Data';
 import { Title } from '../Components/Title'
+import { useGetHajjStartDateQuery } from '../api/apiSlice'
 
 export default function CategoryCalendarScreen (props) {
   const Navigation = useNavigation()
@@ -13,7 +14,19 @@ export default function CategoryCalendarScreen (props) {
   const onSelectSwitch = (value) => {
     setSelectionMode(value)
   }
+  const {data: HajjStartDate,
+    isLoading,
+    isSuccess,
+    isError,
+    error} = useGetHajjStartDateQuery()
 
+  if (isLoading) {
+    <Text>loading...</Text>
+  }
+  else if (isError) {
+    <Text>{error}</Text>
+  }
+  else if (isSuccess) {
     return (
       <SafeAreaView style={styles.Container}>
         <TabSwitch 
@@ -22,15 +35,17 @@ export default function CategoryCalendarScreen (props) {
           TabOneTitle={'Совершаю Хадж'}
           TabTwoTitle={'Совершаю Умру'}/>
 
-        {SelectionMode == 1 ? <CalendarTabOne/> : <Title text='222'/>}
+        {SelectionMode == 1 ? <CalendarTabOne date={HajjStartDate}/> : <Title text='222'/>}
+
       </SafeAreaView>
     );
-  }
-  const CalendarTabOne = () => {
+  }}
+
+  const CalendarTabOne = (props) => {
     return (
     <View style={styles.Container}>
       <StartTable 
-        date={'20 Ноября'}
+        date={props.date}
         description={'Дата начала вашего хаджа'}/>
 
         <FlatList style={styles.List}
@@ -41,6 +56,7 @@ export default function CategoryCalendarScreen (props) {
     </View>
     )
   }
+
   const styles = StyleSheet.create({
     Container: {
       flex: 1,
