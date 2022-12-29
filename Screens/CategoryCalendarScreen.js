@@ -2,11 +2,9 @@ import React, { useState, useEffect, useLayoutEffect } from 'react';
 import { View, Text, FlatList, StyleSheet, SafeAreaView } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { TabSwitch } from '../Components/TabSwitch';
-import { StartTable } from '../Components/StartTable';
-import { CalendarDate } from '../Components/CalendarDate';
-import { DateList } from '../Components/Data';
 import { Title } from '../Components/Title'
-import { useGetHajjStartDateQuery } from '../api/apiSlice'
+import CalendarHajj from '../Screens/CalendarHajj'
+import CalendarUmrah from './CalendarUmrah';
 
 export default function CategoryCalendarScreen (props) {
   const Navigation = useNavigation()
@@ -14,47 +12,18 @@ export default function CategoryCalendarScreen (props) {
   const onSelectSwitch = (value) => {
     setSelectionMode(value)
   }
-  const {data: HajjStartDate,
-    isLoading,
-    isSuccess,
-    isError,
-    error} = useGetHajjStartDateQuery()
+  return (
+    <SafeAreaView style={styles.Container}>
+      <TabSwitch 
+        onSelectSwitch={onSelectSwitch}
+        SelectionMode={SelectionMode}
+        TabOneTitle={'Совершаю Хадж'}
+        TabTwoTitle={'Совершаю Умру'}/>
 
-  if (isLoading) {
-    <Text>loading...</Text>
-  }
-  else if (isError) {
-    <Text>{error}</Text>
-  }
-  else if (isSuccess) {
-    return (
-      <SafeAreaView style={styles.Container}>
-        <TabSwitch 
-          onSelectSwitch={onSelectSwitch}
-          SelectionMode={SelectionMode}
-          TabOneTitle={'Совершаю Хадж'}
-          TabTwoTitle={'Совершаю Умру'}/>
+      {SelectionMode == 1 ? <CalendarHajj/> : <CalendarUmrah/>}
 
-        {SelectionMode == 1 ? <CalendarTabOne date={HajjStartDate}/> : <Title text='222'/>}
-
-      </SafeAreaView>
+    </SafeAreaView>
     );
-  }}
-
-  const CalendarTabOne = (props) => {
-    return (
-    <View style={styles.Container}>
-      <StartTable 
-        date={props.date}
-        description={'Дата начала вашего хаджа'}/>
-
-        <FlatList style={styles.List}
-        data={DateList}
-        showsVerticalScrollIndicator={false}
-        keyExtractor={item => item.id}
-        renderItem={({item}) => <CalendarDate item={item}/>}/>
-    </View>
-    )
   }
 
   const styles = StyleSheet.create({

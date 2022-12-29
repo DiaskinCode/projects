@@ -7,23 +7,18 @@ import { ArticleBlock } from '../Components/ArticleBlock';
 import { Button } from '../Components/Button';
 import { PlayerData } from '../Components/Data';
 import { PlayerItem } from '../Components/PlayerItem';
-import { ArticleData } from '../Components/Data';
-
-import { useGetArticlesQuery } from '../api/apiSlice'
-
+import { useGetArticlesQuery, useGetQuestionCategoryQuery } from '../api/apiSlice'
 
 export const MainScreen = () => {
-    
-      const {
-        data: categories,
-        isLoading,
-        isSuccess,
-        isError,
-        error
-      } = useGetArticlesQuery()
-      const { data: Articles } = useGetArticlesQuery()
     const Navigation = useNavigation()
     const [refreshing, setRefreshing] = useState(false);
+    const {
+    data: Articles,
+    isLoading,
+    isSuccess,
+    isError,
+    error
+    } = useGetArticlesQuery()
 
     const delay = (ms) => new Promise(
         resolve => setTimeout(resolve, ms)
@@ -33,7 +28,6 @@ export const MainScreen = () => {
         setRefreshing(true);
         delay(2000).then(() => setRefreshing(false))
     }, [])
-
     return (
         <SafeAreaView style={styles.Container}>
             <ScrollView
@@ -64,19 +58,19 @@ export const MainScreen = () => {
                     icon={require('../assets/Icons/Stack.png')}
                     borderColor='#FFDDD2'
                     type='Vertical'
-                    onPress={{}}/>
+                    onPress={() => Navigation.navigate('RiteScreen')}/>
                 <Category title='Список Транспорта'
                     description='Мекка'
                     icon={require('../assets/Icons/Car.png')}
                     borderColor='#D8F5C0'
                     type='Vertical'
-                    onPress={{}}/>
+                    onPress={() => Navigation.navigate('TransportList')}/>
                 <Category title='Финансы и валюта'
                     description='Банкоматы'
                     icon={require('../assets/Icons/Coin.png')}
                     borderColor='#E8F0F0'
                     type='Vertical'
-                    onPress={{}}/>
+                    onPress={() => Navigation.navigate('CurrencyAndFinances')}/>
                 <Category title='Экспресс перевод'
                     description='Арабский'
                     icon={require('../assets/Icons/ChatTeardropText.png')}

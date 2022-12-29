@@ -1,12 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native';
+import { format } from "date-fns";
 
 export const StartTable = (props) => {
+    const HajjStartDate = props.date
+
+    const getMonthName = (date) => {
+        const months = ['Января', 'Февраля', 'Марта', 'Апреля', 'Мая', 'Июня', 'Июля', 'Августа', 'Сентября', 'Октября', 'Ноября', 'Декабря'];
+        return (date.getDate() + ' ' + months[date.getMonth()])
+    };
     return (
       <View style={styles.Container}>
         <View style={styles.Left}>
             <Text style={styles.Desription}>{props.description}</Text>
-            <Text style={styles.Date}>{props.date}</Text>
+            <Text style={styles.Date}>{format(HajjStartDate, getMonthName(HajjStartDate))}</Text>
         </View>
         <View>
             <Image source={require('../assets/Icons/Calendar.png')} style={styles.Icon}/>

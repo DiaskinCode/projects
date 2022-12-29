@@ -5,18 +5,31 @@ import { Category } from '../Components/Category';
 import { RiteProgress } from '../Components/RiteProgress';
 import { QuestionsBlock } from '../Components/QuestionsBlock';
 import { PopularQuestionsData } from '../Components/Data'
-import { InstructionsData } from '../Components/Data';
+import { UmrahInstructionsData,UmrahInstructionsVideoData } from '../Components/Data';
 
 export const RiteTabTwo = () => {
+  // AsyncStorage.removeItem('umrahRitevideo');s
   const Navigation = useNavigation()
   const [CurrentRite, setCurrentRite] = useState()
+  const [CurrentRiteVideo, setCurrentRiteVideo] = useState()
   
   const fetchData = useCallback(async () => {
-    const data = await AsyncStorage.getItem('rite');
+    const data = await AsyncStorage.getItem('umrahRitetext');
+    // console.log(data);
+    const dataVideo = await AsyncStorage.getItem('umrahRitevideo');
     if(data != null){
-      setCurrentRite(InstructionsData[JSON.parse(data).sort((a,b) => b-a)[0] - 1] );
+      setCurrentRite(UmrahInstructionsData[Math.max.apply(null, JSON.parse(data)) - 1] );
+    } else if (UmrahInstructionsData[0] != null){
+      setCurrentRite(UmrahInstructionsData[0]);
     } else {
-      setCurrentRite(0);
+      setCurrentRite(undefined);
+    }
+    if(dataVideo != null){
+      setCurrentRiteVideo(UmrahInstructionsVideoData[JSON.parse(dataVideo).sort((a,b) => b-a)[0] - 1] );
+    } else if (UmrahInstructionsVideoData[0] != null){
+      setCurrentRiteVideo(UmrahInstructionsVideoData[0]);
+    } else {
+      setCurrentRiteVideo(undefined);
     }
   }, [])
   
@@ -47,16 +60,16 @@ export const RiteTabTwo = () => {
           description={'Обряды'}
           icon={require('../assets/Icons/Path.png')}
           currentRiteTitle={CurrentRite != undefined ? CurrentRite.title : 'Перейти'}
-          count={InstructionsData.length}
+          count={UmrahInstructionsData.length}
           onPress={() => Navigation.navigate('UmrahRiteInstructionScreen')}
           />
         <RiteProgress 
           background={require('../assets/images/RiteBackground2.png')}
           title={'Видео инструкция Умры'}
           description={'Обряды'}
-          currentRiteTitle={CurrentRite != undefined ? CurrentRite.title : 'Перейти'}
+          currentRiteTitle={CurrentRiteVideo != undefined ? CurrentRiteVideo.title : 'Перейти'}
           icon={require('../assets/Icons/PlayCircle.png')}
-          count={4}
+          count={UmrahInstructionsVideoData.length}
           onPress={() => Navigation.navigate('UmrahRiteVideoInstructionScreen')}/>
         <Category borderColor='#A1F6FB'
           title='Все молитвы и дуа хаджа'

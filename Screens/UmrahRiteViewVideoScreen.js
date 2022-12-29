@@ -22,11 +22,11 @@ export default function UmrahRiteViewVideoScreen (props) {
   const ScreenWidth = Dimensions.get('window').width
   
 
-  AsyncStorage.getItem(`umrahrite${RiteAsyncStorageType}`,(err, previousRite) => {
+  AsyncStorage.getItem(`umrahRite${RiteAsyncStorageType}`,(err, previousRite) => {
     let riteProgress = []
     if(previousRite == null) {
       riteProgress.push(props.route.params.id)
-      AsyncStorage.setItem(`umrahrite${RiteAsyncStorageType}`,JSON.stringify(riteProgress));
+      AsyncStorage.setItem(`umrahRite${RiteAsyncStorageType}`,JSON.stringify(riteProgress));
     } else{
       if (!previousRite.includes(props.route.params.id)){
         riteProgress.push(props.route.params.id)
@@ -34,7 +34,7 @@ export default function UmrahRiteViewVideoScreen (props) {
       JSON.parse(previousRite).map((item) => {
           riteProgress.push(item)
       })
-      AsyncStorage.setItem(`umrahrite${RiteAsyncStorageType}`,JSON.stringify(riteProgress));
+      AsyncStorage.setItem(`umrahRite${RiteAsyncStorageType}`,JSON.stringify(riteProgress));
     }
   }); 
   

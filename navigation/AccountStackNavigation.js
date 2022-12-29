@@ -80,7 +80,7 @@ export default function AccountStackNavigation () {
                     )
                 })}/>
             <Account.Screen name='AboutApp' component={AboutAppScreen}
-            options={({ navigation }) => ({
+            options={({navigation}) => ({
                 headerShadowVisible: false,
                     headerTitle: () => (
                         <Text style={styles.headerTitle}>О приложении</Text>

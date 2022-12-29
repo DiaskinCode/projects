@@ -1,9 +1,21 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableWithoutFeedback, StyleSheet, FlatList } from 'react-native';
 import { Title } from './Title';
+import { format } from "date-fns";
 
 export const CalendarDate = ({item}) => {
     const [ isToday, setToday ] = useState()
+    const dateArray = item.date.split("-", 3)
+    const year = dateArray[0]
+    const month = dateArray[1]
+    const day = dateArray[2].split(" ",1)[0]
+
+    const date = new Date(year, month - 1,day)
+    
+    const getMonthName = (date) => {
+        const months = ['Января', 'Февраля', 'Марта', 'Апреля', 'Мая', 'Июня', 'Июля', 'Августа', 'Сентября', 'Октября', 'Ноября', 'Декабря'];
+        return (date.getDate() + ' ' + months[date.getMonth()])
+    };
 
     return (
         <View style={styles.Container}>
@@ -12,8 +24,8 @@ export const CalendarDate = ({item}) => {
             </View>
 
             <View style={styles.Left}>
-                <Text style={styles.Date}>20 июня, понедельник</Text>
-                <Text style={styles.ListText}>{item.text}</Text>
+                <Text style={styles.Date}>{format(date, getMonthName(date))}</Text>
+                <Text style={styles.ListText}>{item.content}</Text>
             </View>
         </View>
     );
@@ -50,6 +62,7 @@ const styles = StyleSheet.create({
     },
     ListText: {
         fontSize: 14,
+        width:'85%',
         fontFamily: 'GolosRegular',
         lineHeight: 20,
     }

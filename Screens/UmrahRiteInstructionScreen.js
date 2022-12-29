@@ -10,7 +10,7 @@ export default function UmrahRiteInstructionScreen (props) {
       <View style={styles.Container}>
         <FlatList data={UmrahInstructionsData}
           showsVerticalScrollIndicator={false}
-          renderItem={({item}) => <Rite type={'text'} item={item}
+          renderItem={({item}) => <Rite category={'umrah'} type={'text'} item={item}
           onPress={() => Navigation.navigate('UmrahRiteViewScreen', {
             HeaderTitle: item.title,
             type:'text',

@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, FlatList } from 'react-native';
 import { Question } from './Question';
 
-export const QuestionsBlock = ({onPress, data, title}) => {
+export const QuestionsBlock = (props) => {
     return (
       <View style={{width: '100%'}}>
         <View style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}}>
-          <Text style={styles.Title}>{title}</Text>
+          <Text style={styles.Title}>{props.title}</Text>
 
           <TouchableOpacity>
               <Text style={styles.ShowAllButton}>Все</Text>
@@ -14,13 +14,14 @@ export const QuestionsBlock = ({onPress, data, title}) => {
         </View>
 
         <View style={styles.QuestionsList}>
-          {data.map((item) => {
+          {props.data.map((item, index) => {
             return (
               <Question
+                key={item.id}
                 item={item} 
                 type='Question' 
                 icon={require('../assets/Icons/Plus.png')} 
-                onPress={onPress}/>
+                onPress={() => props.onPressItem(index)}/>
           )})}
         </View>
       </View>

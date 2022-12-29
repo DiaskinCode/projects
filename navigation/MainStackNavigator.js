@@ -10,8 +10,7 @@ import ArticleScreen from '../Components/ArticleScreen';
 import CategoryCalendarScreen from '../Screens/CategoryCalendarScreen';
 import MainSettingsScreen from '../Screens/MainSettingsScreen';
 import ExpressTranslateScreen from '../Screens/ExpressTranslateScreen';
-import PopularQuestionsScreen from '../Screens/PopularQuestionsScreen';
-import RiteScreen from '../Screens/RiteScreen';
+import CurrencyAndFinancesScreen from '../Screens/CurrencyAndFinancesScreen';
 
 const Main = createNativeStackNavigator();
 
@@ -99,7 +98,7 @@ export default function MainStackNavigator() {
             <Main.Screen
                 name='ExpressTranslate'
                 component={ExpressTranslateScreen}
-                options={({ navigation }) => ({
+                options={({ navigation, route }) => ({
                     headerShadowVisible: false,
                     headerTitle: () => (
                         <Text style={styles.HeaderTitle}>Экспресс перевод</Text>
@@ -108,28 +107,28 @@ export default function MainStackNavigator() {
                         <HeaderIcon source={require('../assets/Icons/MagnifyingGlass.png')}/>
                     ),
                     headerLeft: () => (
-                        <HeaderIcon source={require('../assets/Icons/ArrowLeft.png')} onPress={() => navigation.goBack()}/>
+                        <HeaderIcon source={require('../assets/Icons/ArrowLeft.png')} 
+                            onPress={() => {navigation.goBack()}}/>
                     )
                     })}
                 />
             <Main.Screen
-                name='PopularQuestionsScreen'
-                component={PopularQuestionsScreen}
-                options={({ navigation }) => ({
+                name='CurrencyAndFinances'
+                component={CurrencyAndFinancesScreen}
+                options={({ navigation, route }) => ({
                     headerShadowVisible: false,
                     headerTitle: () => (
-                        <Text style={styles.HeaderTitle}>Частые вопросы</Text>
+                        <Text style={styles.HeaderTitle}>Экспресс перевод</Text>
                     ),
                     headerRight: () => (
                         <HeaderIcon source={require('../assets/Icons/MagnifyingGlass.png')}/>
                     ),
                     headerLeft: () => (
-                        <HeaderIcon source={require('../assets/Icons/ArrowLeft.png')} onPress={() => navigation.goBack()}/>
+                        <HeaderIcon source={require('../assets/Icons/ArrowLeft.png')} 
+                            onPress={() => {navigation.goBack()}}/>
                     )
                     })}
                 />
-
-
         </Main.Navigator>
     )
 }

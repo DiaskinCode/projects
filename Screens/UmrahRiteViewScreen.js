@@ -12,11 +12,11 @@ export default function UmrahRiteViewScreen (props) {
   const Navigation = useNavigation()
   const Rite = UmrahInstructionsData[0]
 
-  AsyncStorage.getItem(`rite${RiteAsyncStorageType}`,(err, previousRite) => {
+  AsyncStorage.getItem(`umrahRite${RiteAsyncStorageType}`,(err, previousRite) => {
     let riteProgress = []
     if(previousRite == null) {
       riteProgress.push(props.route.params.id)
-      AsyncStorage.setItem(`rite${RiteAsyncStorageType}`,JSON.stringify(riteProgress));
+      AsyncStorage.setItem(`umrahRite${RiteAsyncStorageType}`,JSON.stringify(riteProgress));
     } else{
       if (!previousRite.includes(props.route.params.id)){
         riteProgress.push(props.route.params.id)
@@ -24,11 +24,12 @@ export default function UmrahRiteViewScreen (props) {
       JSON.parse(previousRite).map((item) => {
           riteProgress.push(item)
       })
-      AsyncStorage.setItem(`rite${RiteAsyncStorageType}`,JSON.stringify(riteProgress));
+
+      AsyncStorage.setItem(`umrahRite${RiteAsyncStorageType}`,JSON.stringify(riteProgress));
     }
   }); 
-  
-  // AsyncStorage.removeItem('rite')
+
+  // AsyncStorage.removeItem('umrahritevideo')
   useLayoutEffect(() => {
     Navigation.setOptions({
       headerTitle: () => (<Text style={{fontFamily: 'GolosBold', fontSize: 18}}>{HeaderTitle}</Text>)

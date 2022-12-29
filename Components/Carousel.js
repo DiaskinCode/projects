@@ -3,9 +3,17 @@ import { View, FlatList, Dimensions, Text } from 'react-native';
 import { Pagination } from './pagination';
 
 export const Carousel = ({renderItem, data}) => {
-  const SlidesRef = useRef(null).current;
+  const SlidesRef = useRef(null);
   const { width, height } = Dimensions.get('window')
-  const [currentIndex, setCurrentIndex] = useState(0)
+  const [ViewableSlide, setViewableSlide] = useState(0)
+
+  const onViewChanged = ({viewableItems}) => {
+    console.log('I snapped to', viewableItems[0].index);
+    if (viewableItems.length > 0) {
+      const {item: activeItem, index: activeIndex} = viewableItems[0];
+      setViewableSlide({activeIndex: activeIndex});
+    }
+  };
 
   return (
     <View>
@@ -18,19 +26,20 @@ export const Carousel = ({renderItem, data}) => {
         pagingEnabled
         showsHorizontalScrollIndicator={false}
         snapToStart={true}
+        ItemSeparatorComponent={() => <View style={{width: 10}}/>}
         decelerationRate={0}
         snapToInterval={width * 0.892}
-        ItemSeparatorComponent={() => <View style={{width: 10}}/>}
-        activeItemIndex={currentIndex}
-        onChangeActiveItemIndex={(index)=>{
-          setCurrentIndex(index)}}
         // onViewableItemsChanged = {useCallback(({ viewableItems }) => {
-        // console.log(viewableItems);
+        // console.log(viewableItems[0])
+        // setViewableSlide(viewableItems[0].index);
         // }, [])}
-        ref={SlidesRef}
+        onViewableItemsChanged = {useCallback((viewableItems) => {
+          onViewChanged(viewableItems)
+        }, [])}
+        viewabilityConfig={{itemVisiblePercentThreshold: 100}}
         />
       </View>
-      <Pagination data={data} currentSlide={currentIndex}/>
+      <Pagination data={data} currentSlide={ViewableSlide}/>
     </View>
   );
   }

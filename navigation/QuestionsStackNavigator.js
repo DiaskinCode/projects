@@ -5,6 +5,7 @@ import { Title } from '../Components/Title';
 import { useNavigation } from '@react-navigation/native';
 import { QuestionsScreen } from '../Screens/QuestionsScreen';
 import { CategoryQuestionsScreen } from '../Screens/CategoryQuestionsScreen'
+import PopularQuestionsScreen from '../Screens/PopularQuestionsScreen';
 
 const Questions = createNativeStackNavigator();
 
@@ -39,6 +40,22 @@ export default function QuestionsStackNavigator() {
                         <HeaderIcon source={require('../assets/Icons/ArrowLeft.png')} onPress={() => navigation.goBack()}/>
                     )
                 })}/>
+            <Questions.Screen
+                name='PopularQuestionsScreen'
+                component={PopularQuestionsScreen}
+                options={({ navigation }) => ({
+                    headerShadowVisible: false,
+                    headerTitle: () => (
+                        <Text style={styles.HeaderTitle}>Частые вопросы</Text>
+                    ),
+                    headerRight: () => (
+                        <HeaderIcon source={require('../assets/Icons/MagnifyingGlass.png')}/>
+                    ),
+                    headerLeft: () => (
+                        <HeaderIcon source={require('../assets/Icons/ArrowLeft.png')} onPress={() => navigation.goBack()}/>
+                    )
+                    })}
+                />
         </Questions.Navigator>
     )
 }

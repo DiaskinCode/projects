@@ -7,14 +7,27 @@ export const Rite = (props) => {
 
   
   const fetchData = useCallback(async () => {
+
     const data = await AsyncStorage.getItem(`rite${props.type}`);
+    const Umrahdata = await AsyncStorage.getItem(`umrahRite${props.type}`);
+
+    // AsyncStorage.removeItem('umrahRitetext')
+    
     if(data != null){
       if (data.includes(props.item.id)) {
         setChecked(true);
-      } else{
+      } else if(!data.includes(props.item.id)) {
         setChecked(false);
       }
-    } else{
+    } 
+    if(Umrahdata != null){
+      if (data.includes(props.item.id)) {
+        setChecked(true);
+      } else if(!data.includes(props.item.id)) {
+        setChecked(false);
+      }
+    }
+    else{
       setChecked(false);
     }
   }, [])

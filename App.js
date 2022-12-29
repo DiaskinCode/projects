@@ -14,14 +14,14 @@ export default function App() {
     return null;
   } else {
     return (
-    <StrictMode>
+    //<StrictMode>
       <ApiProvider api={apiSlice}>
         <SafeAreaProvider>
             <Navigation/>
             <StatusBar/>
         </SafeAreaProvider>
       </ApiProvider>
-    </StrictMode>
+    //</StrictMode>
   )
 }
 }

@@ -13,7 +13,6 @@ export default function AllArticlesScreen () {
     isError,
     error
   } = useGetArticlesQuery()
-  console.log(Articles)
 
   const navigation = useNavigation()
     return (

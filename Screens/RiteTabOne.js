@@ -14,9 +14,10 @@ export const RiteTabOne = () => {
   const [CurrentRiteVideo, setCurrentRiteVideo] = useState()
   const fetchData = useCallback(async () => {
     const data = await AsyncStorage.getItem('ritetext');
+    // console.log(data);
     const dataVideo = await AsyncStorage.getItem('ritevideo');
     if(data != null){
-      setCurrentRite(InstructionsData[JSON.parse(data).sort((a,b) => b-a)[0] - 1] );
+      setCurrentRite(InstructionsData[Math.max.apply(null, JSON.parse(data)) - 1] );
     } else if (InstructionsData[0] != null){
       setCurrentRite(InstructionsData[0]);
     } else {

@@ -22,7 +22,7 @@ export default function RiteViewVideoScreen (props) {
   const ScreenWidth = Dimensions.get('window').width
   
 
-  AsyncStorage.getItem(`umrahrite${RiteAsyncStorageType}`,(err, previousRite) => {
+  AsyncStorage.getItem(`umrahRite${RiteAsyncStorageType}`,(err, previousRite) => {
     let riteProgress = []
     if(previousRite == null) {
       riteProgress.push(props.route.params.id)

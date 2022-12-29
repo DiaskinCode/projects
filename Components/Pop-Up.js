@@ -24,7 +24,7 @@ export const ModalHeader = (props) => {
   return (
     <View style={styles.HeaderContainer}>
       <View style={{width: '80%'}}>
-        <Title type='Category' text={props.title}/>
+        <Text style={styles.Title}>{props.title}</Text>
       </View>
       <View style={styles.HeaderRight}>
         {props.type == 'Settings' ? null : <TouchableOpacity>
@@ -87,8 +87,14 @@ const styles = StyleSheet.create({
     height: 18,
   },
   Text: {
-    fontFamily: 'GolosBold',
+    fontFamily: 'GolosRegular',
+    lineHeight: 20,
     fontSize: 14
+  },
+  Title: {
+    fontFamily: 'GolosBold',
+    fontSize: 12,
+    lineHeight: 14,
   }
   
 });

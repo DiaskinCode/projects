@@ -4,7 +4,7 @@ const baseUrl = 'http://oralbekov.dias19.fvds.ru'
 
 export const apiSlice = createApi({
     baseQuery: fetchBaseQuery({baseUrl}),
-    tagTypes: ['PopularQuestions', 'CategoryQuestion','QuestionsCategory', 'CategoryTheory', 'CategoryTheoryArticle' ,'Articles','ArticleById'],
+    tagTypes: ['PopularQuestions', 'CategoryQuestion','QuestionsCategory', 'CategoryTheory', 'CategoryTheoryArticle' ,'Articles','ArticleById','HajjDays','UmrahDays','Translate'],
     endpoints: (builder) => ({
         getQuestionCategory: builder.query({
             query: () => '/ru/api/questions/categories/',
@@ -37,7 +37,19 @@ export const apiSlice = createApi({
         getHajjStartDate: builder.query({
             query: () => `/ru/api/calendar/get_hajj_date`,
             providesTags: ['HajjStartDate']
-        })
+        }),
+        getHajjDays: builder.query({
+            query: () => `/ru/api/calendar/hajj`,
+            providesTags: ['HajjDays']
+        }),
+        getUmrahDays: builder.query({
+            query: () => `/ru/api/calendar/umrah`,
+            providesTags: ['UmrahDays']
+        }),
+        getTranslate: builder.query({
+            query: () => `/ru/api/translate`,
+            providesTags: ['Translate']
+        }),
     })
 })
 
@@ -47,4 +59,4 @@ export const { useGetQuestionCategoryQuery,
     useGetArticlesQuery,
     useGetArticleByIdQuery, 
     useGetCategoryTheoryArticleQuery,
-    useGetHajjStartDateQuery} = apiSlice
+    useGetHajjStartDateQuery, useGetHajjDaysQuery, useGetUmrahDaysQuery,useGetTranslateQuery } = apiSlice

@@ -10,41 +10,42 @@ import {View,
         StyleSheet} from 'react-native';
 
 export const DropdownPicker = (props) => {
-    const [isVisible, setVisible] = useState(false);
     const [dropdownTop, setDropdownTop] = useState(0);
+    const open = () => props.setDropdownVisible(true)
     const toggleDropdown = () => {
-        isVisible ? setVisible(false) : openDropdown()
+        props.isVisible ? props.setDropdownVisible(false) : openDropdown()
     };
     const DropdownButtonRef = useRef()
     const openDropdown = () => {
         DropdownButtonRef.current.measure((_fx, _fy, _w, h, _px, py) => {
             setDropdownTop(py + h);
         });
-        setVisible(true);
+        open(true)
     };
 
     return (
         <TouchableWithoutFeedback onPress={() => toggleDropdown()}>
-            <View style={[styles.ButtonContainer, isVisible == true ? {borderBottomLeftRadius: 0, borderBottomRightRadius: 0} : '']} ref={DropdownButtonRef} >
+            <View style={[styles.ButtonContainer, props.isVisible == true ? {borderBottomLeftRadius: 0, borderBottomRightRadius: 0} : '']}
+                ref={DropdownButtonRef} >
                 <View style={styles.Left}>
                     <Text style={styles.Description}>{props.description}</Text>
                     <Text style={styles.InputLabel}>{props.title}</Text>
                 </View>
 
                 <View style={styles.Right}>
-                    {isVisible ? 
+                    {props.isVisible ? 
                         <Image source={require('../assets/Icons/CaretUp.png')} 
                             style={styles.Icon}/> :
                                 <Image source={require('../assets/Icons/CaretDown.png')} 
                                     style={styles.Icon}/>}
                 </View>
                 
-                {isVisible ? 
-                <Dropdown visible={isVisible} 
+                {props.isVisible ? 
+                <Dropdown visible={props.isDropdownVisible} 
                     dropdownTop={dropdownTop} 
-                    onRequestClose={() => setVisible(false)} 
+                    onRequestClose={() => props.onRequestClose(false)} 
                     data={props.data}
-                    onPress={(index) => props.onItemPress(index)}/> : null}
+                    onPress={(id) => props.onItemPress(id)}/> : null}
             </View>
         </TouchableWithoutFeedback>
     );
@@ -56,12 +57,12 @@ const Dropdown = (props) => {
             <FlatList
                 data={props.data}
                 keyExtractor={item => item.id}
-                renderItem={({item}) => (
-                    <TouchableWithoutFeedback onPress={(event) => props.onPress(event.currentTarget.id)}>
+                renderItem={({item, index}) => (
+                    <TouchableOpacity onPress={() => props.onPress(index)}>
                         <View style={styles.DropdownRow}>
                             <Text style={styles.Label}>{item.value}</Text>
                         </View>
-                    </TouchableWithoutFeedback>
+                    </TouchableOpacity>
                 )
                 }
             />

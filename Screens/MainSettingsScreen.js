@@ -8,24 +8,26 @@ import { AccountInputToMap } from '../Components/AccountInputToMap';
 import { DropdownPicker } from '../Components/DropdownPicker';
 import { DialogPicker, ModalWindow } from '../Components/DialogPicker.js'
 
+const userGender = [
+    { value: 'Мужской', label: 'Мужской', id: 1 },
+    { value: 'Женский', label: 'Женский', id: 2 }
+];
+const language = [
+    {label: 'Русский', value: 'Русский', flagIcon: require('../assets/Icons/RussianFlagIcon.png') , id: 1 },
+    {label: 'English', value: 'English', flagIcon: require('../assets/Icons/EnglishFlagIcon.png'), id: 2 }
+]
 export default function MainSettingsScreen() {
-    const [userGender, setUserGender] = useState([
-        { value: 'Мужской', label: 'Мужской', id: 1 },
-        { value: 'Женский', label: 'Женский', id: 2 }
-    ]);
-    const [language, setLanguage] = useState([
-        {label: 'Русский', value: 'Русский', flagIcon: require('../assets/Icons/FlagIcon.png') , id: 1 },
-        {label: 'English', value: 'English', flagIcon: require('../assets/Icons/FlagIcon.png'), id: 2 }
-    ])
-    const [ SelectedLanguage, setSelectedLanguage ] = useState({label: 'Русский', value: 'Русский', flagIcon: require('../assets/Icons/FlagIcon.png') , id: 1 });
-    const [ SelectedUserGender, setSelectedUserGender ] = useState({ value: 'Мужской', label: 'Мужской', id: 1 },);
+    const [ SelectedLanguage, setSelectedLanguage ] = useState(language[0]);
+    const [ SelectedUserGender, setSelectedUserGender ] = useState(userGender[0]);
 
-    const [isVisible, setVisible] = useState(false);
-    const PickerRef = useRef()
+    const [isModalVisible, setModalVisible] = useState(false);
+    const [isDropdownVisible, setDropdownVisible] = useState(false)
+    const PickerRef = useRef(SelectedLanguage)
 
-    const onItemPress = (id) => {
-        console.log(id)
-        setVisible(false);
+    const onItemPress = (index) => {
+        setSelectedUserGender(userGender[index])
+        setDropdownVisible(false)
+        console.log(SelectedUserGender)
     }
     const onValueChange = (itemIndex) => {
         setSelectedLanguage(language[itemIndex])
@@ -38,12 +40,16 @@ export default function MainSettingsScreen() {
                 title={SelectedLanguage.value}
                 flagIcon={SelectedLanguage.flagIcon}
                 type='language'
-                onPress={() => setVisible(true)}/>
+                ref={PickerRef}
+                onPress={() => setModalVisible(true)}/>
 
             <DropdownPicker 
                 description={'Ваш пол'}
-                title={SelectedLanguage.value}
-                data={userGender} 
+                title={SelectedUserGender.value}
+                data={userGender}
+                isVisible={isDropdownVisible}
+                setDropdownVisible={() => setDropdownVisible(true)}
+                onRequestClose={() => setDropdownVisible(false)}
                 onItemPress={(id) => onItemPress(id)}/>
 
             <View style={styles.InputBlock}>
@@ -63,12 +69,12 @@ export default function MainSettingsScreen() {
             </View>
 
             <ModalWindow 
-                visible={isVisible} 
-                selectedValue={SelectedLanguage}
+                visible={isModalVisible} 
+                selectedValue={SelectedLanguage.value}
                 onPress={() => setVisible(!isVisible)}
                 onItemPress={(item) => onItemPress(item)}
                 ref={PickerRef}
-                onRequestClose={() => {setVisible(false)}}
+                onRequestClose={() => {setModalVisible(false)}}
                 onValueChange={(itemIndex) => onValueChange(itemIndex)}
                 value={language[0].value}
                 value2={language[1].value}
