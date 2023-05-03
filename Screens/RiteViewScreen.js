@@ -1,15 +1,150 @@
-import React, { useLayoutEffect } from 'react';
-import { View,ScrollView, Text,AsyncStorage, StyleSheet, Image,ImageBackground } from 'react-native';
+import React, { useLayoutEffect, useEffect } from 'react';
+import { View,ScrollView, Text, StyleSheet, Image } from 'react-native';
+import i18n from 'i18next';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useNavigation } from '@react-navigation/native';
-import { useEffect } from 'react'
-import { InstructionsData } from '../Components/Data';
 
 export default function RiteViewScreen (props) {
   const HeaderTitle = props.route.params.HeaderTitle
   const RiteInstructionId = props.route.params.id
   const RiteAsyncStorageType = props.route.params.type
-  const Data = props.route.params.Data
   const Navigation = useNavigation()
+
+  const InstructionsData = [
+    {
+      id: 1,
+      title: i18n.t("Umrah_Instructions_Data_Title"),
+      description: i18n.t("Umrah_Instructions_Data_Description"),
+      image: require('../assets/images/RiteImg.png'),
+      desc: i18n.t("Umrah_Instructions_Data_ArticleText"),
+  },
+  {
+    id: 2,
+    title: i18n.t("Umrah_Instructions_Data_Title_5"),
+    description: i18n.t("Umrah_Instructions_Data_Description_5"),
+    image: require('../assets/images/RiteImg.png'),
+    desc: i18n.t("Umrah_Instructions_Data_ArticleText_5"),
+},
+  {
+      id: 3,
+      title: i18n.t("Instructions_Data_Title_2"),
+      description: i18n.t("Instructions_Data_Description_2"),
+      image: require('../assets/images/RiteImg.png'),
+      desc: i18n.t("Instructions_Data_Desc_2"),
+      borderColor: '#A1F6FB'
+  },
+  {
+      id: 4,
+      title: i18n.t("Umrah_Instructions_Data_Title_2"),
+      description: i18n.t("Umrah_Instructions_Data_Description_2"),
+      image: require('../assets/images/RiteImg.png'),
+      desc: i18n.t("Umrah_Instructions_Data_ArticleText_2"),
+  },
+  {
+      id: 5,
+      title: i18n.t("Umrah_Instructions_Data_Title_6"),
+      description: i18n.t("Umrah_Instructions_Data_Description_6"),
+      image: require('../assets/images/RiteImg.png'),
+      desc: i18n.t("Umrah_Instructions_Data_ArticleText_6"),
+  },
+  {
+    id: 6,
+    title: i18n.t("Umrah_Instructions_Data_Title_7"),
+    description: i18n.t("Umrah_Instructions_Data_Description_7"),
+    image: require('../assets/images/RiteImg.png'),
+    desc: i18n.t("Umrah_Instructions_Data_ArticleText_7"),
+},
+  {
+      id: 7,
+      title: i18n.t("Umrah_Instructions_Data_Title_3"),
+      description: i18n.t("Umrah_Instructions_Data_Description_3"),
+      image: require('../assets/images/RiteImg.png'),
+      desc: i18n.t("Umrah_Instructions_Data_ArticleText_3"),
+      borderColor: '#A1F6FB'
+  },
+  {
+      id: 8,
+      title: i18n.t("Instructions_Data_Title_5"),
+      description: i18n.t("Instructions_Data_Description_5"),
+      image: require('../assets/images/RiteImg.png'),
+      desc: i18n.t("Instructions_Data_Desc_5"),
+      borderColor: '#A1F6FB'
+  },
+  {
+      id: 9,
+      title: i18n.t("Instructions_Data_Title_14"),
+      description: i18n.t("Instructions_Data_Description_14"),
+      image: require('../assets/images/RiteImg.png'),
+      desc: i18n.t("Instructions_Data_Desc_14"),
+      borderColor: '#A1F6FB'
+  },
+  {
+      id: 10,
+      title: i18n.t("Instructions_Data_Title_6"),
+      description: i18n.t("Instructions_Data_Description_6"),
+      image: require('../assets/images/RiteImg.png'),
+      desc: i18n.t("Instructions_Data_Desc_6"),
+      borderColor: '#A1F6FB'
+  },
+  {
+      id: 11,
+      title: i18n.t("Instructions_Data_Title_7"),
+      description: i18n.t("Instructions_Data_Description_7"),
+      image: require('../assets/images/RiteImg.png'),
+      desc: i18n.t("Instructions_Data_Desc_7"),
+      borderColor: '#A1F6FB'
+  },
+  {
+      id: 12,
+      title: i18n.t("Instructions_Data_Title_9"),
+      description: i18n.t("Instructions_Data_Description_9"),
+      image: require('../assets/images/RiteImg.png'),
+      desc: i18n.t("Instructions_Data_Desc_9"),
+      borderColor: '#A1F6FB'
+  },
+  {
+      id: 13,
+      title: i18n.t("Instructions_Data_Title_8"),
+      description: i18n.t("Instructions_Data_Description_8"),
+      image: require('../assets/images/RiteImg.png'),
+      desc: i18n.t("Instructions_Data_Desc_8"),
+      borderColor: '#A1F6FB'
+  },
+  {
+      id: 14,
+      title: i18n.t("Instructions_Data_Title_10"),
+      description: i18n.t("Instructions_Data_Description_10"),
+      image: require('../assets/images/RiteImg.png'),
+      desc: i18n.t("Instructions_Data_Desc_10"),
+      borderColor: '#A1F6FB'
+  },
+  {
+      id:15,
+      title: i18n.t("Instructions_Data_Title_11"),
+      description: i18n.t("Instructions_Data_Description_11"),
+      image: require('../assets/images/RiteImg.png'),
+      desc: i18n.t("Instructions_Data_Desc_11"),
+      borderColor: '#A1F6FB'
+  },
+  {
+      id: 16,
+      title: i18n.t("Instructions_Data_Title_12"),
+      description: i18n.t("Instructions_Data_Description_12"),
+      image: require('../assets/images/RiteImg.png'),
+      desc: i18n.t("Instructions_Data_Desc_12"),
+      borderColor: '#A1F6FB'
+  },
+  {
+      id: 17,
+      title: i18n.t("Instructions_Data_Title_13"),
+      description: i18n.t("Instructions_Data_Description_13"),
+      image: require('../assets/images/RiteImg.png'),
+      desc: i18n.t("Instructions_Data_ArticleText_13"),
+  },
+
+
+]
+
   const Rite = InstructionsData[RiteInstructionId - 1]
 
   AsyncStorage.getItem(`rite${RiteAsyncStorageType}`,(err, previousRite) => {
@@ -32,7 +167,7 @@ export default function RiteViewScreen (props) {
     
     useLayoutEffect(() => {
       Navigation.setOptions({
-        headerTitle: () => (<Text style={{fontFamily: 'GolosBold', fontSize: 18}}>{HeaderTitle}</Text>)
+        headerTitle: () => (<Text numberOfLines={1} ellipsizeMode="tail" style={{fontFamily: 'GolosBold', fontSize: 18,flex:0.8}}>{HeaderTitle}</Text>)
       });
     }, [Navigation]);
     return (
@@ -40,11 +175,6 @@ export default function RiteViewScreen (props) {
         <View style = {styles.container}>
           <Image style = {styles.image} source={require('../assets/images/RiteImg.png')} />
           <Text style = {styles.desc}>{Rite['desc']}</Text>
-          <Text style = {styles.subtitle}>На ас-Сафа следует читать аят:</Text>
-          <View style = {styles.translateContainer}>
-            <View style = {styles.translate}><Text style = {styles.translateArabText} >{Rite['arabText']}</Text></View>
-            <Text style = {styles.translateText}>{Rite['translatedArabText']}</Text>
-          </View>
         </View>
       </ScrollView>
     );
@@ -65,6 +195,7 @@ export default function RiteViewScreen (props) {
     desc: {
       fontSize:18,
       marginTop:30,
+      lineHeight:25,
     },
     subtitle: {
       fontSize:14,

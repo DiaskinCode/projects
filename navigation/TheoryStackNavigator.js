@@ -5,17 +5,16 @@ import { Title } from '../Components/Title';
 import { TheoryScreen } from '../Screens/TheoryScreen';
 import TheoryGuide  from '../Screens/TheoryGuide'
 
-import HajjAndUmrah from '../Screens/HajjAndUmrah'
-import WhatIsUmrah from '../Screens/WhatIsUmrah'
 import WhatIsHajj from '../Screens/WhatIsHajj'
-import BenefitsAndPurposes from '../Screens/BenefitsAndPurposes'
 
 import { useNavigation } from '@react-navigation/native';
+import { useTranslation } from 'react-i18next';
 
 const Theory = createNativeStackNavigator();
 
 export default function TheoryStackNavigator() {
     const Navigation = useNavigation()
+    const {t} = useTranslation()
     return (
         <Theory.Navigator>
             <Theory.Screen
@@ -25,70 +24,16 @@ export default function TheoryStackNavigator() {
                     headerShadowVisible: false,
                     headerTitle: '',
                     headerLeft: () => (
-                        <Title text='Теория'/>
+                        <Title text={t('theory')}/>
                     ),
-                    headerRight: () => (
-                        <HeaderIcon source={require('../assets/Icons/MagnifyingGlass.png')}/>
-                    )
                 }}/>
-            <Theory.Screen
-                name='WhatIsUmrah'
-                component={WhatIsUmrah}
-                options={({ navigation }) => ({ 
-                    headerShadowVisible: false,
-                    headerTitle: () => (
-                        <Text style={{fontSize: 18, fontFamily: 'GolosBold'}}>Что такое Умра</Text>
-                    ),
-                    headerRight: () => (
-                        <HeaderIcon source={require('../assets/Icons/UploadSimple.png')}/>
-                    ),
-                    headerLeft: () => (
-                        <HeaderIcon source={require('../assets/Icons/ArrowLeft.png')} onPress={() => navigation.goBack()}/>
-                    )
-                    })
-                }/>
             <Theory.Screen
                 name='WhatIsHajj'
                 component={WhatIsHajj}
                 options={({ navigation }) => ({ 
                     headerShadowVisible: false,
                     headerTitle: () => (
-                        <Text style={{fontSize: 18, fontFamily: 'GolosBold'}}>Что такое Умра</Text>
-                    ),
-                    headerRight: () => (
-                        <HeaderIcon source={require('../assets/Icons/UploadSimple.png')}/>
-                    ),
-                    headerLeft: () => (
-                        <HeaderIcon source={require('../assets/Icons/ArrowLeft.png')} onPress={() => navigation.goBack()}/>
-                    )
-                    })
-                }/>
-            <Theory.Screen
-                name='HajjAndUmrah'
-                component={HajjAndUmrah}
-                options={({ navigation }) => ({ 
-                    headerShadowVisible: false,
-                    headerTitle: () => (
-                        <Text style={{fontSize: 18, fontFamily: 'GolosBold'}}>Что такое Умра</Text>
-                    ),
-                    headerRight: () => (
-                        <HeaderIcon source={require('../assets/Icons/UploadSimple.png')}/>
-                    ),
-                    headerLeft: () => (
-                        <HeaderIcon source={require('../assets/Icons/ArrowLeft.png')} onPress={() => navigation.goBack()}/>
-                    )
-                    })
-                }/>
-            <Theory.Screen
-                name='BenefitsAndPurposes'
-                component={BenefitsAndPurposes}
-                options={({ navigation }) => ({ 
-                    headerShadowVisible: false,
-                    headerTitle: () => (
-                        <Text style={{fontSize: 18, fontFamily: 'GolosBold'}}>Что такое Умра</Text>
-                    ),
-                    headerRight: () => (
-                        <HeaderIcon source={require('../assets/Icons/UploadSimple.png')}/>
+                        <Text style={{fontSize: 18, fontFamily: 'GolosBold'}}></Text>
                     ),
                     headerLeft: () => (
                         <HeaderIcon source={require('../assets/Icons/ArrowLeft.png')} onPress={() => navigation.goBack()}/>

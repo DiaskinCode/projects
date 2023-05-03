@@ -1,81 +1,86 @@
 import React, { useState, useEffect, useLayoutEffect } from 'react';
-import { View, Text, SafeAreaView, StyleSheet, FlatList } from 'react-native';
+import { View, Text,ScrollView, SafeAreaView, StyleSheet, FlatList } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { QuestionsPopUp } from '../Components/Pop-Up';
-
 import { Question } from '../Components/Question';
-import axios from 'axios';
-
-const baseUrl = 'http://oralbekov.dias19.fvds.ru'
-const language = 'ru'
+import { useGetCategoryQuestionsQuery } from '../api/apiSlice';
+import i18n from 'i18next'
+import { NoInternet } from '../Components/NoInternet';
 
 export const CategoryQuestionsScreen = (props) => {
   const {CategoryTitle} = props.route.params || {}
   const {CategoryId} = props.route.params || {}
   const [isVisible, setVisible] = useState(false)
-  const [question, setQuestion] = useState()  
+  const [ SelectedQuestion, setSelectedQuestion ] = useState(0)
+
+  const {
+    data: Questions,
+    isSuccess,
+    isLoading,
+    isError,
+    error
+  } = useGetCategoryQuestionsQuery({language:i18n.language,id:CategoryId})
 
   useLayoutEffect(() => {
     Navigation.setOptions({
       headerTitle: () => <Text style={{fontFamily: 'GolosBold', fontSize: 18}}>{CategoryTitle}</Text>
     });
   }, [Navigation]);
-  
   const Navigation = useNavigation()
-
-  const onPressQuestion = () => {
-    setVisible(true)
+  const onPressQuestion = (index) => {
+    setSelectedQuestion(Questions[index]);
+    setVisible(!isVisible);
   }
+  
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get(`${baseUrl}/${language}/api/questions/category/${CategoryId}`)
-        setQuestion(response.data);
-      } catch (e) {
-        console.log(e)
-      }
-    };
-
-    fetchData();
-  }, [])
-
-  useEffect(() => {
-    console.log(question)
-  }, [question])
-
-  if (!question) {
-    return <Text>Loading...</Text>
-  } else {
+  if (isLoading) {
+      return(
+        <NoInternet/>
+      )  
+  }
+  else if (Questions.length == 0) {
+    return(
+      <NoInternet/>
+    )  
+  }
+  else if (Questions) {
     return (
-      <SafeAreaView style={styles.Container}>
-        <View style={styles.Content}>
-          <FlatList data={question}
-            keyExtractor={item => item.id}
-            bounces={false}
-            ItemSeparatorComponent={() => <View style={{height: 6}}/>}
-            renderItem = {({item}) => 
-              <Question item={item} onPress={() => onPressQuestion()}/>}
+      <ScrollView>
+        <View style={styles.Container}>
+          {Questions.map((item, index) => {
+              return (
+                <Question
+                  key={item.id}
+                  item={item}
+                  type='Question' 
+                  icon={require('../assets/Icons/Plus.png')} 
+                  onPress={() => onPressQuestion(index)}/>
+            )})}
+          <QuestionsPopUp
+            visible={isVisible}
+            Close={() => setVisible(false)}
+            title={SelectedQuestion.title}
+            text={SelectedQuestion.response}
           />
         </View>
-        <QuestionsPopUp 
-          visible={isVisible} 
-          Close={() => setVisible(false)}
-          Close1={() => setVisible(false)}
-          title={question[0].title}
-          text={question[0].response}
-          />
-      </SafeAreaView>
+      </ScrollView>
     );
   }
 }
 const styles = StyleSheet.create({
   Container: {
     marginHorizontal: '6.66%',
+    marginTop:20,
   },
   Content: {
     height: '100%',
     marginTop: 24,
+  },
+  Center: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center'
   }
 });
 

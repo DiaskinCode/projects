@@ -1,44 +1,62 @@
-import React, { useState, useEffect, useLayoutEffect,useRef } from 'react';
+import React from 'react';
 import { View, Text, StyleSheet, ScrollView } from 'react-native';
 import { Carousel } from '../Components/Carousel';
 import { useNavigation } from '@react-navigation/native';
 import { PlayerItem } from '../Components/PlayerItem';
-import { PlayerData } from '../Components/Data';
+import i18n from 'i18next';
 import { ProfileItem } from '../Components/ProfileItem';
+import { TouchableOpacity } from 'react-native-gesture-handler';
+import { useTranslation } from 'react-i18next';
 
 export const AccountScreen = () => {
     const Navigation = useNavigation()
-    const pickerRef = useRef();
-    
+    const {t} = useTranslation()
+
+    const PlayerData = [
+      {
+          id: 1,
+          youtubeId:"3loPeQnJKk4&ab",
+          status: 'Online',
+          title: t('player_from_makkah'),
+          image: require('../assets/images/PlayerBackground.png')
+      },
+      {
+          id: 2,
+          youtubeId:"bRSKpb_xzq0",
+          status: 'Online',
+          title: t('player_from_medina'),
+          image: require('../assets/images/medina.jpg')
+      }
+  ]
+
     return (
       <ScrollView style={styles.container}>
-        <Carousel 
-          data={PlayerData}
-          renderItem={({item}) => <PlayerItem item={item}/>}
-        />
+          <View style={{ marginBottom: 20 }}>
+              <Carousel
+                renderItem={({ item, index }) => <PlayerItem item={item} index={index} />}
+                data={PlayerData}
+                ItemSeparatorComponent={() => <View style={{ width: ItemSeparatorComponent }} />}
+              />
+          </View>
         <View style={{marginTop: 15}}>
           <ProfileItem image={require('../assets/Icons/User.png')} 
-            text='Личные данные'
+            text={t('personal_data')}
             onPress={() => Navigation.navigate('PersonalDataScreen')}/>
           <ProfileItem image={require('../assets/Icons/House.png')} 
-            text='Мой отель'
+            text={t('my_hotel')}
             onPress={() => Navigation.navigate('MyHotelScreen')}/>
           <ProfileItem image={require('../assets/Icons/Nut.png')} 
-            text='Настройки' 
-            onPress={() => Navigation.navigate('MainSettings')}/>
+            text={t('settings')}
+            onPress={() => Navigation.navigate('AccountSettings')}/>
           <ProfileItem image={require('../assets/Icons/Vibrate.png')}
-            text='О приложении'
+            text={t('about_app')}
             onPress={() => Navigation.navigate('AboutApp')}/>
           <ProfileItem image={require('../assets/Icons/WarningOctagon.png')} 
-            text='Сообщить об ошибке'
+            text={t('report_error')}
             onPress={() => Navigation.navigate('AccountReport')}/>
-          <ProfileItem image={require('../assets/Icons/SignOut.png')} 
-            text='Выйти из аккаунта'/>
         </View>
-        <View style={{marginTop:6}}>
-          <Text style={styles.greyText}>Правовые документы</Text>
-          <Text style={styles.greyText}>Политика конфиденциальности</Text>
-        </View> 
+          <TouchableOpacity style={{marginTop:6}} onPress={() => Navigation.navigate('Legacy')}><Text style={styles.greyText}>{t('docs')}</Text></TouchableOpacity>
+          <TouchableOpacity onPress={() => Navigation.navigate('PrivacyPolicy')}><Text style={styles.greyText}>{t('privacy')}</Text></TouchableOpacity>
   </ScrollView>
     )}
 const styles = StyleSheet.create({  

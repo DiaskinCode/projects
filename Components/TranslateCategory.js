@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import { View, Text, FlatList, StyleSheet, TouchableWithoutFeedback, ScrollView } from 'react-native';
+import { View, Text, FlatList, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
 
-export const TranslateCategory = ({item, index}) => {
+export const TranslateCategory = ({item, index, onPress}) => {
     return (
-    <TouchableWithoutFeedback>
+    <TouchableOpacity onPress={onPress}>
         <View style={[styles.CategoryConatainer, { marginRight: 5 }]}>
-            <Text style={styles.CategoryText}>{item.text}</Text>
+            <Text style={styles.CategoryText}>{item.title}</Text>
         </View>
-    </TouchableWithoutFeedback>
+    </TouchableOpacity>
     )
 }
 

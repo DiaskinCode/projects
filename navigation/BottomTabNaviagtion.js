@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component,useEffect,useState } from 'react';
 import { View, Image, StyleSheet, Text } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
@@ -7,13 +7,20 @@ import QuestionsStackNavigator from './QuestionsStackNavigator'
 import TheoryStackNavigator from './TheoryStackNavigator';
 import RiteStackNavigator from './RiteStackNavigator';
 import AccountStackNavigation from './AccountStackNavigation';
-
-import { MapScreen } from '../Screens/MapScreen';
-
+import MapStackNavigator from './MapStackNavigator';
+import { useTranslation } from 'react-i18next';
 
 const Tab = createBottomTabNavigator();
 
-export default function BottomTabNaviagtion () {
+export default function BottomTabNavigation () {
+    const {t} = useTranslation()
+    function handleNavigateToOtherScreen() {
+        navigation.reset({
+          index: 0,
+          routes: [{ name: 'OtherScreen' }],
+        });
+    }
+    
     return (
         <Tab.Navigator
             initialRouteName="Home"
@@ -22,57 +29,59 @@ export default function BottomTabNaviagtion () {
                 tabBarLabel: ({focused}) => {
                     return <Text style={styles.tabBarLabel}>{focused ? '' : route.name}</Text>},
                 tabBarStyle: {
-                borderTopWidth: 0, 
-                width: '86,668%',
-                alignSelf: 'center',
+                    borderTopWidth: 0, 
+                    width: '95%',
+                    alignSelf: 'center',
+                    elevation: 0,
+                    marginBottom:15,
                 },
             })}
             >
             <Tab.Screen
-                name="Главная"
+                name={t('home')}
                 component={MainStackNavigator}
                 options={{tabBarIcon: ({focused}) => focused ? 
-                <TabIcon type='Active' image={require('../assets/Icons/TabIcons/Filled/Home.png')}/> : 
+                    <TabIcon type='Active' image={require('../assets/Icons/TabIcons/Filled/Home.png')}/> : 
                     <TabIcon image={require('../assets/Icons/TabIcons/Light/Home.png')}/>,
                 }}
             />
             <Tab.Screen
-                name="Теория"
+                name={t('theory')}
                 component={TheoryStackNavigator}
                 options={{tabBarIcon: ({focused}) => focused ? 
-                <TabIcon type='Active' image={require('../assets/Icons/TabIcons/Filled/Book.png')}/> : 
+                    <TabIcon type='Active' image={require('../assets/Icons/TabIcons/Filled/Book.png')}/> : 
                     <TabIcon image={require('../assets/Icons/TabIcons/Light/Book.png')}/>
                 }}
             />
             <Tab.Screen
-                name="Обряды"
+                name={t('rites')}
                 component={RiteStackNavigator}
                 options={{tabBarIcon: ({focused}) => focused ? 
-                <TabIcon type='Active' image={require('../assets/Icons/TabIcons/Filled/Layers.png')}/> : 
+                    <TabIcon type='Active' image={require('../assets/Icons/TabIcons/Filled/Layers.png')}/> : 
                     <TabIcon image={require('../assets/Icons/TabIcons/Light/Layers.png')}/>
                 }}
             />
             <Tab.Screen
-                name="Карта"
-                component={MapScreen}
+                name={t('map')}
+                component={MapStackNavigator}
                 options={{tabBarIcon: ({focused}) => focused ? 
-                 <TabIcon type='Active' image={require('../assets/Icons/TabIcons/Filled/Compas.png')}/> :
-                     <TabIcon image={require('../assets/Icons/TabIcons/Light/Compas.png')}/>
+                    <TabIcon type='Active' image={require('../assets/Icons/TabIcons/Filled/Compas.png')}/> :
+                    <TabIcon image={require('../assets/Icons/TabIcons/Light/Compas.png')}/>
                  }}
             />
             <Tab.Screen
-                name="Вопросы"
+                name={t('questions')}
                 component={QuestionsStackNavigator}
                  options={{tabBarIcon: ({focused}) => focused ? 
-                 <TabIcon type='Active' image={require('../assets/Icons/TabIcons/Filled/InfoCircle.png')}/> : 
+                    <TabIcon type='Active' image={require('../assets/Icons/TabIcons/Filled/InfoCircle.png')}/> : 
                     <TabIcon image={require('../assets/Icons/TabIcons/Light/InfoCircleTab.png')}/>
-             }}
+                }}
             />
             <Tab.Screen
-                name="Аккаунт"
+                name={t('account')}
                 component={AccountStackNavigation}
-                 options={{tabBarIcon: ({focused}) => focused ? 
-                 <TabIcon type='Active' image={require('../assets/Icons/TabIcons/Filled/User.png')}/> : 
+                options={{tabBarIcon: ({focused}) => focused ? 
+                    <TabIcon type='Active' image={require('../assets/Icons/TabIcons/Filled/User.png')}/> : 
                     <TabIcon image={require('../assets/Icons/TabIcons/Light/User.png')}/>
              }}
             />
@@ -86,6 +95,7 @@ function TabIcon({image, type}) {
         </View>
     );
 }
+
 const styles = StyleSheet.create({
     Icon: {
         width: 24,
@@ -99,7 +109,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
-        borderRadius: '50%',
+        borderRadius: 50,
         marginTop: 15,
     },
     tabBarLabel: {

@@ -1,8 +1,9 @@
 import React, { useLayoutEffect } from 'react';
-import { View,ScrollView, Text,AsyncStorage, StyleSheet, Image,ImageBackground } from 'react-native';
+import i18n from 'i18next';
+import { View,ScrollView, Text, StyleSheet, Image,ImageBackground } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useNavigation } from '@react-navigation/native';
 import { useEffect } from 'react'
-import { UmrahInstructionsData } from '../Components/Data';
 
 export default function UmrahRiteViewScreen (props) {
   const HeaderTitle = props.route.params.HeaderTitle
@@ -10,7 +11,67 @@ export default function UmrahRiteViewScreen (props) {
   const RiteAsyncStorageType = props.route.params.type
   const Data = props.route.params.Data
   const Navigation = useNavigation()
-  const Rite = UmrahInstructionsData[0]
+  
+  const UmrahInstructionsData = [
+    {
+      id: 1,
+      title: i18n.t("Umrah_Instructions_Data_Title"),
+      description: i18n.t("Umrah_Instructions_Data_Description"),
+      image: require('../assets/images/RiteImg.png'),
+      desc: i18n.t("Umrah_Instructions_Data_ArticleText"),
+  },
+    {
+      id: 2,
+      title: i18n.t("Umrah_Instructions_Data_Title_5"),
+      description: i18n.t("Umrah_Instructions_Data_Description_5"),
+      image: require('../assets/images/RiteImg.png'),
+      desc: i18n.t("Umrah_Instructions_Data_ArticleText_5"),
+  },
+  {
+      id: 3,
+      title: i18n.t("Umrah_Instructions_Data_Title_2"),
+      description: i18n.t("Umrah_Instructions_Data_Description_2"),
+      image: require('../assets/images/RiteImg.png'),
+      desc: i18n.t("Umrah_Instructions_Data_ArticleText_2"),
+  },
+    {
+      id: 4,
+      title: i18n.t("Umrah_Instructions_Data_Title_6"),
+      description: i18n.t("Umrah_Instructions_Data_Description_6"),
+      image: require('../assets/images/RiteImg.png'),
+      desc: i18n.t("Umrah_Instructions_Data_ArticleText_6"),
+  },
+  {
+      id: 5,
+      title: i18n.t("Umrah_Instructions_Data_Title_7"),
+      description: i18n.t("Umrah_Instructions_Data_Description_7"),
+      image: require('../assets/images/RiteImg.png'),
+      desc: i18n.t("Umrah_Instructions_Data_ArticleText_7"),
+  },
+  {
+      id: 6,
+      title: i18n.t("Umrah_Instructions_Data_Title_3"),
+      description: i18n.t("Umrah_Instructions_Data_Description_3"),
+      image: require('../assets/images/RiteImg.png'),
+      desc: i18n.t("Umrah_Instructions_Data_ArticleText_3"),
+  },
+  {
+      id: 7,
+      title: i18n.t("Umrah_Instructions_Data_Title_4"),
+      description: i18n.t("Umrah_Instructions_Data_Description_4"),
+      image: require('../assets/images/RiteImg.png'),
+      desc: i18n.t("Umrah_Instructions_Data_ArticleText_4"),
+  },
+  {
+      id: 8,
+      title: i18n.t("Umrah_Instructions_Data_Title_8"),
+      description: i18n.t("Umrah_Instructions_Data_Description_8"),
+      image: require('../assets/images/RiteImg.png'),
+      desc: i18n.t("Umrah_Instructions_Data_ArticleText_8"),
+  },
+]
+
+  const Rite = UmrahInstructionsData[RiteInstructionId - 1]
 
   AsyncStorage.getItem(`umrahRite${RiteAsyncStorageType}`,(err, previousRite) => {
     let riteProgress = []
@@ -29,10 +90,9 @@ export default function UmrahRiteViewScreen (props) {
     }
   }); 
 
-  // AsyncStorage.removeItem('umrahritevideo')
   useLayoutEffect(() => {
     Navigation.setOptions({
-      headerTitle: () => (<Text style={{fontFamily: 'GolosBold', fontSize: 18}}>{HeaderTitle}</Text>)
+      headerTitle: () => (<Text numberOfLines={1} ellipsizeMode="tail" style={{fontFamily: 'GolosBold', fontSize: 18,width:'85%'}}>{HeaderTitle}</Text>)
     });
   }, [Navigation]);
     return (
@@ -40,11 +100,6 @@ export default function UmrahRiteViewScreen (props) {
         <View style = {styles.container}>
           <Image style = {styles.image} source={require('../assets/images/RiteImg.png')} />
           <Text style = {styles.desc}>{Rite['desc']}</Text>
-          <Text style = {styles.subtitle}>На ас-Сафа следует читать аят:</Text>
-          <View style = {styles.translateContainer}>
-            <View style = {styles.translate}><Text style = {styles.translateArabText} >{Rite['arabText']}</Text></View>
-            <Text style = {styles.translateText}>{Rite['translatedArabText']}</Text>
-          </View>
         </View>
       </ScrollView>
     );
@@ -65,6 +120,7 @@ export default function UmrahRiteViewScreen (props) {
     desc: {
       fontSize:18,
       marginTop:30,
+      lineHeight:25,
     },
     subtitle: {
       fontSize:14,
@@ -73,6 +129,7 @@ export default function UmrahRiteViewScreen (props) {
     translateContainer:{
       marginTop:15,
       height:350,
+      marginTop:30,
       borderWidth:1,
       borderColor:'#61C66C',
       overflow:'hidden',

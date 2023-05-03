@@ -5,20 +5,29 @@ import { useNavigation } from '@react-navigation/native';
 import { Category } from '../Components/Category';
 import { QuestionsBlock } from '../Components/QuestionsBlock';
 import { QuestionsPopUp } from '../Components/Pop-Up';
+import i18n from 'i18next'
+import { useTranslation } from 'react-i18next';
+import { NoInternet } from '../Components/NoInternet';
 
 export const QuestionsScreen = () => {
+  const {t} = useTranslation()
   const [language, setLanguage] = useState('ru');
   const [isVisible, setVisible] = useState(false);
   const [refreshing, setRefreshing] = useState(false);
   const [SelectedQuestion, setSelectedQuestion] = useState(0)
-  const { data: PopularQuestions } = useGetPopularQuestionsQuery()
+  const { data: PopularQuestions } = useGetPopularQuestionsQuery(i18n.language)
   const {
     data: Categories,
     isSuccess,
     isLoading,
     isError,
+    refetch,
     error
-  } = useGetQuestionCategoryQuery()
+  } = useGetQuestionCategoryQuery(i18n.language)
+
+  useEffect(() => {
+    refetch();
+  }, [i18n.language]);
   
   const navigate = useNavigation()
   const onPressQuestion = (index) => {
@@ -35,12 +44,16 @@ export const QuestionsScreen = () => {
     delay(2000).then(() => setRefreshing(false))
 }, [])
 
-  if (isLoading) {
-    <Text>loading...</Text>      
-  }
-  else if (isError) {
-    <Text>{error}</Text>
-  }
+if (isLoading) {
+  return(
+    <NoInternet/>
+  )
+}
+else if (isError) {
+  return(
+    <NoInternet/>
+  )
+}
   else if (PopularQuestions && Categories) {
     return (
       <SafeAreaView style={styles.Container}>
@@ -51,7 +64,7 @@ export const QuestionsScreen = () => {
                 refreshing={refreshing}
                 onRefresh={onRefresh}
               />}>
-        <View style={styles.CategoryBlock}>
+        <View style={styles.CategoryWrapper}>
           <Category title={Categories['QuestionCategories'][0].title}
             description={Categories["category_umra_questions"] + ' ' + 'ответов'}
             icon={require('../assets/Icons/HourglassSimpleHigh.png')}
@@ -114,7 +127,7 @@ export const QuestionsScreen = () => {
   
         
         <QuestionsBlock
-          title={'Популярные Вопросы'}
+          title={t('faq')}
           data={PopularQuestions} 
           onPressItem={(index) => onPressQuestion(index)}
           />
@@ -135,13 +148,14 @@ export const QuestionsScreen = () => {
 
 const styles = StyleSheet.create({
   Container: {
-    marginHorizontal: '6.66%'
+    marginHorizontal: '6.66%',
+    flex: 1
   },
-  CategoryBlock: {
+  CategoryWrapper: {
     flexDirection: 'row',
-    display: 'flex',
     justifyContent: 'space-between',
     flexWrap: 'wrap',
     marginTop: 17,
+    marginBottom: 20
 }
 })

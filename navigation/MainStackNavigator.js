@@ -11,12 +11,15 @@ import CategoryCalendarScreen from '../Screens/CategoryCalendarScreen';
 import MainSettingsScreen from '../Screens/MainSettingsScreen';
 import ExpressTranslateScreen from '../Screens/ExpressTranslateScreen';
 import CurrencyAndFinancesScreen from '../Screens/CurrencyAndFinancesScreen';
+import MainPopularQuestionsScreen from '../Screens/MainPopularQuestionsScreen'
+import MapPlacesScreen from '../Screens/MapPlacesScreen'
+import {MapScreen} from '../Screens/MapScreen'
+import { useTranslation } from 'react-i18next';
 
 const Main = createNativeStackNavigator();
 
 export default function MainStackNavigator() {
-    const Navigation = useNavigation()
-
+    const {t} = useTranslation()
     return (
         <Main.Navigator>
             <Main.Screen 
@@ -30,10 +33,27 @@ export default function MainStackNavigator() {
                     ),
                     headerRight: () => (
                     <View style={styles.HeaderRight}>
-                        <HeaderIcon source={require('../assets/Icons/MagnifyingGlass.png')}/>
                         <HeaderIcon source={require('../assets/Icons/Nut.png')} onPress={() => navigation.navigate('MainSettings')}/>
                     </View>
                     ),
+                    })}/>
+            <Main.Screen 
+                name='MapRoute' 
+                component={MapScreen}
+                options={({ navigation }) => ({
+                    headerShown: false
+                })}/>
+            <Main.Screen 
+                name='Attractions' 
+                component={MapPlacesScreen}
+                options={({ navigation }) => ({
+                    headerShadowVisible: false,
+                        headerTitle: () => (
+                            <Text style={styles.HeaderTitle}>{t('attractions')}</Text>
+                        ),
+                        headerLeft: () => (
+                            <HeaderIcon source={require('../assets/Icons/ArrowLeft.png')} onPress={() => navigation.goBack()}/>
+                        )
                     })}/>
             <Main.Screen
                 name='AllArticlesScreen'
@@ -41,14 +61,13 @@ export default function MainStackNavigator() {
                 options={({ navigation }) => ({
                     headerShadowVisible: false,
                     headerTitle: () => 
-                        <Text style={styles.HeaderTitle}>Статьи</Text>,
-                    headerRight: () => (
-                        <HeaderIcon source={require('../assets/Icons/MagnifyingGlass.png')}/>
-                    ),
+                        <Text style={styles.HeaderTitle}>{t('articles')}</Text>,
+
                     headerLeft: () => (
                         <HeaderIcon source={require('../assets/Icons/ArrowLeft.png')} onPress={() => navigation.goBack()}/>
                     )
                     })}
+                    
                 />
             <Main.Screen
                 name='ArticleScreen'
@@ -56,14 +75,12 @@ export default function MainStackNavigator() {
                 options={({ navigation }) => ({
                     headerShadowVisible: false,
                     headerTitle: () => 
-                        <Text style={styles.HeaderTitle}>Статья</Text>,
-                    headerRight: () => (
-                        <HeaderIcon source={require('../assets/Icons/UploadSimple.png')}/>
-                    ),
+                        <Text style={styles.HeaderTitle}>{t('articles')}</Text>,
                     headerLeft: () => (
                         <HeaderIcon source={require('../assets/Icons/ArrowLeft.png')} onPress={() => navigation.goBack()}/>
-                    )
+                    )                    
                     })}
+                    
                 />
             <Main.Screen
                 name='CategoryCalendarScreen'
@@ -71,10 +88,7 @@ export default function MainStackNavigator() {
                 options={({ navigation }) => ({
                     headerShadowVisible: false,
                     headerTitle: () => 
-                        <Text style={styles.HeaderTitle}>Каленьдарь</Text>,
-                    headerRight: () => (
-                        <HeaderIcon source={require('../assets/Icons/MagnifyingGlass.png')}/>
-                    ),
+                        <Text style={styles.HeaderTitle}>{t('calendar')}</Text>,
                     headerLeft: () => (
                         <HeaderIcon source={require('../assets/Icons/ArrowLeft.png')} onPress={() => navigation.goBack()}/>
                     )
@@ -86,10 +100,7 @@ export default function MainStackNavigator() {
                 options={({ navigation }) => ({
                     headerShadowVisible: false,
                     headerTitle: () => 
-                        <Text style={styles.HeaderTitle}>Настройки</Text>,
-                    headerRight: () => (
-                        <HeaderIcon source={require('../assets/Icons/MagnifyingGlass.png')}/>
-                    ),
+                        <Text style={styles.HeaderTitle}>{t('settings')}</Text>,
                     headerLeft: () => (
                         <HeaderIcon source={require('../assets/Icons/ArrowLeft.png')} onPress={() => navigation.goBack()}/>
                     )
@@ -101,31 +112,24 @@ export default function MainStackNavigator() {
                 options={({ navigation, route }) => ({
                     headerShadowVisible: false,
                     headerTitle: () => (
-                        <Text style={styles.HeaderTitle}>Экспресс перевод</Text>
-                    ),
-                    headerRight: () => (
-                        <HeaderIcon source={require('../assets/Icons/MagnifyingGlass.png')}/>
+                        <Text style={styles.HeaderTitle}>{t('express_translate')}</Text>
                     ),
                     headerLeft: () => (
-                        <HeaderIcon source={require('../assets/Icons/ArrowLeft.png')} 
-                            onPress={() => {navigation.goBack()}}/>
+                        <HeaderIcon source={require('../assets/Icons/ArrowLeft.png')} onPress={() => navigation.goBack()}/>
                     )
                     })}
                 />
+
             <Main.Screen
-                name='CurrencyAndFinances'
-                component={CurrencyAndFinancesScreen}
+                name='MainPopularQuestions'
+                component={MainPopularQuestionsScreen}
                 options={({ navigation, route }) => ({
                     headerShadowVisible: false,
                     headerTitle: () => (
-                        <Text style={styles.HeaderTitle}>Экспресс перевод</Text>
-                    ),
-                    headerRight: () => (
-                        <HeaderIcon source={require('../assets/Icons/MagnifyingGlass.png')}/>
+                        <Text style={styles.HeaderTitle}>{t('faq')}</Text>
                     ),
                     headerLeft: () => (
-                        <HeaderIcon source={require('../assets/Icons/ArrowLeft.png')} 
-                            onPress={() => {navigation.goBack()}}/>
+                        <HeaderIcon source={require('../assets/Icons/ArrowLeft.png')} onPress={() => navigation.goBack()}/>
                     )
                     })}
                 />
@@ -154,5 +158,5 @@ const styles = StyleSheet.create({
     HeaderTitle: {
         fontFamily: 'GolosBold',
         fontSize: 18
-    }
+    },
 });

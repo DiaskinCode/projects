@@ -10,7 +10,7 @@ export const TranslateBlock = (props) => {
     } else if (props.item) {
         // console.log(data);
         return(
-            <View style={styles.TranslateListContainer}>
+        <View style={props.length == props.id ? {marginBottom:100,} : {marginBottom:30,}}>
             <Text style={styles.Title}>{props.item.title}</Text>
             <FlatList
                 data={props.item.items}

@@ -1,23 +1,24 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, Image, StyleSheet } from 'react-native';
-import { format } from "date-fns";
+import { View, Text, Image, StyleSheet, Modal,TouchableOpacity } from 'react-native';
+import { useTranslation } from 'react-i18next';
 
 export const StartTable = (props) => {
+    const {t} = useTranslation()
     const HajjStartDate = props.date
 
     const getMonthName = (date) => {
-        const months = ['Января', 'Февраля', 'Марта', 'Апреля', 'Мая', 'Июня', 'Июля', 'Августа', 'Сентября', 'Октября', 'Ноября', 'Декабря'];
+        const months = [t('January'), t('February'), t('March'), t('April'), t('May'), t('June'), t('July'), t('August'), t('September'), t('October'), t('November'), t('December')];
         return (date.getDate() + ' ' + months[date.getMonth()])
     };
     return (
       <View style={styles.Container}>
         <View style={styles.Left}>
             <Text style={styles.Desription}>{props.description}</Text>
-            <Text style={styles.Date}>{format(HajjStartDate, getMonthName(HajjStartDate))}</Text>
+            <Text style={styles.Date}>{getMonthName(HajjStartDate)}</Text>
         </View>
-        <View>
+        <TouchableOpacity onPress={props.onPress}>
             <Image source={require('../assets/Icons/Calendar.png')} style={styles.Icon}/>
-        </View>
+        </TouchableOpacity>
       </View>
     );
 }

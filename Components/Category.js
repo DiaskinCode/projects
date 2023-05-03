@@ -4,17 +4,18 @@ import { Title } from './Title';
 import { Description } from './Description'
 
  export const Category = (props) => {
-
   const { width } = useWindowDimensions()
-  const itemWidth = width * 0.27
+  const itemVerticalWidth = width * 0.27
+  const itemHorizontalWidth = width * 0.42
 
   return (
-    <View style={[styles[`Container${props.type}`], {borderColor: props.borderColor, 
+    <View style={[styles[`Container${props.type}`], 
+        {borderColor: props.borderColor, 
         borderWidth: 1, 
         borderRadius: 20, 
         marginBottom: 10,
-        }
-        ]}>
+        height: props.type == 'Vertical' ? itemVerticalWidth : 76,
+        width: props.type == 'Vertical' ? itemVerticalWidth : itemHorizontalWidth}]}>
       <TouchableWithoutFeedback onPress={props.onPress}>
           <View style={styles[`Content${props.type}`]}>
             <View style={styles.textBar}>
@@ -31,13 +32,6 @@ import { Description } from './Description'
     )
   }
 const styles = StyleSheet.create({
-    ContainerHorizontal: {
-      width: '48.5%',
-    },
-    ContainerVertical: {
-      width: '31.35%',
-      height: 106,
-    },
     ContentHorizontal: {
       flexDirection: 'row',
       justifyContent: 'space-between',
@@ -51,7 +45,9 @@ const styles = StyleSheet.create({
     IconHorizontal: {
       width: 24,
       height: 24,
-      marginTop: 'auto',
+      position:'absolute',
+      right:10,
+      bottom:10,
     },
     IconVertical: {
       marginTop: 10,
@@ -60,11 +56,12 @@ const styles = StyleSheet.create({
     },
     textWrapHorizontal: {
       marginBottom: 5,
-      width: 100,
+      width: 110,
       height: 36,
     },
     textWrapVertical: {
       width: 75,
+      height:30,
     },
 
 });

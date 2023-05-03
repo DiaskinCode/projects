@@ -3,10 +3,12 @@ import { View, Text, StyleSheet, ImageBackground, TouchableWithoutFeedback, Imag
 import { Title } from './Title';
 import { Description } from './Description';
 import window from '../constants/Layout.js'
+import { useTranslation } from 'react-i18next';
 
 export const RiteProgress = (props) => {
 
   const ScreenWidth = Dimensions.get('window').width
+  const {t} = useTranslation()
     return (
     <ImageBackground source={props.background} imageStyle={styles.Container} resizeMode='cover'>
     <View style={[styles.Container, {width: ScreenWidth * 0.42, height: ScreenWidth * 0.42}]}>
@@ -30,8 +32,8 @@ export const RiteProgress = (props) => {
             <TouchableWithoutFeedback onPress={props.onPress} style={{}}>
               <View style={styles.Button}>
                 <View style={{marginHorizontal: 13, marginVertical: 7, width: '100%'}}>
-                  <Description text={'Продолжить'} color='#FFFFFF'/>
-                  <Text style={styles.Title}>{props.currentRiteTitle != 'undefined' ? props.currentRiteTitle : 'Обряды'}</Text>
+                  <Description text={t('continue')} color='#FFFFFF'/>
+                  <Text numberOfLines={2} style={styles.Title}>{props.currentRiteTitle != 'undefined' ? props.currentRiteTitle : 'Обряды'}</Text>
                 </View>
               </View>
             </TouchableWithoutFeedback>
@@ -54,7 +56,7 @@ const styles = StyleSheet.create({
       fontFamily: 'GolosSemiBold',
       fontSize: 12,
       color: '#FFFFFF',
-      maxWidth:'84%',
+      maxWidth:'85%',
     },
     Count: {
       backgroundColor: '#FFFFFF',

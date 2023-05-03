@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { View, Text, FlatList, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { ArticleItem } from './ArticleItem';
-import { ArticleData } from '../Components/Data';
 import { useGetArticlesQuery } from '../api/apiSlice'
+import i18n from 'i18next';
 
 export default function AllArticlesScreen () {
   const {
@@ -12,7 +12,7 @@ export default function AllArticlesScreen () {
     isSuccess,
     isError,
     error
-  } = useGetArticlesQuery()
+  } = useGetArticlesQuery(i18n.language)
 
   const navigation = useNavigation()
     return (

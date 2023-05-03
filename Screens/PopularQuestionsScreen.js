@@ -5,6 +5,7 @@ import { useNavigation } from '@react-navigation/native';
 import { QuestionsPopUp } from '../Components/Pop-Up';
 import { ScrollView } from 'react-native-gesture-handler';
 import { Question } from '../Components/Question';
+import i18n from 'i18next';
 
 export default function PopularQuestionsScreen() {
   const { data: PopularQuestions, isLoading, isSuccess } = useGetPopularQuestionsQuery()

@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import { View, Text, TouchableWithoutFeedback, StyleSheet, FlatList } from 'react-native';
 import { Title } from './Title';
 import { format } from "date-fns";
+import { useTranslation } from 'react-i18next';
 
 export const CalendarDate = ({item}) => {
+    const {t} = useTranslation()
     const [ isToday, setToday ] = useState()
     const dateArray = item.date.split("-", 3)
     const year = dateArray[0]
@@ -13,7 +15,7 @@ export const CalendarDate = ({item}) => {
     const date = new Date(year, month - 1,day)
     
     const getMonthName = (date) => {
-        const months = ['Января', 'Февраля', 'Марта', 'Апреля', 'Мая', 'Июня', 'Июля', 'Августа', 'Сентября', 'Октября', 'Ноября', 'Декабря'];
+        const months = [t('January'), t('February'), t('March'), t('April'), t('May'), t('June'), t('July'), t('August'), t('September'), t('October'), t('November'), t('December')];
         return (date.getDate() + ' ' + months[date.getMonth()])
     };
 
@@ -24,7 +26,7 @@ export const CalendarDate = ({item}) => {
             </View>
 
             <View style={styles.Left}>
-                <Text style={styles.Date}>{format(date, getMonthName(date))}</Text>
+                <Text style={styles.Date}>{getMonthName(date)}</Text>
                 <Text style={styles.ListText}>{item.content}</Text>
             </View>
         </View>

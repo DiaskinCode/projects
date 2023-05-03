@@ -1,12 +1,25 @@
 import React, { useLayoutEffect,useCallback,useState } from 'react';
-import { View,ScrollView,Dimensions,TouchableWithoutFeedback, Text,AsyncStorage, StyleSheet, Image,ImageBackground } from 'react-native';
+import i18n from 'i18next';
+import { View,ScrollView,Dimensions,TouchableWithoutFeedback, Text, StyleSheet, Image,ImageBackground } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useNavigation } from '@react-navigation/native';
-import { useEffect } from 'react'
-import { UmrahInstructionsVideoData } from '../Components/Data';
-import { Rite } from '../Components/Rite';
 import YoutubePlayer from "react-native-youtube-iframe";
 
 export default function UmrahRiteViewVideoScreen (props) {
+  const UmrahInstructionsVideoData = [
+    {
+        id: 1,
+        title: i18n.t("Umrah_Instructions_Video_Data_Title"),
+        youtubeId:"yy6hW0NhZco",
+        description: i18n.t("Umrah_Instructions_Video_Data_Description"),
+        image: require('../assets/images/RiteImg.png'),
+        desc: i18n.t("Umrah_Instructions_Video_Data_Desc"),
+        arabText:'إِنَّ الصَّفَا وَ الْمَرْوَةَ مِنْ شَعَائِرِ اللهِ فَمَنْ حَجَّ الْبَيْتَ أَوِ اعْتَمَرَ فَلاَ جُنَاحَ عَلَيْهِ أَن يَطَّوَّفَ بِهِمَا',
+        translatedArabText: i18n.t("Umrah_Instructions_Video_Data_TranslatedArabText"),
+        borderColor: '#A1F6FB'
+    },
+]
+
   const HeaderTitle = props.route.params.HeaderTitle
   const RiteInstructionId = props.route.params.id
   const onStateChange = useCallback((state) => {

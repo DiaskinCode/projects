@@ -1,62 +1,117 @@
-import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
+import {createApi,fetchBaseQuery} from '@reduxjs/toolkit/query/react'
 
-const baseUrl = 'http://oralbekov.dias19.fvds.ru'
+// const customBaseQuery = async (url, options) => {
+//     const language = await AsyncStorage.getItem('Language') == 1 ? 'en' : 'ru'
+//     return fetchBaseQuery({ baseUrl })(url, options);
+//   };
 
+const baseUrl = `http://oralbekov.dias19.fvds.ru/`;
+  
 export const apiSlice = createApi({
     baseQuery: fetchBaseQuery({baseUrl}),
-    tagTypes: ['PopularQuestions', 'CategoryQuestion','QuestionsCategory', 'CategoryTheory', 'CategoryTheoryArticle' ,'Articles','ArticleById','HajjDays','UmrahDays','Translate'],
+    tagTypes: [
+        'PopularQuestions',
+        'CategoryQuestion',
+        'QuestionsCategory',
+        'CategoryTheory',
+        'CategoryTheoryArticle',
+        'Articles',
+        'ArticleById',
+        'HajjDays',
+        'HajjStartDate',
+        'UmrahDays',
+        'Translate',
+        'CategoryTheoryWhatTake',
+        'CategoryQuestions',
+      ],
+      
     endpoints: (builder) => ({
         getQuestionCategory: builder.query({
-            query: () => '/ru/api/questions/categories/',
+            query: (language) => `${language}/api/questions/categories/`,
             providesTags: ['QuestionsCategory']
         }),
         getPopularQuestions: builder.query({
-            query: () => '/ru/api/questions/popular',
+            query: (language) => `${language}/api/questions/popular`,
             providesTags: ['PopularQuestions']
         }),
+        getPopularQuestionsHajj: builder.query({
+            query: (language) => `${language}/api/questions/popular/hajj`,
+        }),
+        getPopularQuestionsUmrah: builder.query({
+            query: (language) => `${language}/api/questions/popular/umrah`,
+        }),
         getCategoryQuestions: builder.query({
-            query: (id) => `/ru/api/questions/category/${id}`,
+            query: ({ language, id }) => `${language}/api/questions/category/${id}`,
             providesTags: ['CategoryQuestions']
         }),
         getCategoryTheoryMain: builder.query({
-            query: () => `/ru/api/info/main`,
+            query: (language) => `${language}/api/info/main`,
             providesTags: ['CategoryTheory']
         }),
+        getCategoryTheoryWhatTake: builder.query({
+            query: (language) => `${language}/api/info/what-to-take`,
+            providesTags: ['CategoryTheoryWhatTake']
+        }),
         getCategoryTheoryArticle: builder.query({
-            query: (id) => `/ru/api/info/${id}`,
+            query: ({ language, id }) => `${language}/api/info/${id}`,
             providesTags: ['CategoryTheoryArticle']
         }),
         getArticles: builder.query({
-            query: () => `/ru/api/news/`,
+            query: (language) => `${language}/api/news/`,
             providesTags: ['Articles']
         }),
         getArticleById: builder.query({
-            query: (id) => `/ru/api/news/${id}`,
+            query: ({ language, id }) => `${language}/api/news/${id}`,
             providesTags: ['ArticleById']
         }),
         getHajjStartDate: builder.query({
-            query: () => `/ru/api/calendar/get_hajj_date`,
+            query: (language) => `${language}/api/calendar/get_hajj_date`,
             providesTags: ['HajjStartDate']
         }),
         getHajjDays: builder.query({
-            query: () => `/ru/api/calendar/hajj`,
+            query: (language) => `${language}/api/calendar/hajj`,
             providesTags: ['HajjDays']
         }),
         getUmrahDays: builder.query({
-            query: () => `/ru/api/calendar/umrah`,
+            query: (language) => `${language}/api/calendar/umrah`,
             providesTags: ['UmrahDays']
         }),
         getTranslate: builder.query({
-            query: () => `/ru/api/translate`,
+            query: (language) => `${language}/api/translate`,
             providesTags: ['Translate']
         }),
-    })
+        getPlaces: builder.query({
+            query: (language) => `${language}/api/maps/places`
+        }),
+        getRestaurants: builder.query({
+            query: (language) => `${language}/api/maps/restaurants`
+        }),
+        getRestaurantById: builder.query({
+            query: ({ language, id }) => `${language}/api/maps/restaurants/${id}`
+        }),
+        getPlaceById: builder.query({
+            query: ({ language, id }) => `${language}/api/maps/places/${id}`
+        }),
+    }),
 })
 
-export const { useGetQuestionCategoryQuery, 
-    useGetPopularQuestionsQuery, 
+
+export const { 
+    useGetQuestionCategoryQuery,
+    useGetCategoryQuestionsQuery, 
+    useGetPopularQuestionsUmrahQuery, useGetPopularQuestionsHajjQuery, useGetPopularQuestionsQuery, 
     useGetCategoryTheoryMainQuery, 
+    useGetCategoryTheoryWhatTakeQuery,
     useGetArticlesQuery,
     useGetArticleByIdQuery, 
     useGetCategoryTheoryArticleQuery,
-    useGetHajjStartDateQuery, useGetHajjDaysQuery, useGetUmrahDaysQuery,useGetTranslateQuery } = apiSlice
+    useGetHajjStartDateQuery,
+    useGetHajjDaysQuery,
+    useGetUmrahDaysQuery,
+    useGetTranslateQuery,
+    useGetPlacesQuery,
+    useGetPlaceByIdQuery,
+    useGetRestaurantsQuery,
+    useGetRestaurantByIdQuery} = apiSlice
+
+    

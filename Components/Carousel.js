@@ -1,47 +1,74 @@
-import React, { useRef, useState, useCallback, useEffect } from 'react';
-import { View, FlatList, Dimensions, Text } from 'react-native';
-import { Pagination } from './pagination';
+  import React, { useRef, useState, useMemo } from 'react';
+  import { View, FlatList, Dimensions, TouchableWithoutFeedback, StyleSheet } from 'react-native';
 
-export const Carousel = ({renderItem, data}) => {
-  const SlidesRef = useRef(null);
-  const { width, height } = Dimensions.get('window')
-  const [ViewableSlide, setViewableSlide] = useState(0)
 
-  const onViewChanged = ({viewableItems}) => {
-    console.log('I snapped to', viewableItems[0].index);
-    if (viewableItems.length > 0) {
-      const {item: activeItem, index: activeIndex} = viewableItems[0];
-      setViewableSlide({activeIndex: activeIndex});
-    }
-  };
-
+  export const Carousel = ({renderItem, data}) => {
+  const SlidesRef = useRef().current;
+  const ScreenWidth = Dimensions.get('window').width
+  const ItemSeparatorComponent = useMemo(() => ScreenWidth * 0.03)
+  const numberOfPages = data.length;
+  const [ activeIndex, setActiveIndex] = useState(0)
+  const scrollRef = useRef();
   return (
-    <View>
+    <>
       <View style={{marginBottom: 10, marginTop: 17}}>
-        <FlatList data={data}
-        renderItem = {renderItem}
-        keyExtractor={item => item.id}
-        bounces={false}
-        horizontal
-        pagingEnabled
-        showsHorizontalScrollIndicator={false}
-        snapToStart={true}
-        ItemSeparatorComponent={() => <View style={{width: 10}}/>}
-        decelerationRate={0}
-        snapToInterval={width * 0.892}
-        // onViewableItemsChanged = {useCallback(({ viewableItems }) => {
-        // console.log(viewableItems[0])
-        // setViewableSlide(viewableItems[0].index);
-        // }, [])}
-        onViewableItemsChanged = {useCallback((viewableItems) => {
-          onViewChanged(viewableItems)
-        }, [])}
-        viewabilityConfig={{itemVisiblePercentThreshold: 100}}
-        />
+        <FlatList 
+          data={data}
+          renderItem={renderItem}
+          keyExtractor={item => item.id}
+          bounces={false}
+          decelerationRate={0}
+          horizontal
+          pagingEnabled
+          showsHorizontalScrollIndicator={false}
+          snapToStart={true}
+          ref={scrollRef}
+          onScroll={(event) => {
+            const contentOffset = event.nativeEvent.contentOffset;
+            const viewSize = event.nativeEvent.layoutMeasurement;
+            const pageNum = Math.floor(contentOffset.x / viewSize.width);
+            setActiveIndex(pageNum);
+          }}
+          snapToInterval={ScreenWidth * 0.892}
+          ItemSeparatorComponent={() => <View style={{width: ItemSeparatorComponent}}/>}
+          />
       </View>
-      <Pagination data={data} currentSlide={ViewableSlide}/>
-    </View>
+      <PaginationDots activeIndex={activeIndex} numberOfPages={numberOfPages} />
+    </>
   );
+}
+function PaginationDots({ activeIndex, numberOfPages, onDotPress }) {
+  const dots = [];
+  for (let i = 0; i < numberOfPages; i++) {
+    const dotStyle = i === activeIndex ? styles.activeDot : styles.inactiveDot;
+    dots.push(
+      <TouchableWithoutFeedback key={i}>
+        <View style={dotStyle}/>
+      </TouchableWithoutFeedback>
+    );
   }
-
+  return (
+    <View style={styles.dotContainer}>{dots}</View>
+  )
+}
+  const styles = StyleSheet.create({
+  dotContainer: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+  },
+  inactiveDot: {
+    height: 6,
+    width: 6,
+    borderRadius: 5,
+    marginRight: 8,
+    backgroundColor: '#D8D0DD'
+  },
+  activeDot: {
+    height: 6,
+    width: 6,
+    marginRight: 8,
+    borderRadius: 5,
+    backgroundColor: '#1C1C1E'
+  }
+});
 

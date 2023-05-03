@@ -1,10 +1,10 @@
 {
   "expo": {
     "name": "Hajjum",
-    "slug": "Hajjum",
+    "slug": "hajjum",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/logoicon.png",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
@@ -21,13 +21,25 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "ttpc.hajjum",
+      "versionCode": 1,
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyBQPaK7vaLhe6fAXh53K__nC1BGYsV193g"
+        }
+      },
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/logoicon.png",
         "backgroundColor": "#FFFFFF"
       }
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "59691135-99be-40cd-aa7d-8eedf8092fe1"
+      }
     }
   }
 }

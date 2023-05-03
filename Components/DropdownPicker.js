@@ -22,7 +22,7 @@ export const DropdownPicker = (props) => {
         });
         open(true)
     };
-
+    console.log();
     return (
         <TouchableWithoutFeedback onPress={() => toggleDropdown()}>
             <View style={[styles.ButtonContainer, props.isVisible == true ? {borderBottomLeftRadius: 0, borderBottomRightRadius: 0} : '']}
@@ -34,15 +34,18 @@ export const DropdownPicker = (props) => {
 
                 <View style={styles.Right}>
                     {props.isVisible ? 
-                        <Image source={require('../assets/Icons/CaretUp.png')} 
-                            style={styles.Icon}/> :
-                                <Image source={require('../assets/Icons/CaretDown.png')} 
-                                    style={styles.Icon}/>}
+                            <Image source={props.flagIcon ? props.flagIcon : require('../assets/Icons/CaretUp.png')} 
+                                style={styles.Icon}/> 
+                        :
+                            <Image source={props.flagIcon ? props.flagIcon : require('../assets/Icons/CaretDown.png')}
+                                style={styles.Icon}/> 
+                    }
                 </View>
                 
                 {props.isVisible ? 
                 <Dropdown visible={props.isDropdownVisible} 
                     dropdownTop={dropdownTop} 
+                    flagIcon={props.flagIcon}
                     onRequestClose={() => props.onRequestClose(false)} 
                     data={props.data}
                     onPress={(id) => props.onItemPress(id)}/> : null}
@@ -78,7 +81,6 @@ const styles = StyleSheet.create({
     Container: {
         flex: 1,
         marginHorizontal: '6%',
-        marginTop: 26
     },
     ButtonContainer: {
         flexDirection: 'row',
@@ -137,6 +139,7 @@ const styles = StyleSheet.create({
         marginHorizontal: '6%',
         borderBottomWidth: 1,
         borderLeftWidth: 1,
+        marginTop:-35,
         borderRightWidth: 1,
         borderColor: '#E9E9E9',
         zIndex: 2,

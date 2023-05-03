@@ -1,19 +1,33 @@
 import React, { useLayoutEffect,useCallback,useState } from 'react';
-import { View,ScrollView,Dimensions,TouchableWithoutFeedback, Text,AsyncStorage, StyleSheet, Image,ImageBackground } from 'react-native';
+import i18n from 'i18next';
+import { View,ScrollView,Dimensions,TouchableWithoutFeedback, Text, StyleSheet, Image,ImageBackground } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useNavigation } from '@react-navigation/native';
-import { useEffect } from 'react'
-import { InstructionsVideoData } from '../Components/Data';
-import { Rite } from '../Components/Rite';
 import YoutubePlayer from "react-native-youtube-iframe";
+import { useTranslation } from 'react-i18next';
 
 export default function RiteViewVideoScreen (props) {
   const HeaderTitle = props.route.params.HeaderTitle
+  const {t} = useTranslation()
   const RiteInstructionId = props.route.params.id
   const onStateChange = useCallback((state) => {
     if (state === "ended") {
       setPlaying(true);
     }
   }, []);
+  const InstructionsVideoData = [
+    {
+        id: 1,
+        title: i18n.t("Hajj_Instructions_Video_Data_Title"),
+        youtubeId:"61vh-4dGRgE",
+        description: i18n.t("Hajj_Instructions_Video_Data_Description"),
+        image: require('../assets/images/RiteImg.png'),
+        desc:i18n.t("Hajj_Instructions_Video_Data_Desc"),
+        arabText:'إِنَّ الصَّفَا وَ الْمَرْوَةَ مِنْ شَعَائِرِ اللهِ فَمَنْ حَجَّ الْبَيْتَ أَوِ اعْتَمَرَ فَلاَ جُنَاحَ عَلَيْهِ أَن يَطَّوَّفَ بِهِمَا',
+        translatedArabText:i18n.t("Hajj_Instructions_Video_Data_TranslatedArabText"),
+        borderColor: '#A1F6FB'
+    },
+  ]
   const [playing, setPlaying] = useState(false);
   const Data = props.route.params.Data
   const RiteAsyncStorageType = props.route.params.type
@@ -22,11 +36,11 @@ export default function RiteViewVideoScreen (props) {
   const ScreenWidth = Dimensions.get('window').width
   
 
-  AsyncStorage.getItem(`umrahRite${RiteAsyncStorageType}`,(err, previousRite) => {
+  AsyncStorage.getItem(`rite${RiteAsyncStorageType}`,(err, previousRite) => {
     let riteProgress = []
     if(previousRite == null) {
       riteProgress.push(props.route.params.id)
-      AsyncStorage.setItem(`rite${RiteAsyncStorageType}`,JSON.stringify(riteProgress));
+      AsyncStorage.setItem(`rite${RiteAsyncStorageType}`, JSON.stringify(riteProgress));
     } else{
       if (!previousRite.includes(props.route.params.id)){
         riteProgress.push(props.route.params.id)
@@ -34,8 +48,10 @@ export default function RiteViewVideoScreen (props) {
       JSON.parse(previousRite).map((item) => {
           riteProgress.push(item)
       })
-      AsyncStorage.setItem(`umrahrite${RiteAsyncStorageType}`,JSON.stringify(riteProgress));
+      AsyncStorage.setItem(`rite${RiteAsyncStorageType}`, JSON.stringify(riteProgress));
     }
+
+    console.log(riteProgress);
   }); 
   
   // AsyncStorage.removeItem('rite')

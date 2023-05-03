@@ -1,19 +1,22 @@
 import React from 'react';
-import { View, Image, StyleSheet, TouchableOpacity, Text } from 'react-native';
+import { Image, StyleSheet, TouchableOpacity, Text,View } from 'react-native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { AccountScreen } from '../Screens/AccountScreen';
 import { PersonalDataScreen } from '../Screens/PersonalDataScreen'
 import { MyHotelScreen } from '../Screens/MyHotelScreen'
-import { AccountSettingsScreen } from '../Screens/AccountSettingsScreen';
 import { ReportScreen } from '../Screens/ReportScreen';
+import { ReportSuccessScreen } from '../Screens/ReportSuccessScreen';
+import { AccountLegacyScreen } from '../Screens/AccountLegacyScreen';
+import { AccountPrivacyScreen } from '../Screens/AccountPrivacyScreen';
 import { AboutAppScreen } from '../Screens/AboutAppScreen.js'
-import { useNavigation } from '@react-navigation/native';
-
+import AccountSettingsScreen from '../Screens/AccountSettingsScreen'
 import { Title } from '../Components/Title';
+import { useTranslation } from 'react-i18next';
 
 const Account = createNativeStackNavigator();
 
 export default function AccountStackNavigation () {
+    const {t} = useTranslation()
     return (
         <Account.Navigator initialRouteName='AccountScreen'>
             <Account.Screen name='AccountScreen' component={AccountScreen}
@@ -21,20 +24,14 @@ export default function AccountStackNavigation () {
                 headerShadowVisible: false,
                     title: null,
                     headerLeft: () => (
-                        <Title text='Мои данные'/>
-                    ),
-                    headerRight: () => (
-                        <HeaderIcon source={require('../assets/Icons/MagnifyingGlass.png')}/>
-                    ),
+                        <Title text={t('my_data')}/>
+                    )
                 }}/>
             <Account.Screen name='PersonalDataScreen' component={PersonalDataScreen}
             options={({ navigation }) => ({
                 headerShadowVisible: false,
                     headerTitle: () => (
-                        <Text style={styles.headerTitle}>Личные Данные</Text>
-                    ),
-                    headerRight: () => (
-                        <HeaderIcon source={require('../assets/Icons/MagnifyingGlass.png')}/>
+                        <Text style={styles.headerTitle}>{t('personal_data')}</Text>
                     ),
                     headerLeft: () => (
                         <HeaderIcon source={require('../assets/Icons/ArrowLeft.png')} onPress={() => navigation.goBack()}/>
@@ -44,10 +41,7 @@ export default function AccountStackNavigation () {
             options={({ navigation }) => ({
                 headerShadowVisible: false,
                     headerTitle: () => (
-                        <Text style={styles.headerTitle}>Мой отель</Text>
-                    ),
-                    headerRight: () => (
-                        <HeaderIcon source={require('../assets/Icons/UploadSimple.png')}/>
+                        <Text style={styles.headerTitle}>{t('my_hotel')}</Text>
                     ),
                     headerLeft: () => (
                         <HeaderIcon source={require('../assets/Icons/ArrowLeft.png')} onPress={() => navigation.goBack()}/>
@@ -57,10 +51,7 @@ export default function AccountStackNavigation () {
             options={({ navigation }) => ({
                 headerShadowVisible: false,
                     headerTitle: () => (
-                        <Text style={styles.headerTitle}>Настройки</Text>
-                    ),
-                    headerRight: () => (
-                        <HeaderIcon source={require('../assets/Icons/MagnifyingGlass.png')}/>
+                        <Text style={styles.headerTitle}>{t('settings')}</Text>
                     ),
                     headerLeft: () => (
                         <HeaderIcon source={require('../assets/Icons/ArrowLeft.png')} onPress={() => navigation.goBack()}/>
@@ -70,10 +61,7 @@ export default function AccountStackNavigation () {
             options={({ navigation }) => ({
                 headerShadowVisible: false,
                     headerTitle: () => (
-                        <Text style={styles.headerTitle}>Cообщить об ошибке</Text>
-                    ),
-                    headerRight: () => (
-                        <HeaderIcon source={require('../assets/Icons/MagnifyingGlass.png')}/>
+                        <Text style={styles.headerTitle}>{t('report_error')}</Text>
                     ),
                     headerLeft: () => (
                         <HeaderIcon source={require('../assets/Icons/ArrowLeft.png')} onPress={() => navigation.goBack()}/>
@@ -83,10 +71,39 @@ export default function AccountStackNavigation () {
             options={({navigation}) => ({
                 headerShadowVisible: false,
                     headerTitle: () => (
-                        <Text style={styles.headerTitle}>О приложении</Text>
+                        <Text style={styles.headerTitle}>{t('about_app')}</Text>
                     ),
-                    headerRight: () => (
-                        <HeaderIcon source={require('../assets/Icons/MagnifyingGlass.png')}/>
+                    headerLeft: () => (
+                        <HeaderIcon source={require('../assets/Icons/ArrowLeft.png')} onPress={() => navigation.goBack()}/>
+                    )
+                })}/>
+                
+            <Account.Screen name='AccountReportSuccess' component={ReportSuccessScreen}
+            options={({ navigation }) => ({
+                headerShadowVisible: false,
+                    headerTitle: () => (
+                        <Text style={styles.headerTitleGrey}>{t('report_error')}</Text>
+                    ),
+                    headerLeft: () => (
+                        <View></View>
+                    )
+                })}/>
+            <Account.Screen name='Legacy' component={AccountLegacyScreen}
+             options={({navigation}) => ({
+                headerShadowVisible: false,
+                    headerTitle: () => (
+                        <Text style={styles.headerTitle}>{t('docs')}</Text>
+                    ),
+                    headerLeft: () => (
+                        <HeaderIcon source={require('../assets/Icons/ArrowLeft.png')} onPress={() => navigation.goBack()}/>
+                    )
+
+                })}/>
+            <Account.Screen name='PrivacyPolicy' component={AccountPrivacyScreen}
+             options={({navigation}) => ({
+                headerShadowVisible: false,
+                    headerTitle: () => (
+                        <Text style={styles.headerTitle}>{t('privacy')}</Text>
                     ),
                     headerLeft: () => (
                         <HeaderIcon source={require('../assets/Icons/ArrowLeft.png')} onPress={() => navigation.goBack()}/>
@@ -113,5 +130,10 @@ export default function AccountStackNavigation () {
             headerTitle: {
                 fontFamily: 'GolosBold',
                 fontSize: 18,
+            },
+            headerTitleGrey: {
+                fontFamily: 'GolosBold',
+                fontSize: 18,
+                color:'#CECECE'
             }
         });

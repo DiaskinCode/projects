@@ -1,0 +1,705 @@
+{
+    "en": {
+        "home":"Home",
+        "theory":"Theory",
+        "rites":"Rites",
+        "map":"Map",
+        "questions":"Questions",
+        "account":"Account",
+        "main":"Main",
+        "what_take":"What to take",
+        "faq":"FAQ",
+        "list":"List",
+        "lesson":"Lesson",
+        "lessons":"Lessons",
+        "continue":"Continue",
+        "express_translate":"Quick translate",
+        "date_hajj_beggining":"Hajj start date",
+        "no-internet":"No internet connection",
+        "tap-reload":"Tap to reload",
+        "transcription":"Transcription",
+        "translate":"Translation",
+        "valid_error":"You have not filled in all the fields in the form.\nTo submit, please fill in all the highlighted fields.",
+
+        "do_hajj":"Do Hajj",
+        "do_umrah":"Do Umrah",
+
+        "calendar": "Calendar",
+        "arabic":"Arabic",
+        "all":"All",
+        "go":"Go to",
+        "loading":"Loading...",
+        "RiteTypesOfHajj":"There are three types of rituals associated with the fulfillment of the sacred duty of the Hajj:\n ⠀ \n1. Al-Ifrad, performing only Hajj, without Umrah.\n ⠀ \n2. At-Tamattu, performing first Umrah, and then Hajj, separately.\n ⠀ \n3. Al-Kiran, performing Umrah and Hajj combined. \n ⠀ \nThe most preferred form is At-Tamattu. This method of performing the Hajj was recommended by the Prophet Muhammad (sallallahu alayhi wa sallam) to his companions. Hajj at-Tamattu implies the performance during the designated months of the Hajj, first of the rites of Umra (small pilgrimage), and then the Hajj (main). A pilgrim performing Hajj At-Tamattu must sacrifice an animal. Those who are unable to make a sacrifice observe fasting for three days during the Hajj and seven days after it.",
+
+        "welcome_category_calendar": "7 More\nDays of Hajj",
+        "welcome_category_faq": "FAQ",
+        "welcome_category_rites": "Hajj\nRites",
+        "welcome_category_translate": "Express Translation",
+        "welcome_category_things":"",
+        "welcome_category_umrah":"",
+        "important_info":"Important\nto know",
+        
+        "player_from_makkah":"Live from Makkah",
+        "player_from_medina":"Live from Medina",
+
+        "articles":"Articles and News",
+        "welcome_hotel_route":"Route to my hotel",
+        "open_map":"Open Map",
+
+        "about_app_desc":"This application is intended for Muslims who are planning to perform Hajj or Umrah - the two main religious rites performed in Mecca. The application provides useful information and tools for those who perform these rites for the first time, as well as for those who already have experience in this.",
+        "about_app_goals":"App goals",
+        "about_app_goals_text":"The goals of this application include providing useful information about Hajj and Umrah, helping users to perform religious rites, providing detailed information about cultural attractions and restaurants around Mecca, creating a community of travelers who perform Hajj and Umrah, and promoting the convenience of performing religious duties.",
+
+        "about_city_reason":"Every adult healthy Muslim who has physical and material capabilities has a place in life and has a loved one for the duration of the journey, Hajj at least once a year.",
+        "about_city_text":"Mecca is the holy city of Muslims located in the western part of Saudi Arabia. Mecca covers an area of 400 km² and is the center of the administrative district of the same name. From the ancient Semitic language, the name of the city is translated as 'house'. Mecca is located in a rocky valley, 80 km east of the Red Sea coast and is surrounded on all sides by mountains. It is so famous in the world that Mecca is often mistakenly considered the capital of Saudi Arabia. In fact, the main city of the Arab state is Riyadh.",
+        "about_city_name":"Makkah",
+
+        "preparation_and_intention":"Preparation and Intention",
+        "intention":"Intention",
+        "intention_title":"Start your preparations with the intention to perform Umrah or Hajj for the sake of Allah.",
+        "voucher":"Voucher",
+        "voucher_title":"Purchase a ticket from a trusted Hajj or Umrah operator",
+        "small_bag":"Small bag",
+        "small_bag_title":"Take a waist bag in which you will carry valuables.",
+        "clothes":"Clothes",
+        "clothes_title":"Take clothes and shoes for ihram, as well as everyday items",
+
+        "watch":"Watch",
+        
+        "rite_type_head":"All types of Hajj",
+        "rite_prays_head":"All prayers and duas of Hajj",
+
+        "instructions_performing_hajj":"Instructions for performing the Hajj",
+        "video_instructions_performing_hajj":"Video instruction of Hajj",
+        "rites_of_hajj":"Rites of Hajj",
+
+        "rites_of_umrah":"Rites of Umrah",
+        "rite_type_head_umrah":"All types of Umrah",
+        "rite_prays_head_umrah":"All prayers and duas of Umrah",
+
+        "instructions_performing_umrah":"Instructions for performing Umrah",
+        "video_instructions_performing_umrah":"Video instruction of Umrah",
+
+        "enable_location":"Location permission required",
+        "location_permission_required":"Please enable location services in your device settings to use map.",
+        "your_adress":"Your adress",
+        "add_hotel":"Add hotel address in account settings",
+        "get_taxi":"Get taxi",
+        "where_hotel":"My hotel",
+
+        "places":"Places",
+        "attractions":"Attractions",
+        "famous_places":"Famous places",
+        "eat":"Restaraunts",
+        "city":"About city",
+        "help":"Support",
+        "about_restaraunt":"About restaraunt",
+        "from":"",
+        "to":"to",
+        "on_map":"Show on map",
+        "more":"more",
+        "work_time":"Working hours",
+        "rating":"General rating",
+        "review":"Rating",
+
+        "personal_data":"Personal data",
+        "my_hotel":"My hotel",
+        "settings":"Settings",
+        "about_app":"About app",
+        "report_error":"Report a bug",
+        "docs":"Legal documents",
+        "privacy":"Privacy",
+        "my_data":"My details",
+
+        "January": "January",
+        "February": "February",
+        "March": "March",
+        "April": "April",
+        "May": "May",
+        "June": "June",
+        "July": "July",
+        "August": "August",
+        "September": "September",
+        "October": "October",
+        "November": "November",
+        "December": "December",
+
+        "contacts_information":"",
+        "reference":"",
+ 
+        "Umrah_Instructions_Data_Title":"Ihram", 
+        "Umrah_Instructions_Data_Description":"How to enter the state of Ihram and what to do", 
+        "Umrah_Instructions_Data_ArticleText":"Ihram.\n ⠀ \nEntering the state of Ihram:\n ⠀ \nRequired (Fard):\n ⠀ \n1. Intention (niyat).\n ⠀ \n2. Dressing in special clothes (for men in Izar and Rida linen clothes, for women in clothes that cover the awrah).\n ⠀ \n ⠀ \nDesirable (Sunnah):\n ⠀ \n1. Take a big ghusl.\n ⠀ \n2. Use of incense (application on the head and beard).\n ⠀ \n3. Saying after the prayer of Ihram (2 rak'ahs, in the first rak'ah after Fatiha, surah Kafirun is read, in the second rak'ah after Fatiha, surah Ikhlas is read) dual talbiya: \n ⠀ \n 'Lyabbaikal-laahumma lyabbaik. Lyabbaik la sharikya lakya lyabbaik. Innal-hamda van-ni'mata lakya wal-mulk, la shariikya lak.\n ⠀ \nلَبَّيْكَ اللَّهُمَّ لَبَّيْكَ، لَبَّيْكَ لا شَرِيكَ لَكَ لَبَّيْكَ، إِنَّ الْحَمْدَ وَ النِّعْمَةَ لَكَ وَ الْمُلْكَ، لا شَرِيكَ لَكَ\n ⠀ \nTranslation: 'Here I am before You, O Supreme, I am before You. Here I am before You, You have no partner, I am before You. Truly, praise, mercy and dominion belong only to You! You have no partner!'\n ⠀ \nProhibitions due to entering the state of ihram\n ⠀ \nA person who has entered the state of ihram, to perform the rites of the Hajj or ‘Umrah, is prohibited from the following actions:\n ⠀ \n1. It is forbidden for a man to wear anything tailored, to cover his head and face with anything, and also to use shoes that cover his toes and have a back.\n ⠀ \n2. It is forbidden for a woman to cover her face and wear gloves.\n ⠀ \n3. Use aromatic substances. But it is possible and necessary to use them directly before entering the state of ihram.\n ⠀ \n4. Use ointments for non-medical purposes.\n ⠀ \n5. Remove hair on any part of the body.\n ⠀ \n6. Trim your nails.\n ⠀ \n7. Get married.\n ⠀ \n8. Have intimacy, as well as do everything that activates the libido.\n ⠀ \n9. Argue or quarrel with someone.\n ⠀ \n10. To hunt, to be a hunting guide, to kill wild animals, except for those that may be dangerous to people.", 
+ 
+        "Umrah_Instructions_Data_Title_2":"Tawaf", 
+        "Umrah_Instructions_Data_Description_2":"The order of bypassing the Kaaba and dua", 
+        "Umrah_Instructions_Data_ArticleText_2":"Tawaf.\n ⠀ \n Tawaf (Arabic طواف - detour) is a ritual walk around the Holy Kaaba. According to the unanimous opinion of scholars and theologians, tawaf is the main and uncancelled component of the rituals of pilgrimage (hajj), the fulfillment of which is obligatory (wajib). Tawaf is allowed to be performed as a voluntary act, as well as as a greeting to the Holy Kaaba, once again being next to her. In both cases, tawaf will refer to the category of desirable (mustahab) actions that any believer can perform, regardless of age.\n ⠀ \n What are the conditions for the validity of tawaf?\n ⠀ \n the actual performance of tawaf around the Holy Kaaba,\n ⠀ \n- performing tawaf seven times,\n ⠀ \n- presence of intention,\n ⠀ \n- performing tawaf in the immediate vicinity of the Holy Kaaba\n ⠀ \nor in a certain part adjacent to it,\n ⠀ \n- the direction of movement should be counterclockwise,\n ⠀ \n- do tawaf, starting from the Black Stone (al-hajar al-aswad),\n ⠀ \n- the presence of ritual purity,\n ⠀ \n- to the extent possible, make tawaf on your own, \n ⠀ \n- the continuity of performing all seven tawafs at once,\n ⠀ \n- according to Hanafi scholars, the performance of two rak'ah prayers after the completion of the tawaf. It is important to note that some actions during the performance of tawaf are classified as desirable (mustahab), which should be performed only to the extent possible. These actions include:\n ⠀ \ntouch and kiss the Black Stone, say some types of zikr and du'a.\n ⠀ \n \n ⠀ \nWhat is undesirable to do during tawaf:\n ⠀ \n- say zikr loudly and du'a, as well as reading the Holy Quran aloud,\n ⠀ \nthus disturbing other people,\n ⠀ \n- to conduct unnecessary conversations,\n ⠀ \n- to eat and drink,\n ⠀ \n- to experience a strong the need to satisfy a physiological need.", 
+        
+        "Umrah_Instructions_Data_Title_3":"Safa and Marwa.", 
+        "Umrah_Instructions_Data_Description_3":"Ritual run and dua", 
+        "Umrah_Instructions_Data_ArticleText_3":"Running between Safa and Marwa hills.\n ⠀ \nThen the pilgrim descends from Safa and goes on foot towards Marva. On the way to Mount Marwa, he will see a green pillar. As soon as the pilgrim approaches the green pillar, it is advisable for him to speed up as much as he can, if possible, without harming himself or other people, and so on until the next green pillar. When he reaches it, he again switches to his usual walk up to Mount 18 Marv. Then he rises to it, turns towards the Kaaba, raises his hands and says the same thing that he said on Mount Safa [dua between the established dhikrs, the pilgrim can do whatever he wants]. The pilgrim then descends Mount Marwa and heads towards Safa, speeding up his pace or running between the green markers and walking the rest of the distance. Then he climbs Mount Safa, turns towards the Kaaba, raises his hands and says the same thing that he said the first time. While the pilgrim passes between the mountains, he can say any dhikr and dua that he wants, and he can also read the Koran. Climbing (climbing) the mountains Safa and Marwa, as well as running between two green marks are desirable actions (sunnah), not mandatory. Green marks 19 “Sai” - movement between Safa and Marwa mountains, performed 7 times. From Safa to Marwa counts as one move, from Marwa to Safa as a second move.", 
+        
+        "Umrah_Instructions_Data_Title_4":"Shaving or cutting.", 
+        "Umrah_Instructions_Data_Description_4":"", 
+        "Umrah_Instructions_Data_ArticleText_4":"Shaving or cutting.\n ⠀ \n After the completion of the saya, the pilgrim, if he is a man, shaves or cuts his hair. It is better to shave the hair if the man does not intend to perform the hajj after death, as is the case with the hajj at-tamattu. If, shortly after his death, Hajj should begin, and his hair does not have time to grow before that time, then it is better for him to cut his hair to shave it off during Hajj. The argument for this is that the Prophet صلى الله عليه وسلم ordered his companions to shorten their hair after they performed Umrah upon their arrival in Mecca on the 4th of Dhul Hiji. In any case, women should only cut their hair, but not shave it. Trim should be from the tip of your finger along the entire length of the hair (or from each strand). If a man shaves his hair, then he should do it over the entire surface of the head in accordance with the words of Allah Almighty: “You will shave your heads and cut your hair without fear. He knew what you did not know, and predetermined before that a close victory ”(Quran, sura 48:27), and also because the Prophet صلى الله عليه وسلم completely shaved his head. The Prophet صلى الله عليه وسلم told us: 'Learn from me your ritual worship.' Cutting should also touch the entire head. After doing all of the above, the pilgrim completes the death, leaves the state of “ihram”, and everything that was forbidden to him in the state of “ihram” becomes permissible.", 
+        
+        "Umrah_Instructions_Video_Data_Title":"Video instruction of Hajj", 
+        "Umrah_Instructions_Video_Data_Description":"Circling around the Kaaba seven times", 
+        "Umrah_Instructions_Video_Data_Desc":"After the prayer, the pilgrim sets off towards the as-Safa hill, drinking Zamzam water along the way.", 
+        "Umrah_Instructions_Video_Data_TranslatedArabText":"(Indeed, as-Safa and al-Marwa are from among the signs of Allah. Whoever performs the Hajj to the house or dies, it is allowed to go around them. And whoever chooses good on his own initiative, [let him know] that Allah is the Rewarder according to merit and Knowing). (Sura Al-Baqara, verse 158).", 
+ 
+        "Instructions_Data_Title":"Entering the State of Ihram", 
+        "Instructions_Data_Description":"How to enter the state of Ihram and what to do", 
+        "Instructions_Data_Desc":"Ihram.\n ⠀ \nEntering the state of Ihram:\n ⠀ \nRequired (Fard):\n ⠀ \n1. Intention (niyat).\n ⠀ \n2. Dressing in special clothes (for men in Izar and Rida linen clothes, for women in clothes that cover the awrah).\n ⠀ \n ⠀ \nDesirable (Sunnah):\n ⠀ \n1. Take a big ghusl.\n ⠀ \n2. Use of incense (application on the head and beard).\n ⠀ \n3. Saying after the prayer of Ihram (2 rak'ahs, in the first rak'ah after Fatiha, surah Kafirun is read, in the second rak'ah after Fatiha, surah Ikhlas is read) dual talbiya: \n ⠀ \n 'Lyabbaikal-laahumma lyabbaik. Lyabbaik la sharikya lakya lyabbaik. Innal-hamda van-ni'mata lakya wal-mulk, la shariikya lak.\n ⠀ \nلَبَّيْكَ اللَّهُمَّ لَبَّيْكَ، لَبَّيْكَ لا شَرِيكَ لَكَ لَبَّيْكَ، إِنَّ الْحَمْدَ وَ النِّعْمَةَ لَكَ وَ الْمُلْكَ، لا شَرِيكَ لَكَ\n ⠀ \nTranslation: 'Here I am before You, O Supreme, I am before You. Here I am before You, You have no partner, I am before You. Truly, praise, mercy and dominion belong only to You! You have no partner!'\n ⠀ \nProhibitions due to entering the state of ihram\n ⠀ \nA person who has entered the state of ihram, to perform the rites of the Hajj or ‘Umrah, is prohibited from the following actions:\n ⠀ \n1. It is forbidden for a man to wear anything tailored, to cover his head and face with anything, and also to use shoes that cover his toes and have a back.\n ⠀ \n2. It is forbidden for a woman to cover her face and wear gloves.\n ⠀ \n3. Use aromatic substances. But it is possible and necessary to use them directly before entering the state of ihram.\n ⠀ \n4. Use ointments for non-medical purposes.\n ⠀ \n5. Remove hair on any part of the body.\n ⠀ \n6. Trim your nails.\n ⠀ \n7. Get married.\n ⠀ \n8. Have intimacy, as well as do everything that activates the libido.\n ⠀ \n9. Argue or quarrel with someone.\n ⠀ \n10. To hunt, to be a hunting guide, to kill wild animals, except for those that may be dangerous to people.", 
+        
+        "Instructions_Data_Title_2":"Entry in Mecca from side of Kyada’, then in Holy Mosque through Banu Sheyba door", 
+        "Instructions_Data_Description_2":"", 
+        "Instructions_Data_Desc_2":"Entry into Mecca from the side of Kyada’, then into the Holy Mosque through the Banu Sheyba door", 
+        
+        "Instructions_Data_Title_3":"Tawaf", 
+        "Instructions_Data_Description_3":"The order of bypassing the Kaaba and dua", 
+        "Instructions_Data_Desc_3":"Tawaf.\n ⠀ \n Tawaf (Arabic طواف - detour) is a ritual walk around the Holy Kaaba. According to the unanimous opinion of scholars and theologians, tawaf is the main and uncancelled component of the rituals of pilgrimage (hajj), the fulfillment of which is obligatory (wajib). Tawaf is allowed to be performed as a voluntary act, as well as as a greeting to the Holy Kaaba, once again being next to her. In both cases, tawaf will refer to the category of desirable (mustahab) actions that any believer can perform, regardless of age.\n ⠀ \n What are the conditions for the validity of tawaf?\n ⠀ \n the actual performance of tawaf around the Holy Kaaba,\n ⠀ \n- performing tawaf seven times,\n ⠀ \n- presence of intention,\n ⠀ \n- performing tawaf in the immediate vicinity of the Holy Kaaba\n ⠀ \nor in a certain part adjacent to it,\n ⠀ \n- the direction of movement should be counterclockwise,\n ⠀ \n- do tawaf, starting from the Black Stone (al-hajar al-aswad),\n ⠀ \n- the presence of ritual purity,\n ⠀ \n- to the extent possible, make tawaf on your own, \n ⠀ \n- the continuity of performing all seven tawafs at once,\n ⠀ \n- according to Hanafi scholars, the performance of two rak'ah prayers after the completion of the tawaf. It is important to note that some actions during the performance of tawaf are classified as desirable (mustahab), which should be performed only to the extent possible. These actions include:\n ⠀ \ntouch and kiss the Black Stone, say some types of zikr and du'a.\n ⠀ \n \n ⠀ \nWhat is undesirable to do during tawaf:\n ⠀ \n- say zikr loudly and du'a, as well as reading the Holy Quran aloud,\n ⠀ \nthus disturbing other people,\n ⠀ \n- to conduct unnecessary conversations,\n ⠀ \n- to eat and drink,\n ⠀ \n- to experience a strong the need to satisfy a physiological need.", 
+        
+        "Instructions_Data_Title_4":"Ritual run between the Safa and Marwa hills", 
+        "Instructions_Data_Description_4":"", 
+        "Instructions_Data_Desc_4":"Running between the hills of Safa and Marwa.\n ⠀ \nThen the pilgrim descends from Safa and walks towards Marwa. On the way to Mount Marwa, he will see a green pillar. As soon as the pilgrim approaches the green pillar, it is advisable for him to speed up as much as he can, if possible, without harming himself or other people, and so on until the next green pillar. When he reaches it, he again switches to his usual walk up to Mount 18 Marv. Then he rises to it, turns towards the Kaaba, raises his hands and says the same thing that he said on Mount Safa [dua between the established dhikrs, the pilgrim can do whatever he wants]. The pilgrim then descends Mount Marwa and heads towards Safa, speeding up his pace or running between the green markers and walking the rest of the distance. Then he climbs Mount Safa, turns towards the Kaaba, raises his hands and says the same thing that he said the first time. While the pilgrim passes between the mountains, he can say any dhikr and dua that he wants, and he can also read the Koran. Climbing (climbing) the mountains Safa and Marwa, as well as running between two green marks are desirable actions (sunnah), not mandatory. Green marks 19 “Sai” - movement between Safa and Marwa mountains, performed 7 times. From Safa to Marwa counts as one move, from Marwa to Safa as a second move.", 
+        
+        "Instructions_Data_Title_5":"Standing at Arafat\nand in the valley of Mina.", 
+        "Instructions_Data_Description_5":"", 
+        "Instructions_Data_Desc_5":"On the eighth day of the month of Dhul-Hijja, the pilgrim goes to the valley of Mina and stays there for the night. After sunrise the next day, he goes to Mount Arafat and, uniting, performs Zuhr and ‘Asr prayers after the imam in the Namir Mosque or any other place. After that, together with all the people, he stays on Arafat for some time, turning to the Almighty with dua prayers. ", 
+        
+        "Instructions_Data_Title_6":"Overnight in the place of Muzdalifa, located between Mina and Arafat.", 
+        "Instructions_Data_Description_6":"", 
+        "Instructions_Data_Desc_6":"On the night of the holiday, after the disappearance of the evening dawn, the pilgrims, uniting and reducing, perform the Maghreb and ‘Isha’ prayers in Muzdalifa. Having performed the morning prayer in the place 'al-Mash'ar al-haram' and turning to God with du'a prayers, the pilgrims return to Mina before sunrise. ", 
+        
+        "Instructions_Data_Title_7":"Symbolic stone throwing", 
+        "Instructions_Data_Description_7":"", 
+        "Instructions_Data_Desc_7":"On the tenth day of the month of Zul-Hijja, after sunrise at a distance of one spear, the pilgrim successively throws seven pebbles into the Jamratul-‘Aqaba (the nearest pillar from Mecca). Over the next three days, the pilgrim throws seven pebbles at each of the three special pillars, starting with 'jamra sughra', then 'jamra wusta' and ending with 'jamratul-'akaba'", 
+        
+        "Instructions_Data_Title_8":"Shaving or trimming the hair on the head", 
+        "Instructions_Data_Description_8":"", 
+        "Instructions_Data_Desc_8":"The first (shaving) is preferable for men. As for women, they only cut their hair to the length of the phalanx of a finger. This happens on the tenth day of the month of Dhul-Hijja after stones are thrown at the Jamratul-‘Aqaba and an animal is sacrificed, if any. After that, the pilgrim goes to Mecca to make a 'circumvention of aspiration.' ", 
+        
+        "Instructions_Data_Title_9":"Sacrifice", 
+        "Instructions_Data_Description_9":"", 
+        "Instructions_Data_Desc_9":"The animal is sacrificed after throwing stones. It is permissible to cut one's hair before the sacrifice, and it is permissible to make a sacrifice before the throwing of stones and before sunrise.", 
+        
+        "Instructions_Data_Title_10":"Farewell detour around the Kaaba.", 
+        "Instructions_Data_Description_10":"", 
+        "Instructions_Data_Desc_10":"Canonical provisions Scientists-theologians divided the actions of the Hajj into: pillars (arkyan), obligatory (wajib) and additional, desirable (sunnah) actions. Let us briefly consider the opinions of the two most widespread Sunni schools in our geographical region: the Hanafis and the Shafiites.", 
+        
+        "Instructions_Data_Title_11":"Pillars of the Hajj", 
+        "Instructions_Data_Description_11":"", 
+        "Instructions_Data_Desc_11":"According to Hanafi scholars, the Hajj has two invariable conditions, if one of them is not fulfilled, the pilgrimage is violated and becomes invalid: - Standing on Arafat. - Detour around the Kaaba, referred to as the 'detour of aspiration.' According to Shafi'i scholars, the Hajj has five pillars: - Ihram. - Standing on Arafat. - Detour around the Kaaba, referred to as the 'detour of aspiration.' - Ritual run between the slopes of Safa and Marwa. - Shaving or cutting hair on the head.", 
+        
+        "Instructions_Data_Title_12":"Mandatory actions during the Hajj", 
+        "Instructions_Data_Description_12":"", 
+        "Instructions_Data_Desc_12":"According to the Hanafi scholars, in case of an unreasonable failure to perform an action that is a wajib (mandatory), the pilgrim will have to sacrifice cattle. These include the following five actions: - Ritual running between the slopes of Safa and Marwa. - Short-term (at least momentary) stay in the second half of the night in the Muzdalifah valley. - Throwing pebbles. - Shaving or shortening the hair on the head. - Making a farewell detour. According to the scholars of the Shafi'i madhhab, in case of any failure to perform an obligatory action, the pilgrim must sacrifice an animal. They include the following five actions as obligatory: - Entry into the state of ihram in miqat. - Overnight in Muzdalifah (on the night of the holiday). - Throwing pebbles on each of the three days. - Overnight stay in the Mina valley during the period of pebble throwing. - Making a farewell detour if you wish to leave Mecca.", 
+ 
+        "Hajj_Instructions_Video_Data_Title":"Video instruction of Hajj", 
+        "Hajj_Instructions_Video_Data_Description":"Circling around the Kaaba seven times", 
+        "Hajj_Instructions_Video_Data_Desc":"After the prayer, the pilgrim sets off towards the as-Safa hill, drinking Zamzam water along the way.", 
+        "Hajj_Instructions_Video_Data_TranslatedArabText":"(Indeed, as-Safa and al-Marwa are from among the signs of Allah. Whoever performs the Hajj to the house or dies, it is allowed to go around them. And whoever chooses good on his own initiative, [let him know] that Allah is the Rewarder according to merit and Knowing). (Sura Al-Baqara, verse 158).", 
+ 
+        "Translate_Category_List_Standard":"Standard", 
+        "Translate_Category_List_Railway_Station":"Railway Station", 
+        "Translate_Category_List_Orientation_In_The_City":"Orientation in the city", 
+        "Translate_Category_List_Numbers_And_Figures":"Numbers and figures", 
+        "Translate_Category_List_Restaurant":"Restaurant", 
+        "Translate_Category_List_Hotel":"Hotel", 
+ 
+        "Small_Bag_Screen_Data_Text":"Bring a fanny pack to carry your valuables.", 
+        "Small_Bag_Screen_Data_ListTitle":"We recommend putting", 
+        "Small_Bag_Screen_Data_List_AirplaneTickets":"Airplane tickets", 
+        "Small_Bag_Screen_Data_List_PasportAndVisaCopy":"A copy of your passport and visa (also take a photo of them with your phone)", 
+        "Small_Bag_Screen_Data_List_ShahadaCertificate":"Shahada Certificate (If you are a convert to Islam in a non-Muslim country)", 
+        "Small_Bag_Screen_Data_List_HotelAdress":"Hotel address (in English and Arabic)", 
+        "Small_Bag_Screen_Data_List_Cash":"Cash (Per person from $500)", 
+        "Small_Bag_Screen_Data_List_Medicines":"Basic medicines", 
+        "Small_Bag_Screen_Data_List_GlassesOrLenses":"Glasses, contact lenses",
+
+        "Prays_Data_Title":"Talbiyah",
+        "Prays_Data_Content":"Talbiya is the servant's response to Allah Almighty's call to His creatures. Allah called His creatures to perform hajj to His House through the Prophet Ibrahim, peace be upon him (see surah Hajj, ayat 27). The pilgrim who recites talbiya is submissive and hastens to Allah's call, saying, 'Lyabbai-ka, Allahumma, lyabbai-ka...' - that is, 'I answer Your call by submitting to Your wisdom and obeying Your command whenever, without being late or hesitating!'",
+        "Prays_Data_When":"",
+        "Prays_Data_Transcription":"«Labbaykallāhumma labbayk. Labbayka lā sharīka laka labbayk. Innal-hamda wan-ni‘mata laka wal-mulk, lā sharīka lak».",
+        "Prays_Data_Translate":"Here I am at Your service, O Lord, here I am. Here I am at Your service and You have no partners. Yours alone is All Praise and All Bounty, and Yours alone is The Sovereignty. You have no partners.",
+        
+        "Prays_Data_Title_2":"Dua after prayer during Hajj",
+        "Prays_Data_When_2":"It is desirable to say these words after obligatory and additional prayers",
+        "Prays_Data_Content_2":"It is desirable to say these words after obligatory and additional prayers:",
+        "Prays_Data_Transcription_2":"«Labbaykallāhumma labbayk. Labbayka lā sharīka laka labbayk. Innal-hamda wan-ni‘mata laka wal-mulk, lā sharīka lak».",
+        "Prays_Data_Translate_2":"Here I am at Your service, O Lord, here I am. Here I am at Your service and You have no partners. Yours alone is All Praise and All Bounty, and Yours alone is The Sovereignty. You have no partners.",
+        
+        "Prays_Data_Title_3":"Dua upon seeing the Kaaba",
+        "Prays_Data_When_3":"Upon entering Mecca (day or night), enter the Sacred Mosque through the door of Banu Shaybah, and when your eyes fall on the Kaaba, say to yourself",
+        "Prays_Data_Content_3":"Upon entering Mecca (day or night), enter the Sacred Mosque through the door of Banu Shaybah, and when your eyes fall on the Kaaba, say to yourself",
+        "Prays_Data_Transcription_3":"«Subhanal-lahi wal-hamdu lillahi wa la ilaha illallahu wallahu akbar. Allahumma hazza baytuka ‘azzamtahu wa sharraftahu wa karramtahu fazidhu taziman wa tashrifan wa takrima».",
+        "Prays_Data_Translate_3":"",
+
+        "Prays_Data_Title_4":"Dua while drinking water from the Zamzam source",
+        "Prays_Data_When_4":"While drinking, it is desirable to stand in the direction of the Qibla and say",
+        "Prays_Data_Content_4":"While drinking, it is desirable to stand in the direction of the Qibla and say: \"Allahumma inni balagha-ni 'an nabiyyika anna ma'a zamzama lima shuriba lahu, wa ana ash-rabuhu li-sa'adatid-dunya wal-akhirah. Allahumma fa-f'al\".\n اَللَّهُمَّ إِنِّي بَلَغَنِي عَنْ نَبِيِّكَ أَنَّ مَاءَ زَمْزَمَ لِمَا شُرِبَ لَهُ، وَ أَنَا أَشْرَبُهُ لِسَعَادَةِ الدُّنْيَا وَ الآخِرَةِ، اَللَّهُمَّ فَافْعَلْ⠀ \nTranslation: \"O Most High! I have been informed by Your Prophet that water from Zamzam serves the fulfillment of those desires with which it is drunk (with the utterance of which a person drinks it), and I drink it for becoming happy in both worlds (with Your blessing). O Allah, grant me this!\" It is reported that when Ibn 'Abbas drank Zamzam water, he turned to God with a plea: \"Allahumma inni as'aluka 'ilman nafi'an, wa rizqan wasi'an, wa shifa'an min kulli da'\".\n ⠀ \nTranslation: \"O Allah! I ask You for useful knowledge (literacy, scholarship), abundant provision (wealth) and healing from all diseases.\" It is also desirable to pour water on your head, face and chest.",
+        "Prays_Data_Transcription_4":"",
+        "Prays_Data_Translate_4":"",
+        
+        "Prays_Data_Title_5":"Dua before entering the state of Ihram.",
+        "Prays_Data_When_5":"Before entering the state of Ihram",
+        "Prays_Data_Content_5":"Before entering the state of Ihram, the pilgrim turns towards the Qibla and says",
+        "Prays_Data_Transcription_5":"\"Allahumma uhrimu laka sha'ri wa bashari wa lahmii wa dami\"",
+        "Prays_Data_Translate_5":"Translation: \"O Most High! For Your sake I make my hair, skin, flesh and blood (my whole body enters into the state of Ihram) forbidden [for everything reprehensible].\" After that, he begins to say \"talbiyah\". The recitation of \"talbiyah\" is resumed every time the pilgrim's position changes, that is, when he sits in a vehicle or gets out of it, climbs up or down from a height, as well as after prayer-namaz.",
+  
+        "Prays_Data_Title_6":"Dua Tawafa", 
+        "Prays_Data_When_6":"Reaching the corner of the Kaaba where the Black Stone is located", 
+        "Prays_Data_Content_6":"Having reached the corner of the Kaaba, in which the Black Stone is located, you should turn to face it and point with your hand with the words: 'Allahu Akbar.' \n ⠀ \nIf there is an opportunity (and with today's large number of pilgrims and cramped conditions, this usually does not happen), the pilgrim touches him with his right hand, kisses him and touches his forehead. It is desirable to do this at the beginning of each of the seven revolutions around the Holy Kaaba. \n ⠀ \nStarting the detour from the line perpendicular to the stone, the pilgrim says: “Bismil-lyahi wal-laahu akbar. Allahumma iimaanan bikya wa tasdykan bikitaabikya wa wafaa'an bi'ahdikya wat-tibaa'an lisunnati nabiyikya muhammad, sallal-laahu 'alayhi wa sallam.\n ⠀ \nبِسْمِ اللَّهِ وَ اللَّهُ أَكْبَرُ. اَللَّهُمَّ إِيمَانًا بِكَ وَ تَصْدِيقًا بِكِتَابِكَ وَ وَفَاءً بِعَهْدِكَ وَ اتِّبَاعًا لِسُنَّةِ نَبِيِّكَ مُحَمَّدٍ، صَلَّى اللَّهُ عَلَيْهِ وَ سَلَّمَ\n ⠀ \nTranslation: “[I begin] with the name of Allah. He is above everything. O Almighty, with faith in You, recognizing the truthfulness of Your Scripture, in fulfillment of the promise given to You [a vow given to each of the human souls even before the Creation of the world, about faith and piety before You, the Creator of all things], following the Sunnah of Your [last] prophet Muhammad (bless him and welcome).\n ⠀ \nPassing in front of the door of the Kaaba, the words are pronounced: “Allaahumma innal-bayta baytuk, wal-harama haramuk, wal-emna emnuk, wa haza - makaamul-'aaizi bikya minan-naar .\n ⠀ \nاَللَّهُمَّ إِنَّ الْبَيْتَ بَيْتُكَ، وَ الْحَرَمَ حَرَمُكَ، وَ الأَمْنَ أَمْنُكَ، وَ هَذَا مَقَامُ الْعَائِذِ بِكَ مِنَ النَّارِ\n ⠀ \nTranslation: “O Allah, indeed, the House (Kaaba) is Your House; sacred territory (Mecca) - Your territory; security [here] - Your security [security provided by You]; this is the place of the one who asks You for protection from the fire of hell.” \n ⠀ \nPassing near the Yemeni corner, the pilgrim passes it with his right hand and says: 'Bismil-layahi, Allahu Akbar!'. He does not kiss the corner or the hand. During the detour, the pilgrim prays to Allah for whatever he wishes, or reads verses from the Holy Quran. The first three rounds of circumambulation (followed by a ritual run between the hills of Safa and Marwa) the pilgrim makes quick small steps. At the same time, the following prayer is pronounced: 'Allaahumma-j’alhu hajan mabruura, va zanban magfuura, wa sa’yan mashkuur'\n ⠀ \nاَللَّهُمَّ اجْعَلْهُ حَجًّّا مَبْرُورًا، وَ ذَنْبًا مَغْفُورًا، وَ سَعْيًا مَشْكُو\n ⠀ \nTranslation: “O Lord, make this hajj accepted, sin forgiven, efforts laudable\n ⠀ \nBefore starting the detour on the occasion of arrival, the pilgrim pinches the cape under the right armpit, throwing its end over the left shoulder. This action applies only to male pilgrims, as well as making the first three circles with quick steps. At the end of each circle between the Yemeni corner and the Black Stone, the pilgrim says: “Rabbanaa eetina fid-dunya hasanatan wa fil-eehyrati hasanatan wa kynaa ‘azaaban-na\n ⠀ \nرَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَ فِي الآخِرَةِ حَسَنَةً وَ قِنَا عَذَابَ النَّ\n ⠀ \nTranslation: “Lord, give us good (all good things) in this and the next life and save us from the torment of fire\n ⠀ \nUnreasonable interruption of the sevenfold round is undesirable. Permissible reasons include the beginning of the obligatory prayer or the occurrence of extreme need. As for the funeral and additional prayers, prayers, they cannot serve as a reason for interrupting the obligatory detour. It is advisable to be closer to the Holy Kaaba during the detour, which makes it easier to touch and kiss the Black Stone. Having completed the detour, the pilgrim performs a prayer in two rak'yaats for the 'place of Ibrahim (Abraham)' (Makam Ibrahim). In the first rak'ah, after the surah 'al-Fatiha', the surah 'al-Kafirun' is read, and in the second - 'al-Ikhlyas'.", 
+        "Prays_Data_Transcription_6":"", 
+        "Prays_Data_Translate_6":"", 
+        
+        "Prays_Data_Title_7":"Dua while running between Safa and Marwa hills", 
+        "Prays_Data_When_7":"", 
+        "Prays_Data_Content_7":"The pilgrim passes through the gates of Safa and goes to the place of the ritual run between the slopes of Safa and Marwa. It is advisable for men to climb Safa and Marwa. Rising, the pilgrim turns his gaze towards the Kaaba and says: “Allahu akbar, Allahu akbar, Allahu akbar, wa lil-lyahil-hamd, Allahu akbar ‘ala ma hadaana, wal-hamdu lil-lyahi ‘ala ma evlyayana, la ilaha illal -lahu wahdahu la sharikya lyah, lyahul-mulku wa lyahul-hamdu yuhyi va yumitu biyadihil-khair, wa khuva 'ala kuli shayin kadiir. La ilaha illal-lahu wahdah, anjaza wahdah, wa nasara ‘abdah, wa hazamal-ahzaaba wahdah. La ilaha illal-lahu wa la na’budu illa iyyah, mukhlisyyna lyahud-din, wa lav kyarihal-kyafirun.\n ⠀ \n \nاَللَّهُ أَكْبَرُ، اَللَّهُ أَكْبَرُ، اَللَّهُ أَكْبَرُ، وَ لِلَّهِ الْحَمْدُ ،\nاَللَّهُ أَكْبَرُ عَلَى مَا هَدَانَا، وَ الْحَمْدُ لِلَّهِ عَلَى مَا أَوْلانَا ،\nلا إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَ لَهُ الْحَمْدُ يُحْيِي وَ يُمِيتُ بِيَدِهِ الْخَيْرُ ،\nوَ هُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ .\nلا إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ، أَنْجَزَ وَعْدَهُ، وَ نَصَرَ عَبْدَهُ، وَ هَزَمَ الأَحْزَابَ وَحْدَهُ .\nلا إِلَهَ إِلاَّ اللَّهُ وَ لاَ نَعْبُدُ إِلاَّ إِيَّاهُ، مُخْلِصِينَ لَهُ الدِّينُ، وَ لَوْ كَرِهَ الْكَافِرُونَ\n ⠀ \nTranslation: “Allah (God) is above all. Allah is above everything. Allah is above everything. Praise belongs to him. We exalt Him because He has guided us to the right path. Praise be to Him for what He has given us. There is no god but only Allah (Lord of the worlds), Who has no partner (God is one, and there is no equal to Him). Dominion belongs to the Almighty, praise be to Him. He revives and mortifies, good is in His power, absolutely everything is within His power. There is no god, except for Him alone, Who fulfilled His promise, helped His servant (the last messenger) and Odin (by His will and blessing) defeated the tribes (at war with the followers of Monotheism). There is no god but only Allah (Lord of the worlds, Creator of all things). We worship Him alone, being sincere in religiosity before Him, and even if it is hatefully denying the Most High and His good. \n ⠀ \nThen the pilgrim calls on the Almighty (in any language), asking Him for good in this and the next life. All prayers are said three times. It is advisable for a male pilgrim to run a segment of the path marked with two green pillars and light indicators. This does not apply to women. While running, the following prayer is pronounced: “Rabbi-gfir varham va tajavaz ‘amma ta’lam, innyakya ental-e’azzul-ekram.”\n ⠀ \nرَبِّ اغْفِرْ وَ ارْحَمْ وَ تَجَاوَزْ عَمَّا تَعْلَمُ، إِنَّكَ أَنْتَ الأَعَزُّ الأَكْرَمُ\n ⠀ \nTranslation: “O Lord, forgive me and have mercy, hide what You know, truly, You are the Most Majestic and Most Generous.”", 
+        "Prays_Data_Transcription_7":"", 
+        "Prays_Data_Translate_7":"", 
+        
+        "Prays_Data_Title_8":"Special prayers (dua) to read on the day of 'Arafah", 
+        "Prays_Data_When_8":"", 
+        "Prays_Data_Content_8":"Dua 1: “Rabbanaa eetina fid-dunya hasanatan va fil-eehyrati hasanatan va kynaa ‘azaaban-nar.”\n ⠀ \nرَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَ فِي الآخِرَةِ حَسَنَةً وَ قِنَا عَذَابَ النَّارِ\n ⠀ \nTranslation: 'Lord, give us good things in this and the next life and save us from the torment of fire.' \n ⠀ \nDua 2: 'Allaahumma inni zalyamtu nafsi zulman kasiira, wa la yagfiruz-zunuuba illya ent, fagfir li magfiratan min 'indika varhamni, innakya ental-gafuurur-rahiim.'\n ⠀ \nاَللَّهُمَّ إِنِّي ظَلَمْتُ نَفْسِي ظُلْمًا كَثِيرًا، وَ لاَ يَغْفِرُ الذُّنُوبَ إِلاَّ أَنْتَ فَاغْفِرْ لِي مَغْفِرَةً مِنْ عِنْدِكَ وَ ارْحَمْنِي، إِنَّكَ أَنْتَ الْغَفُورُ الرَّحِيمُ\n ⠀ \nTranslation: “O Allah, verily, I have acted unjustly towards myself (by committing sins; I am not without sin), and no one will forgive sins except You, forgive me with Your forgiveness and have mercy. For You are the All-Forgiving, the All-Merciful.' \n ⠀ \n Dua 3: 'Allaahumma-nkulni min zullil-ma'syati ilya 'izzit-taa'a, vakfini bihalayalikya 'an haraamik, va agnin bifadlikya 'amman sivaak, va navvir kalbi va kabri, vakhdini va e'izni minash -sharri kullikh, vajma' lil-khair.\n ⠀ \nاَللَّهُمَّ انْقُلْنِي مِنْ ذُلِّ الْمَعْصِيَةِ إِلَى عِزِّ الطَّاعَةِ ، وَ اكْفِنِي بِحَلاَلِكَ عَنْ حَرَامِكَ وَ أَغْنِنِي بِفَضْلِكَ عَمَّنْ سِوَاكَ، وَ نَوِّرْ قَلْبِي وَ قَبْرِي وَ اهْدِنِي وَ أَعِذْنِي مِنَ الشَّرِّ كُلِّهِ ، وَ اجْمَعْ لِيَ الْخَيْرَ\n ⠀ \nTranslation: “O Allah, bring me out of the humiliation of sin to the greatness of submission to You. Deliver what You have forbidden by giving me what You have permitted. Enrich me with Your mercy so that I do not need anyone but You. Illuminate my heart and the place where my body rests. Guide me to the righteous path and protect me from all forms of evil. Encompassed for me good. \n ⠀ \nDua 4: 'Allaahumma inni es'elukyal-hudaa wat-tukaa wal-'afaafa wal-gynaa.'\n ⠀ \nاَللَّهُمَّ إِنِّي أَسْأَلُكَ الْهُدَى وَ التُّقَى وَ الْعَفَافَ وَ الْغِنَى\n ⠀ \nTranslation: “O Allah, I ask You for righteousness, piety, chastity and prosperity.” It is advisable to ask for blessings and forgiveness of sins both for yourself and for all believers. The Prophet Muhammad prayed: “O Almighty, forgive the pilgrim and the one for whom he asks for forgiveness!”", 
+        "Prays_Data_Transcription_8":"", 
+        "Prays_Data_Translate_8":"", 
+        
+        "Prays_Data_Title_9":"Dua to be recited on the way to Mina", 
+        "Prays_Data_When_9":"Reading on the Road to Mina", 
+        "Prays_Data_Content_9":"Dua 1: 'Rabbanaa eetina fid dunya hasanatan wa fil-ehirati hasanatan wa kinaa 'azaaban-nar'.\n ⠀ \nرَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَ فِي الآخِرَةِ حَسَنَةً وَ قِنَا عَذَابَ النَّارِ\n ⠀ \nTranslation: 'Lord, give us good in this life and the life to come, and keep us from the torment of fire. \n ⠀ Then the pilgrim adds: \n ⠀ \nDua 2: 'Allaahumma qamaa ewqaftanaa fiihi wa eraytanaa iyayahu fawaffiknaa lizikkaa qama hadaitanaa, wagfir lanaa warhamnaa qamaa wa'adtanaa bikawlikka, wa qawlikyal-hakku: faiza efadtum min 'arafaatin fazkurul-laha 'indal-mash'aril-haraam, wazkuruhu kama hadaakum wa in kuntum min kablihi laminaddoollin. Summa afiyidu min haisu afaadan-naasu vastagfirullah, inal-laha gafuurur-rahi'im'.\n ⠀ \nاَللَّهُمَّ كَمَا أَوْقَفْتَنَا فِيهِ وَ أَرَيْتَنَا إِيَّاهُ فَوَفِّقْنَا لِذِكْرِكَ كَمَا هَدَيْتَنَا ، وَ اغْفِرْ لَنَا وَ ارْحَمْنَا كَمَا وَعَدْتَنَا بِقَوْلِكَ وَ قَوْلُكَ الْحَقُّ فَإِذَا أَفَضْتُمْ مِنْ عَرَفَاتٍ  فَاذْكُرُوا اللَّهَ عِنْدَ الْمَشْعَرِ الْحَرَامِ وَ اذْكُرُوهُ كَمَا هَدَاكُمْ وَ إِنْ كُنْتُمْ مِنْ قَبْلِهِ لَمِنَ الضَّالِّينَ . ثُمَّ أَفِيضُوا مِنْ حَيْثُ أَفَاضَ النَّاسُ وَ اسْتَغْفِرُوا اللَّهَ إِنَّ اللَّهَ غَفُورٌ رَحِيمٌ\n ⠀ \nTranslation: 'O Allah, just as You have made it possible for us to be and see these places, just as the ease of the way You have guided us to the right path, help us to remember, to remember You. Forgive us and have mercy on us according to your promise. For Your word is true: 'And when you leave 'Arafat in great crowds, mention the Most High near the holy place of 'Mash'ar. [that is, near Mount Kazh, which is at the end of Muzdalifa], for He has guided you to the right path after you were lost. Leave in a great crowd [the area of 'Arafat], like the others [let no one stand out and choose 'special' places for himself], and ask forgiveness from the Almighty. He can forgive all things, and [He is] Merciful. \n ⠀ The pilgrim also says: 'Allahu akbar (three times). La ilayahu ilayal-lahu, wal-lahu akbar, allahu akbaru wa lil-lahil-hamd.\n ⠀ \nاَللَّهُ أَكْبَرُ  لا إِلَهَ إِلاَّ اللَّهُ وَ اللَّهُ أَكْبَرُ، اَللَّهُ أَكْبَرُ وَ لِلَّهِ الْحَمْدُ\n ⠀ \nTranslation: 'Allah is above all things (thrice). There is no god but the Most High alone. He is above all things. He is above all things, and only He is to be praised. Then, shortly before sunrise, the pilgrims head to Mina, reciting the 'talbiya'. When passing through the valley of Muhassir, it is advisable to speed up the pace.", 
+        "Prays_Data_Transcription_9":"", 
+        "Prays_Data_Translate_9":"", 
+        
+        "Prays_Data_Title_10":"Dua during stone throwing at Mina", 
+        "Prays_Data_When_10":"", 
+        "Prays_Data_Content_10":"Every pilgrim, after sunrise on the day of sacrifice, should throw seven stones at 'Jamratul-'aqaba,' the nearest pillar from Mecca. The throwing of stones on this day is a ritual of welcoming Minah. With the beginning of the throwing, the recitation of 'talbiya' ceases. According to the Sunnah, the pilgrim faces the stone-throwing place so that Mecca is on the left side and Mina is on the right. When throwing each stone, the pilgrim instead of 'talbiya' pronounces 'takbir': 'Allahu akbar (thrice). La ilayah ilayal-lahu wal-lahu akbar, wa lil-lahil-hamd'.\n ⠀ \nاَللَّهُ أَكْبَرُ  لا إِلَهَ إِلاَّ اللَّهُ وَ اللَّهُ أَكْبَرُ، وَ لِلَّهِ الْحَمْدُ\n ⠀ \nTranslation: 'Allah is above all things (thrice). There is no god but the Most High alone. Allah is supreme, and only He is praised. \n On the day of sacrifice it is advisable to observe the order between the following four actions, which are performed from midnight: throwing stones at the jamratul-'aqaba, sacrifice, shaving or shortening the hair on the head, and then 'circumambulation of the aspiration'. \n ZOn the next three days (from the moment the sun passes its zenith until it sets), the pilgrim throws seven stones into each of the three pillars, beginning with 'jamra sugra', then 'jamra wusta' and ending with 'jamratul-'aqaba'. It is best if the stones are small, a little more than a pea in size. All six of the points described refer by the Shafi'i theologians to desirable actions accompanying the fundamental provisions of the Hajj. As we see from the above desirable actions mentioned by scholars of the Hanafi and Shafi'i madhhabs with some difference in classification, they are complementary and do not contradict each other.", 
+        "Prays_Data_Transcription_10":"", 
+        "Prays_Data_Translate_10":"", 
+ 
+        "Prays_Umrah_Data_Title":"Talbiya", 
+        "Prays_Umrah_Data_When":"Pronounced before Umrah", 
+        "Prays_Umrah_Data_Content":"Repeated many times by pilgrims during the entire Hajj, when they are in a state of ihram.", 
+        "Prays_Umrah_Data_Transcription":"Lyabbeyk, Allakhumma lyabbeyk, lyabbeyka, lya sharika laka lyabbeyk. Innal'-khamda van-ni`mata laka val'mul'k, lya sharika lyak", 
+        "Prays_Umrah_Data_Translate":"Here I am in front of you, O Allah! Here I am in front of you! Here I am in front of you, and you have no partner! Here I am in front of you! Verily, to you belongs praise, and to you belongs grace and dominion! You have no partner!", 
+ 
+        "settings_gender_male":"Male", 
+        "settings_gender_female":"Female",
+
+        "hotel_contacts":"Hotel contacts",
+        "language":"Language in app",
+        "gender":"Gender",
+        "hotel_adress":"Hotel's adress",
+        "hotel_phone":"Hotel's phone number",
+        "site":"Site URL",
+        "hotel_name":"Hotel's name",
+
+        "personal_data_placeholder_name":"Name",
+        "personal_data_placeholder_surname":"Surname",
+        "personal_data_placeholder_phone_number":"Phone number",
+        "personal_data_placeholder_email":"Email",
+        "personal_data_placeholder_city":"Your city",
+
+        "button_save_data":"Save data",
+        "button_delete_data":"Delete account",
+        "button_send_data":"Send message",
+
+        "settings_notifications_title":"Notifications",
+        "settings_app_news_switch_title":"App news",
+        "settings_poll_participation_switch_title":"Partcipation in polls",
+        "settings_push_notification_switch_title":"PUSH notifications",
+        
+        "settings_switch_description_on_email":"On email",
+        "settings_switch_description_app_actions":" Actions in the app",
+
+        "report_a_bug_input_title_name":"Your name",
+        "report_a_bug_input_title_phone_number":"Phone number",
+        "report_a_bug_input_title_email":"Email",
+        "report_a_bug_input_title_message":"Your message",
+
+        "report_a_bug_input_message_placeholder":"There is one point in the application...",
+
+        "support_and_info":"Communication and info",
+        "referencial":"Referencial",
+        "airport_referencial":"Airport referencial",
+        "Water_supply_service":"Water supply service",
+        "payphone_text":"In Mecca and Medina, you will find payphones that work with telecards and coins. The cards cost about 120 SR. You can also call from the hotel, after informing the administrator about it. Jeddah, Mecca, Medina have cellular communications serviced by Saudi Telecom and Thuraya.",
+        "telephone_communications":"Telephone code with Russia - 7, \ncode of Moscow - 495, St. Petersburg - 812, \nKazan - 8432, Ufa - 3472, Makhachkala - 8722, Nizhny Novgorod - 8312.",
+
+        "legal_documents":"Policy on Processing of Personal Data\n1. General provisions\nThis policy on processing of personal data has been developed in accordance with the requirements of Federal Law No. 152-FZ of July 27, 2006, 'On Personal Data' (hereinafter referred to as the Personal Data Law) and defines the procedure for processing personal data and measures to ensure the security of personal data taken by Mikhailov Ivan Sergeevich (hereinafter referred to as the Operator).\n1.1. The Operator sets compliance with the rights and freedoms of man and citizen, including protection of the rights to privacy, personal and family secrets, as its most important goal and condition for carrying out its activities.\n1.2. This Operator's policy on processing personal data (hereinafter referred to as the Policy) applies to all information that the Operator may receive about visitors to the website https://thismywebsite.com\n3. Main rights and obligations of the Operator\n3.1. The Operator has the right:\n- to receive truthful information and/or documents containing personal data from the data sub\n- in case of revocation of consent by the data subject for the processing of personal data, as well as receipt of a request to cease processing of personal data, the Operator has the right to continue processing personal data without the consent of the data subject if there are grounds specified in the Law on Personal Data;\n2.1. Automated processing of personal data - processing of personal data using computer technology.\n3.2. The Operator is obliged:\n- to provide the data subject, upon request, with information related to the processing of their personal data;\n- to organize the processing of personal data in accordance with the current legislation of the Russian Federation;\n- to respond to requests and inquiries from data subjects and their legal representatives in accordance with the requirements of the Law on Personal Data;\n- to provide the authorized body for the protection of the rights of data subjects, upon request, with necessary information within 30 days from the date of receiving such a request;\n- to publish or otherwise ensure unlimited access to this Policy regarding the processing of personal data;\n- to take legal, organizational, and technical measures to protect personal data from unlawful or accidental access to them, destruction, alteration, blocking, copying, providing, distributing personal data, as well as from other unlawful actions with personal data;\n- to terminate the transfer (distribution, provision, access) of personal data, cease processing, and destroy personal data in the cases and manner provided for by the Law on Personal Data;\n- to perform other obligations provided for by the Law on Personal Dat\n4. Basic rights and obligations of personal data subjects\n4.1. Personal data subjects have the right to:\n- obtain information related to the processing of their personal data, except in cases provided for by federal laws. The information is provided to the personal data subject by the Operator in an accessible form, and it should not contain personal data related to other personal data subjects, except in cases where there are legitimate grounds for disclosing such personal data. The list of information and the procedure for obtaining it are established by the Personal Data Law;\n- require the Operator to clarify their personal data, block or destroy it in case their personal data is incomplete, outdated, inaccurate, illegally obtained or unnecessary for the declared purpose of processing, as well as to take measures provided by the law to protect their rights;\n- impose a condition of preliminary consent when processing personal data for the purpose of promoting goods, works and services on the market;\n- withdraw consent for the processing of personal data, as well as to submit a request to stop processing personal data;\n- appeal to the authorized body for the protection of personal data subjects' rights or file a lawsuit against the Operator for unlawful actions or inaction in processing their personal data;\n- exercise other rights provided by the legislation of the Russian Federation.\n4.2. Personal data subjects are obliged to:\n- provide the Operator with truthful information about themselves;\n- inform the Operator of the clarification (update, change) of their personal data.\n4.3. Persons who provided the Operator with false information about themselves, or information about another personal data subject without their consent, bear responsibility in accordance with the legislation of the Russian Federation\n5. Principles of personal data processing\n5.1. Personal data processing is carried out on a legal and fair basis.\n5.2. Personal data processing is limited to achieving specific, predetermined, and lawful goals. Processing of personal data that is incompatible with the purposes of collecting personal data is not allowed.\n5.3. Databases containing personal data that are processed for incompatible purposes cannot be merged.\n5.4. Only personal data that meets the goals of its processing shall be subject to processing.\n5.5. The content and volume of processed personal data correspond to the stated goals of processing. Processing of personal data that is excessive in relation to the stated goals of its processing is not allowed.\n5.6. Personal data processing ensures the accuracy, sufficiency, and, where necessary, relevance of personal data to the purposes of processing. The operator takes necessary measures and/or ensures their adoption to remove or clarify incomplete or inaccurate data.\n5.7. Personal data is stored in a form that allows identifying the subject of personal data for no longer than required by the purposes of personal data processing, unless the period of storage of personal data is established by federal law, a contract whose party, beneficiary, or guarantor is the subject of personal data. Processed personal data is destroyed or depersonalized upon reaching the goals of processing or in case of loss of the necessity of achieving these goals, unless otherwise provided by federal law.\n6. Purposes of personal data processing\nPurpose of processing: informing the user by sending emails\nPersonal data:\nPhilosophical beliefs\nLegal grounds:\nFederal Law 'On Information, Information Technologies and Protection of Information' dated July 27, 2006, No. 149-FZ\nTypes of personal data processing:\nTransmission of personal data\n7. Conditions for processing personal data\n7.1. Processing of personal data is carried out with the consent of the subject of personal data to the processing of their personal data.\n7.2. Processing of personal data is necessary for the fulfillment of the purposes provided for by an international treaty of the Russian Federation or a law, for the exercise of functions, powers and duties imposed by the legislation of the Russian Federation on the operator.\n7.3. Processing of personal data is necessary for the administration of justice, the execution of a judicial act, an act of another body or official subject to execution in accordance with the legislation of the Russian Federation on enforcement proceedings.\n7.4. Processing of personal data is necessary for the performance of a contract, the party to which is the personal data subject, or for the benefit of the personal data subject or for the performance of a contract initiated by the personal data subject or a contract under which the personal data subject will be a beneficiary or guarantor.\n7.5. Processing of personal data is necessary for the realization of the rights and legitimate interests of the operator or third parties or for the achievement of socially significant goals, provided that the rights and freedoms of the personal data subject are not violated.\n7.6. Processing of personal data is carried out, access to which is provided by the personal data subject or at their request (hereinafter - publicly available personal data).\n7.7. Processing of personal data subject to publication or mandatory disclosure in accordance with federal law is carried out."  
+    },
+
+
+    "ru": {
+        "home":"Главная",
+        "theory":"Теория",
+        "rites":"Обряды",
+        "map":"Карта",
+        "account":"Аккаунт",
+        "main":"Основное",
+        "what_take":"Что нужно взять",
+        "faq":"Частые вопросы",
+        "list":"Список",
+        "lesson":"Урок",
+        "lessons":"Уроки",
+        "continue":"Продолжить",
+        "express_translate":"Экспресс перевод",
+        "date_hajj_beggining":"Дата начала вашего хаджа",
+        "no-internet":"Нет интернет соединения",
+        "tap-reload":"Нажми чтобы перезагрузить",
+        "transcription":"Транскрипция",
+        "translate":"Перевод",
+        "valid_error":"Вы не заполнили все поля в форме.\nДля отправки заполните все выделенные поля.",
+
+        "do_hajj":"Совершить Хадж",
+        "do_umrah":"Совершить Умру",
+
+        "calendar": "Календарь",
+        "questions": "Вопросы",
+        "arabic":"Арабский",
+        "all":"Все",
+        "go":"Перейти",
+        "loading":"Загрузка...",
+        "RiteTypesOfHajj":"Существует три вида обрядов, связанных с выполнением священной обязанности хаджа:\n ⠀ \n1. Аль-Ифрад, совершение только Хаджа, без Умры.\n ⠀ \n2. Ат-Таматту, совершение сначала умры, а потом и Хаджа, по отдельности.\n ⠀ \n3. Аль-Кыран, совершение Умры и Хаджа в совмещенном виде.\n ⠀ \nНаиболее предпочтительный вид — Ат-Таматту. Этот способ совершения хаджа рекомендовал своим сподвижникам Пророк Мухаммад, (салляллаху алейхи ва саллям). Хадж ат-Таматту подразумевает совершение в течение обозначенных месяцев Хаджа сначала обрядов Умры (малого паломничества), а затем Хаджа (основного). Паломнику, совершающему хадж Ат-Таматту, надлежит принести в жертву животное. Тот, кто не в состоянии совершить жертвоприношение, соблюдает пост в течении трех дней во время хаджа и семи дней по его окончании.",
+        
+        "player_from_makkah":"Прямой эфир \nиз Мекки",
+        "player_from_medina":"Прямой эфир \nиз Медины",
+        
+        "welcome_category_calendar": "Ещё 7 дней хажда",
+        "welcome_category_faq": "Частые вопросы",
+        "welcome_category_rites": "Обряды хаджа",
+        "welcome_category_translate": "Экспресс перевод",
+        "welcome_category_things":"",
+        "welcome_category_umrah":"",
+        "important_info":"Важно знать",
+        
+        "articles":"Статьи и новости",
+        "welcome_hotel_route":"Маршрут до моего отеля",
+        "open_map":"Открыть карту",
+        
+        "about_app_desc":"Данное приложение предназначено для мусульман, которые планируют выполнить Хадж или Умру - два основных религиозных обряда, выполняемых в Мекке. Приложение предоставляет полезную информацию и инструменты для тех, кто совершает эти обряды впервые, а также для тех, кто уже имеет опыт в этом.",
+        "about_app_goals":"Цели приложения",
+        "about_app_goals_text":"Цели этого приложения включают в себя предоставление полезной информации о Хадже и Умре, помощь пользователям в совершении религиозных обрядов, обеспечение подробной информации о культурных достопримечательностях и ресторанах в окрестностях Мекки, создание сообщества путешественников, которые совершают Хадж и Умру, и содействие удобству выполнения религиозных обязанностей.",
+
+        "about_city_reason":"Каждый взрослый здоровый мусульманин, имеющий физические и материальные возможности посетить Мекку и обеспечить существование своим близким на время путешествия, должен совершить Хадж как минимум один раз в жизни.",
+        "about_city_text":"Мекка – священный город мусульман, расположенный в западной части Саудовской Аравии. Мекка занимает площадь 400 км² и является центром одноименного административного округа. С древнесемитского языка название города переводится как «дом». Мекка находится в каменистой долине, в 80 км к востоку от берега Красного моря и со всех сторон окружена горами. Она настолько известна в мире, что часто именно Мекку ошибочно считают столицей Саудовской Аравии. На самом деле главным городом арабского государства является Эр-Рияд.",
+        "about_city_name":"Мекка",
+        
+        "rite_type_head":"Все виды Хаджа",
+        "rite_prays_head":"Все молитвы и дуа Хаджа",
+        "instructions_performing_hajj":"Инструкция по совершению Хаджа",
+        "video_instructions_performing_hajj":"Видео инструкция Хаджа",
+        "rites_of_hajj":"Обряды Хаджа",
+
+        "rites_of_umrah":"Обряды Умры",
+        "rite_type_head_umrah":"Все виды Умры",
+        "rite_prays_head_umrah":"Все молитвы и дуа Умры",
+
+        "instructions_performing_umrah":"Инсрукция по совершению Умры",
+        "video_instructions_performing_umrah":"Видео инструкция Умры",
+
+        "enable_location":"Необходимо разрешение",
+        "location_permission_required":"Пожалуйста, включите службы определения местоположения в настройках вашего устройства, чтобы использовать карты.",
+        "your_adress":"Ваш адрес",
+        "add_hotel":"Добавьте адрес отеля в настройках профиля",
+        "get_taxi":"Вызвать такси",
+        "where_hotel":"Где мой отель?",
+
+        "places":"Места",
+        "attractions":"Достопримечательности",
+        "famous_places":"Красивые места",
+        "eat":"Поесть",
+        "city":"О городе",
+        "help":"Помощь",
+        "about_restaraunt":"О ресторане",
+        "from":"с",
+        "to":"до",
+        "on_map":"На карте",
+        "more":"Подробнее",
+        "work_time":"Время работы",
+        "rating":"Общий уровень",
+        "review":"Оценка",
+
+        "personal_data":"Личные данные",
+        "my_hotel":"Мой отель",
+        "settings":"Настройки",
+        "about_app":"О приложении",
+        "report_error":"Сообщить об ошибке",
+        "docs":"Правовые документы",
+        "privacy":"Конфидециальность",
+        "my_data":"Мои данные",
+
+        "January": "Января",
+        "February": "Февраля",
+        "March": "Марта",
+        "April": "Апреля",
+        "May": "Майя",
+        "June": "Июня",
+        "July": "Июль",
+        "August": "Августа",
+        "September": "Сентября",
+        "October": "Октября",
+        "November": "Ноября",
+        "December": "Декабря",
+
+        "contacts_information":"",
+        "reference":"",
+ 
+        "Umrah_Instructions_Data_Title":"Вход в состояние Ихрама", 
+        "Umrah_Instructions_Data_Description":"Как войти в состояние Ихрама и что нужно делать", 
+        "Umrah_Instructions_Data_ArticleText":"Вход в состояние Ихрама:\n ⠀ \nОбязательно (Фард):\n ⠀ \n1. Намерение (ният).\n ⠀ \n2. Облачение в специальную одежду (Мужчинам в полотняную одежду Изар и Рида, женщинам в одежду, которая закрывает аурат).\n ⠀ \n Желательно (Сунна):\n ⠀ \n1. Взять большое омовение гусль.\n ⠀ \n2. Использование благовоний (нанесение на голову и бороду).\n ⠀ \n3. Произнесение после намаза Ихрама (2 ракаата, в первом ракаате после Фатихи читается сура Кяфирун, во втором ракаате после Фатихи читается сура Ихлас) дуа тальбии:\n ⠀ \n«Ляббайкял-лаахумма ляббайкь. Ляббайкя ля шариикя лякя ляббайкь. Инналь-хамда ван-ни‘мата лякя валь-мулькь, ля шариикя лякь».\n ⠀ \nلَبَّيْكَ اللَّهُمَّ لَبَّيْكَ، لَبَّيْكَ لا شَرِيكَ لَكَ لَبَّيْكَ، إِنَّ الْحَمْدَ وَ النِّعْمَةَ لَكَ وَ الْمُلْكَ، لا شَرِيكَ لَكَ\n ⠀ \nПеревод: «Вот я пред Тобой, о Всевышний, я пред Тобой. Вот я пред Тобой, нет у Тебя сотоварища, я пред Тобой. Поистине, хвала, милость и владычество принадлежат только Тебе! Нет у Тебя сотоварища!». ⠀ \n ⠀ \n ⠀ \n", 
+        
+        "Umrah_Instructions_Data_Title_2":"Обязательные действия Тавафа", 
+        "Umrah_Instructions_Data_Description_2":"", 
+        "Umrah_Instructions_Data_ArticleText_2":"Условия действительности тавафа:\n ⠀ \n- фактическое совершение тавафа вокруг Священной Каабы,\n ⠀ \n- семикратное совершение тавафа,\n ⠀ \n- наличие намерения,\n ⠀ \n- совершение тавафа в непосредственной близости от Священной Каабы\n ⠀ \nлибо в определенной прилегающей к ней части,\n ⠀ \n- направление движения должно быть против часовой стрелки,\n ⠀ \n- делать таваф, начиная от Черного камня (аль-хаджар аль-асвад),\n ⠀ \n- наличие ритуальной чистоты,\n ⠀ \n- по мере возможности совершать таваф самостоятельно,\n ⠀ \n- непрерывность совершения сразу всех семи тавафов,\n ⠀ \n- по мнению ученых-ханафитов, совершение двух ракяатной молитвы после завершения тавафа.", 
+        
+        "Umrah_Instructions_Data_Title_6":"Желательные действия Тавафа", 
+        "Umrah_Instructions_Data_Description_6":"", 
+        "Umrah_Instructions_Data_ArticleText_6":"Желательные действия Тавафа:\n ⠀ \n - Прикоснуться и поцеловать Черный камень, произнести некоторые виды зикров и ду‘а.\n - Произнесение зикра и дуа", 
+        
+        "Umrah_Instructions_Data_Title_7":"Нежелательные действия Тавафа", 
+        "Umrah_Instructions_Data_Description_7":"", 
+        "Umrah_Instructions_Data_ArticleText_7":"Нежелательные действия Тавафа:\n ⠀ \n- громко произносить зикр и ду‘а, а также читать Священный Коран вслух,\n ⠀ \nмешая тем самым другим людям,\n ⠀ \n- вести ненужные разговоры,\n ⠀ \n- есть и пить,\n ⠀ \n- испытывать сильную нужду в удовлетворении физиологической потребности.", 
+        
+        "Umrah_Instructions_Data_Title_3":"Бег между склонами Сафа и Марва", 
+        "Umrah_Instructions_Data_Description_3":"Ритуальный бег и дуа", 
+        "Umrah_Instructions_Data_ArticleText_3":"После Тавафа паломник идет к холму Сафа. Когда возойдет на холм Сафа, необходимо повернуться лицом к Каабе и произнести дуа (это дуа есть в разделе все молитвы и дуа Умры).\n ⠀ \nДалее пешим ходом перейти с холма Сафа на холм Марва. По дороге будут промежутки между зелеными столбами, там мужчинам необходимо ускорить шаг, по возможности перейти на легкий бег.\n ⠀ \nКогда поднялся на холм Марва произносится дуа лицом к Каабе, та же самая дуа, которую произносил на холме Сафа.\n ⠀ \nНеобходимо 7 раз пройти между холмами, где переход от Сафы до Марвы это 1, от Марвы до Сафы это переход 2. И каждый раз читать дуа.", 
+        
+        "Umrah_Instructions_Data_Title_4":"Сбривание или укорачивание волос", 
+        "Umrah_Instructions_Data_Description_4":"", 
+        "Umrah_Instructions_Data_ArticleText_4":"После завершения “сая” паломник, если это мужчина, бреет или подстригает волосы. Лучше брить волосы, если мужчина не намеревается совершать хадж после умры, как в случае с хаджем ат-таматту. Если же вскоре после совершения им умры должен начаться хадж, и его волосы не успеют отрасти до того времени, то лучше для него подстричь волосы, чтобы сбрить их во время хаджа. Подстригание также должно касаться всей головы.", 
+
+        "Umrah_Instructions_Data_Title_8":"Окончание умры", 
+        "Umrah_Instructions_Data_Description_8":"", 
+        "Umrah_Instructions_Data_ArticleText_8":"После выполнения всего перечисленного паломник завершает умру, выходит из состояния “ихрама”, и все, что было запрещено ему в состоянии “ихрама”, становится дозволенным.", 
+    
+        "Umrah_Instructions_Data_Title_5":"Что нельзя делать в Ихраме", 
+        "Umrah_Instructions_Data_Description_5":"", 
+        "Umrah_Instructions_Data_ArticleText_5":"Человеку, вошедшему в состояние ихрама, для выполнения обрядов хаджа или ‘умры запрещаются следующие действия:\n ⠀ \n1. Мужчине запрещается надевать что-либо скроенное, покрывать чем-либо голову и лицо, а также использовать закрывающую пальцы ног и имеющую задник обувь.\n ⠀ \n2. Женщине запрещается закрывать лицо и надевать перчатки.\n ⠀ \n3. Пользоваться ароматическими веществами. Но пользоваться ими непосредственно до того, как войти в состояние ихрама, можно и нужно.\n ⠀ \n4. Использовать мази не в лечебных целях.\n ⠀ \n5. Удалять волосы на любом участке тела.\n ⠀ \n6. Подстригать ногти.\n ⠀ \n7. Вступать в брак.\n8. Иметь интимную близость, а также совершать все то, что активизирует либидо.\n ⠀ \n9. Спорить или ссориться с кем-либо.\n ⠀ \n10. Охотиться, быть проводником на охоте, убивать диких животных, кроме тех, которые могут быть опасны для людей. \n ⠀ \n Искупление запрещеных действий в состояний Ихрама читайте в вопросах по Хаджу", 
+ 
+        "Umrah_Instructions_Video_Data_Title":"Видеоинструкция по Хаджу", 
+        "Umrah_Instructions_Video_Data_Description":"Семикратный обход вокруг Каабы", 
+        "Umrah_Instructions_Video_Data_Desc":"После намаза паломник отправляется в сторону холма ас-Сафа, попив по дороге воду Замзам.", 
+        "Umrah_Instructions_Video_Data_TranslatedArabText":"(Поистине, ас-Сафа и аль-Марва - из числа знаков Аллаха. Тому, кто совершает хадж к дому или умру, дозволено обойти их. И кто изберет добро по собственному почину, [пусть знает], что Аллах — Воздающий по заслугам и Знающий). (Сура «Алъ-Бакара». аят 158).", 
+ 
+        "Instructions_Data_Title":"Вхождение в состояние Ихрам", 
+        "Instructions_Data_Description":"Как войти в состояние Ихрама и что нужно делать", 
+        "Instructions_Data_Desc":"Вход в состояние Ихрама:\n ⠀ \nОбязательно (Фард):\n ⠀ \n1. Намерение (ният).\n ⠀ \n2. Облачение в специальную одежду (Мужчинам в полотняную одежду Изар и Рида, женщинам в одежду, которая закрывает аурат).\n ⠀ \n Желательно (Сунна):\n ⠀ \n1. Взять большое омовение гусль.\n ⠀ \n2. Использование благовоний (нанесение на голову и бороду).\n ⠀ \n3. Произнесение после намаза Ихрама (2 ракаата, в первом ракаате после Фатихи читается сура Кяфирун, во втором ракаате после Фатихи читается сура Ихлас) дуа тальбии:\n ⠀ \n«Ляббайкял-лаахумма ляббайкь. Ляббайкя ля шариикя лякя ляббайкь. Инналь-хамда ван-ни‘мата лякя валь-мулькь, ля шариикя лякь».\n ⠀ \nلَبَّيْكَ اللَّهُمَّ لَبَّيْكَ، لَبَّيْكَ لا شَرِيكَ لَكَ لَبَّيْكَ، إِنَّ الْحَمْدَ وَ النِّعْمَةَ لَكَ وَ الْمُلْكَ، لا شَرِيكَ لَكَ\n ⠀ \nПеревод: «Вот я пред Тобой, о Всевышний, я пред Тобой. Вот я пред Тобой, нет у Тебя сотоварища, я пред Тобой. Поистине, хвала, милость и владычество принадлежат только Тебе! Нет у Тебя сотоварища!». ⠀ \n ⠀ \n ⠀ \n Запреты, обусловленные вхождением в состояние ихрама\n ⠀ \nЧеловеку, вошедшему в состояние ихрама, для выполнения обрядов хаджа или ‘умры запрещаются следующие действия:\n ⠀ \n1. Мужчине запрещается надевать что-либо скроенное, покрывать чем-либо голову и лицо, а также использовать закрывающую пальцы ног и имеющую задник обувь.\n ⠀ \n2. Женщине запрещается закрывать лицо и надевать перчатки.\n ⠀ \n3. Пользоваться ароматическими веществами. Но пользоваться ими непосредственно до того, как войти в состояние ихрама, можно и нужно.\n ⠀ \n4. Использовать мази не в лечебных целях.\n ⠀ \n5. Удалять волосы на любом участке тела.\n ⠀ \n6. Подстригать ногти.\n ⠀ \n7. Вступать в брак.\n8. Иметь интимную близость, а также совершать все то, что активизирует либидо.\n ⠀ \n9. Спорить или ссориться с кем-либо.\n ⠀ \n10. Охотиться, быть проводником на охоте, убивать диких животных, кроме тех, которые могут быть опасны для людей.", 
+        
+        "Instructions_Data_Title_2":"Вхождение в Мекку со стороны Кяда’, затем – в Священную Мечеть через дверь «Бану шейба»", 
+        "Instructions_Data_Description_2":"", 
+        "Instructions_Data_Desc_2":"Вхождение в Мекку со стороны Кяда’, затем – в Священную Мечеть через дверь «Бану шейба».", 
+        
+        "Instructions_Data_Title_3":"Обход Каабы (Таваф)", 
+        "Instructions_Data_Description_3":"Порядок обхода Каабы и дуа", 
+        "Instructions_Data_Desc_3":"Условия действительности тавафа:\n ⠀ \n- фактическое совершение тавафа вокруг Священной Каабы,\n ⠀ \n- семикратное совершение тавафа,\n ⠀ \n- наличие намерения,\n ⠀ \n- совершение тавафа в непосредственной близости от Священной Каабы\n ⠀ \nлибо в определенной прилегающей к ней части,\n ⠀ \n- направление движения должно быть против часовой стрелки,\n ⠀ \n- делать таваф, начиная от Черного камня (аль-хаджар аль-асвад),\n ⠀ \n- наличие ритуальной чистоты,\n ⠀ \n- по мере возможности совершать таваф самостоятельно,\n ⠀ \n- непрерывность совершения сразу всех семи тавафов,\n ⠀ \n- по мнению ученых-ханафитов, совершение двух ракяатной молитвы после завершения тавафа.", 
+        
+        "Instructions_Data_Title_4":"Ритуальный бег между\nхолмами Сафа и Марва", 
+        "Instructions_Data_Description_4":"", 
+        "Instructions_Data_Desc_4":"Бег между холмами Сафа и Марва.\n ⠀ \nДалее паломник спускается с Сафы и направляется пешим ходом в сторону Марвы. По дороге к горе Марва он увидит зеленый столб. Как только паломник подойдет к зеленому столбу, ему желательно сильно ускориться, насколько он может, если будет такая возможность без причинения вреда (себе или другим людям), и так вплоть до следующего зеленого столба. Когда он дойдет до него, опять переходит на свой обычный шаг вплоть до горы 18 Марва. Затем он поднимается на нее, поворачивается в сторону Каабы, возводит руки и говорит все то же, что говорил на горе Сафа [дуа между установленными зикрами паломник может делать, какие пожелает]. Затем паломник спускается с горы Марва и направляется к Сафе, ускоряя шаг или пробегая между зелеными отметками и проходя пешим шагом остальную дистанцию. Далее он поднимается на гору Сафа, обращается в сторону Каабы, возводит руки и говорит то же, что говорил в первый раз. В то время, когда паломник проходит между горами, он может говорить любые зикры и дуа, которые пожелает, а также может читать Коран. Само восхождение (взбирание) на горы Сафа и Марва, а также бег между двумя зелеными отметками являются желательными действиями (сунна), а не обязательными. Зеленые отметки 19 “Сай” — перемещение между горами Сафа и Марва, совершается 7 раз. От Сафы до Марвы считается одним перемещением, от Марвы до Сафы — второе перемещение.", 
+        
+        "Instructions_Data_Title_5":"Нахождение в долине Мина", 
+        "Instructions_Data_Description_5":"", 
+        "Instructions_Data_Desc_5":"На восьмой день месяца Зуль-хиджа паломник идет в долину Мина и остается там на ночь.", 
+        
+        "Instructions_Data_Title_14":"Стояние на горе Арафат", 
+        "Instructions_Data_Description_14":"", 
+        "Instructions_Data_Desc_14":"После восхода солнца на следующий день он направляется на гору Арафат и, объединяя, совершает за имамом молитвы Зухр и ‘Аср в мечети Намира или любом другом месте. После чего вместе со всеми людьми некоторое время пребывает на Арафате, обращаясь к Всевышнему с молитвами-ду‘а.", 
+        
+        "Instructions_Data_Title_6":"Ночевка в месте Муздалифа", 
+        "Instructions_Data_Description_6":"", 
+        "Instructions_Data_Desc_6":"В ночь праздника, после исчезновения вечерний зари, паломники, объединяя и сокращая, совершают молитвы Магриб и ‘Иша’ в Муздалифе. Совершив утреннюю молитву в местечке «аль-Маш‘ар аль-харам» и обратившись к Богу с молитвами-ду‘а, паломники до восхода солнца возвращаются в Мина. ", 
+        
+        "Instructions_Data_Title_7":"Символическое метание камней. ", 
+        "Instructions_Data_Description_7":"", 
+        "Instructions_Data_Desc_7":"На десятый день месяца Зуль-хиджа, после восхода солнца на расстояние одного копья, паломник последовательно бросает в «джамратуль-‘акаба» (ближайший столб от Мекки) семь камешков. В последующие три дня паломник бросает по семь камешков в каждый из трех специальных столбов, начиная с «джамра сугра», затем «джамра вуста» и заканчивая «джамратуль- ‘акаба».", 
+        
+        "Instructions_Data_Title_8":"Сбривание или укорачивание волос на голове. ", 
+        "Instructions_Data_Description_8":"", 
+        "Instructions_Data_Desc_8":"Мужчинам предпочтительнее сбривать волосы.\n ⠀ \nЖенщины лишь подрезают свои волосы на длину фаланги пальца.\n ⠀ \nЭто происходит на десятый день месяца Зуль-хиджа после того, как брошены камешки в «джамратуль-‘акаба» и принесено в жертву животное, если таковое имеется. После паломник направляется в Мекку для совершения прощального Тавафа. ", 
+        
+        "Instructions_Data_Title_9":"Жертвоприношение. ", 
+        "Instructions_Data_Description_9":"", 
+        "Instructions_Data_Desc_9":"Животное приносится в жертву после бросания камней. Разрешается постричься до жертвоприношения и допускается принести жертву до бросания камней и до восхода солнца.", 
+        
+        "Instructions_Data_Title_10":"Прощальный обход вокруг Каабы. ", 
+        "Instructions_Data_Description_10":"", 
+        "Instructions_Data_Desc_10":"Этот таваф совершается во время хаджа после возвращения из долины Мина в Мекку. Этот таваф так же называют «тавафу-веда» (прощальный таваф). Для тех, кто проживает за пределами миката, этот таваф является ваджибом. После совершения этого тавафа, все фарды, ваджибы и сунны хаджа считаются завершенными. Таким образом, паломники, попрощавшись с Меккой, готовы к отбытию к себе на родину.", 
+        
+        "Instructions_Data_Title_11":"Столпы хаджа ", 
+        "Instructions_Data_Description_11":"", 
+        "Instructions_Data_Desc_11":"По мнению ученых-ханафитов, у хаджа два неизменных условия, при невыполнении одного из которых паломничество нарушается и становится недействительным: \n ⠀ \n- Стояние на Арафате. \n- Обход вокруг Каабы, именуемый как «обход устремления».\n ⠀ \nПо мнению ученых-шафиитов у хаджа пять столпов: \n ⠀ \n- Ихрам. \n- Стояние на Арафате. \n- Обход вокруг Каабы, именуемый как «обход устремления». \n- Ритуальный бег между склонами Сафа и Марва. \n- Сбривание или подстригание волос на голове.", 
+        
+        "Instructions_Data_Title_12":"Обязательные действия при совершении хаджа.", 
+        "Instructions_Data_Description_12":"", 
+        "Instructions_Data_Desc_12":"По мнению ученых-ханафитов, при беспричинном невыполнении действия, являющегося ваджибом (обязательным), паломник должен будет принести в жертву скот. К ним относятся следующие пять действий: \n- Ритуальный бег между склонами Сафа и Марва. \n- Кратковременное (хотя бы мгновенное) пребывание во второй половине ночи в долине Муздалифа. \n- Бросание камешков. \n- Сбривание или укорачивание волос на голове. \n- Совершение прощального обхода.\n ⠀ \nПо мнению ученых шафиитского мазхаба, при любом невыполнении действия, являющегося обязательным, паломнику надлежит принести в жертву животное. К обязательным они относят следующие пять действий: \n- Вхождение в состояние ихрама в микате. \n- Ночевка в Муздалифе (в ночь праздника). \n- Бросание камешков в каждый из трех дней. \n- Ночевка в долине Мина в период бросания камешков. \n- Совершение прощального обхода при желании покинуть Мекку.", 
+        
+        "Instructions_Data_Title_13":"Окончание хаджа", 
+        "Instructions_Data_Description_13":"", 
+        "Instructions_Data_ArticleText_13":"После выполнения всего перечисленного паломник завершает хадж, выходит из состояния “ихрама”, и все, что было запрещено ему в состоянии “ихрама”, становится дозволенным.", 
+
+        "Umrah_Instructions_Data_Title_13":"Желательные действия Тавафа", 
+        "Umrah_Instructions_Data_Description_13":"", 
+        "Umrah_Instructions_Data_ArticleText_13":" Важно отметить, что некоторые действия при совершении тавафа относятся к категории желательных (мустахаб), которые следует выполнять только по мере возможности. К числу таких действий относятся:\n ⠀ \nприкоснуться и поцеловать Черный камень, произнести некоторые виды зикров и ду‘а.\n ⠀ \n \n ⠀ \nЧто нежелательно делать во время тавафа:\n ⠀ \n- громко произносить зикр и ду‘а, а также читать Священный Коран вслух,\n ⠀ \nмешая тем самым другим людям,\n ⠀ \n- вести ненужные разговоры,\n ⠀ \n- есть и пить,\n ⠀ \n- испытывать сильную нужду в удовлетворении физиологической потребности.", 
+
+        "Hajj_Instructions_Video_Data_Title":"Видеоинструкция по Хаджу", 
+        "Hajj_Instructions_Video_Data_Description":"Семикратный обход вокруг Каабы", 
+        "Hajj_Instructions_Video_Data_Desc":"После намаза паломник отправляется в сторону холма ас-Сафа, попив по дороге воду Замзам.", 
+        "Hajj_Instructions_Video_Data_TranslatedArabText":"(Поистине, ас-Сафа и аль-Марва - из числа знаков Аллаха. Тому, кто совершает хадж к дому или умру, дозволено обойти их. И кто изберет добро по собственному почину, [пусть знает], что Аллах — Воздающий по заслугам и Знающий). (Сура «Алъ-Бакара». аят 158).", 
+ 
+        "Translate_Category_List_Standard":"Стандартные", 
+        "Translate_Category_List_Railway_Station":"Вокзал", 
+        "Translate_Category_List_Orientation_In_The_City":"Ориентация в городе", 
+        "Translate_Category_List_Numbers_And_Figures":"Числа и цифры", 
+        "Translate_Category_List_Restaurant":"Ресторан", 
+        "Translate_Category_List_Hotel":"Гостиница",
+
+        "preparation_and_intention":"Подготовка и намерение",
+        "intention":"Подготовка",
+        "intention_title":"Начните подготовку с намериния совершить Умру или Хадж ради Аллаха",
+        "voucher":"Путевка",
+        "voucher_title":"Приобретите путевку у проверенного оператора Хаджа или Умры",
+        "small_bag":"Маленькая Сумка",
+        "small_bag_title":"Возьмите поясную сумку в которой будете носить ценные вещи",
+        "clothes":"Одежда",
+        "clothes_title":"Возьмите одежду и обувь для ихрама, а также повседневные вещи",
+        
+        "watch":"Смотреть",
+ 
+        "Small_Bag_Screen_Data_Text":"Возьмите поясную сумку, в которой будут носить ценные вещи", 
+        "Small_Bag_Screen_Data_ListTitle":"Рекомендуем положить", 
+        "Small_Bag_Screen_Data_List_AirplaneTickets":"Билеты на самолет", 
+        "Small_Bag_Screen_Data_List_PasportAndVisaCopy":"Копию паспорта и визы (также сфотографируйте их на телефон)", 
+        "Small_Bag_Screen_Data_List_ShahadaCertificate":"Сертификат шахады (Если вы обращенный в ислам в немусульманской стране)", 
+        "Small_Bag_Screen_Data_List_HotelAdress":"Адрес отеля (На английском и арабском)", 
+        "Small_Bag_Screen_Data_List_Cash":"Наличные деньги (На человека от $500)", 
+        "Small_Bag_Screen_Data_List_Medicines":"Основные лекарства", 
+        "Small_Bag_Screen_Data_List_GlassesOrLenses":"Очки, контактные линзы", 
+ 
+        "Prays_Data_Title":"Тальбия", 
+        "Prays_Data_Content":"Тальбия является ответом раба на зов Всевышнего Аллаха, обращенный к Его творениям. Аллах призвал Свои творения совершать хадж к Его Дому через пророка Ибрахима, мир ему (см. суру «Хадж», аят 27). Паломник, произносящий тальбию, покорен и спешит на зов Аллаха, говоря: «Ляббай-ка, Аллахумма, ляббай-ка …», — т.е. «я отвечаю на Твой зов, покорившись Твоей мудрости и повинуясь Твоему приказу всякий раз, не опаздывая и не мешкая!»", 
+        "Prays_Data_When":"", 
+        "Prays_Data_Transcription":"«Ляббайкял-лаахумма ляббайкь. Ляббайкя ля шариикя лякя ляббайкь. Инналь-хамда ван-ни‘мата лякя валь-мулькь, ля шариикя лякь».", 
+        "Prays_Data_Translate":"Вот я пред Тобой, о Всевышний, я пред Тобой. Вот я пред Тобой, нет у Тебя сотоварища, я пред Тобой. Поистине, хвала, милость и владычество принадлежат только Тебе! Нет у Тебя сотоварища!", 
+        
+        "Prays_Data_Title_2":"Дуа после намаза во время Хаджа", 
+        "Prays_Data_When_2":"Желательно по окончании обязательных и дополнительных молитв", 
+        "Prays_Data_Content_2":"Желательно по окончании обязательных и дополнительных молитв произносить слова:", 
+        "Prays_Data_Transcription_2":"«Ляббайкял-лаахумма ляббайкь. Ляббайкя ля шариикя лякя ляббайкь. Инналь-хамда ван-ни‘мата лякя валь-мулькь, ля шариикя лякь».", 
+        "Prays_Data_Translate_2":"Вот я пред Тобой, о Всевышний, я пред Тобой. Вот я пред Тобой, нет у Тебя сотоварища, я пред Тобой. Поистине, хвала, милость и владычество принадлежат только Тебе! Нет у Тебя сотоварища", 
+        
+        "Prays_Data_Title_3":"Дуа при виде Каабы", 
+        "Prays_Data_When_3":"Войдя в Мекку (днем или ночью), зайти в Священную Мечеть через дверь «Бану шейба», а в момент, когда взор упадет на Каабу, про себя произнести", 
+        "Prays_Data_Content_3":"Войдя в Мекку (днем или ночью), зайти в Священную Мечеть через дверь «Бану шейба», а в момент, когда взор упадет на Каабу, про себя произнести", 
+        "Prays_Data_Transcription_3":"«Субхаанал-лахи валь-хамду лил-ляхи ва ля иляхя иллял-лаху вал-лаху акбар. Аллаахумма хаза байтукя ‘аззамтаху ва шаррафтаху ва кяррамтаху фазидху та‘зыман ва ташрифан ва такрима».", 
+        "Prays_Data_Translate_3":"", 
+        
+        "Prays_Data_Title_4":"Дуа во время питья воды из источника Замзам", 
+        "Prays_Data_When_4":"Во время питья желательно стоять в направлении Киблы и произносить", 
+        "Prays_Data_Content_4":"Во время питья желательно стоять в направлении Киблы и произносить: «Аллаахумма инни балягани ‘ан набийикя энна ма’а замзама лимя шуриба ляхь, ва эна эшьрабуху лиса‘адатид-дунья валь-эхыра, аллаахумма фаф‘аль».", 
+        "Prays_Data_Transcription_4":"«Аллаахумма инни балягани ‘ан набийикя энна ма’а замзама лимя шуриба ляхь, ва эна эшьрабуху лиса‘адатид-дунья валь-эхыра, аллаахумма фаф‘аль».", 
+        "Prays_Data_Translate_4":"О Всевышний, от Твоего пророка до меня дошла весть о том, что вода источника Замзам служит исполнению тех желаний, с которыми она пьется (с проговариванием которых человек пьет ее), я же пью для становления (с Твоего благословения) счастливым в обоих мирах. О Аллах, даруй же мне это!", 
+        
+        "Prays_Data_Title_5":"Дуа перед входом в состояние ихрам.", 
+        "Prays_Data_When_5":"Перед тем как войти в состояние ихрама", 
+        "Prays_Data_Content_5":"Перед тем как войти в состояние ихрама, паломник поворачивается в сторону Киблы и произносит", 
+        "Prays_Data_Transcription_5":"«Аллаахумма ухриму лякя ша‘ри ва башари ва ляхми ва дами»", 
+        "Prays_Data_Translate_5":"Перевод: «О Всевышний, ради Тебя я делаю запретным [для всего предосудительного] свои волосы, кожу, плоть и кровь (всем своим телом вхожу в состояние ихрама)». После этого он начинает произносить «тальбию». Произнесение «тальбии» возобновляется всякий раз, как меняется положение паломника, то есть когда он садится в транспортное средство или выходит из него, поднимается на возвышенность или спускается с нее, а также после молитвы-намаза", 
+        
+        "Prays_Data_Title_6":"Дуа Тавафа", 
+        "Prays_Data_When_6":"Достигнув угла Каабы, в котором находится Черный камень", 
+        "Prays_Data_Content_6":"Проходя возле Йеменского угла, паломник проводит по нему правой рукой и говорит: «Бисмил-ляяхи, аллаху акбар!». Ни угол, ни руку он при этом не целует. В конце каждого круга между Йеменским углом и Черным камнем паломник говорит: \n ⠀ \n", 
+        "Prays_Data_Transcription_6":"«Раббанаа ээтина фид-дунья хасанатан ва филь-ээхырати хасанатан ва кынаа ‘азаабан-на", 
+        "Prays_Data_Translate_6":"«Господи, дай нам благо (все хорошее) в этой и последующей жизни и убереги нас от мук огня\n ⠀ \nБеспричинное прерывание семикратного обхода является нежелательным. К числу дозволительных причин относится начало совершения обязательной молитвы или возникновение крайней нужды. Что касается погребальной и дополнительной молитв-намазов, то они не могут служить причиной прерывания обязательного обхода. Желательно во время обхода находиться ближе к Священной Каабе, что облегчает возможность прикоснуться и поцеловать Черный камень. Завершив обход, паломник совершает молитву в два ракяата за «местом Ибрахима (Авраама)» (Макам Ибрахим). В первом ракяте после суры «аль-Фатиха» читается сура «аль-Кяфирун», а во втором – «аль-Ихляс».", 
+        
+        "Prays_Data_Title_7":"Дуа во время бега между холмами Сафа и Марва", 
+        "Prays_Data_When_7":"", 
+        "Prays_Data_Content_7":"Паломник проходит через врата Сафа и направляется к месту совершения ритуального бега между склонами Сафа и Марва. Мужчинам желательно подниматься на Сафа и Марва. Поднявшись, паломник обращает свой взор в сторону Каабы и произносит:", 
+        "Prays_Data_Transcription_7":"«Аллаху акбар, аллаху акбар, аллаху акбар, ва лил-ляяхиль-хамд, аллаху акбар ‘аля ма хадаана, валь-хамду лил-ляяхи ‘аля ма эвляяна, ля иляха иллял-лаху вахдаху ля шариикя лях, ляхуль-мульку ва ляхуль-хамду юхйи ва юмииту биядихиль-хайр, ва хува ‘аля кули шайин кадиир. Ля иляха иллял-лаху вахдах, анджаза ва‘дах, ва насара ‘абдах, ва хазамаль-ахзааба вахдах. Ля иляха иллял-лаху ва ля на‘буду илля ийях, мухлисыына ляхуд-дин, ва ляв кярихаль-кяяфирун»", 
+        "Prays_Data_Translate_7":"Аллах (Бог) превыше всего. Аллах превыше всего. Аллах превыше всего. Ему принадлежит хвала. Мы возвеличиваем Его, ведь Он направил нас на правильный путь. Хвала Ему за то, чем Он нас наделил. Нет бога, кроме одного лишь Аллаха (Господа миров), у Которого нет сотоварища (Бог один, и нет равных Ему). Всевышнему принадлежит владычество, Ему хвала. Он оживляет и умерщвляет, в Его власти благо, Ему абсолютно все под силу. Нет бога, кроме одного лишь Него, Который выполнил Свое обещание, помог Своему рабу (последнему посланнику) и Один (волею Своей и благословением) разбил племена (враждовавшие с последователями Единобожия). Нет бога, кроме одного лишь Аллаха (Господа миров, Творца всего сущего). Ему Одному мы поклоняемся, являясь искренними в религиозности пред Ним, и даже если это ненавистно отрицающим Всевышнего и Его блага». \n ⠀ \nЗатем паломник взывает к Всевышнему (на любом языке), прося у Него добра в этой и последующей жизни. Все обращения-молитвы произносятся трижды. Женщин это не касается.", 
+        
+        "Prays_Data_Title_11":"Бег во время Сайи", 
+        "Prays_Data_When_11":"", 
+        "Prays_Data_Content_11":"Отрезок пути, обозначенный двумя зелеными столбами и световыми указателями, паломнику-мужчине желательно пробежать.\n ⠀ \n Во время бега между зелеными столбами проговаривается следующая мольба:", 
+        "Prays_Data_Transcription_11":"«Рабби-гфир вархам ва таджаваз ‘амма та‘лям, иннякя энталь-э‘аззуль-экрам»", 
+        "Prays_Data_Translate_11":"О Господи, прости меня и помилуй, сокрой ведомое Тебе, поистине, Ты – Величественнейший и Щедрейший", 
+
+        "Prays_Data_Title_8":"Особые молитвы (дуа), которые стоит читать в день ‘Арафа", 
+        "Prays_Data_When_8":"", 
+        "Prays_Data_Content_8":"Дуа 1:  «Раббанаа ээтина фид-дунья хасанатан ва филь-ээхырати хасанатан ва кынаа ‘азаабан-нар».\n ⠀ \nرَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَ فِي الآخِرَةِ حَسَنَةً وَ قِنَا عَذَابَ النَّارِ\n ⠀ \nПеревод: «Господи, дай нам благое в этой и последующей жизни и убереги нас от мук огня». \n ⠀ \nДуа 2: «Аллаахумма инни залямту нафси зульман кясиира, ва ля ягфируз-зунууба илля энт, фагфир ли магфиратан мин ‘индикя вархамни, иннакя энталь-гафуурур-рахиим».\n ⠀ \nاَللَّهُمَّ إِنِّي ظَلَمْتُ نَفْسِي ظُلْمًا كَثِيرًا، وَ لاَ يَغْفِرُ الذُّنُوبَ إِلاَّ أَنْتَ فَاغْفِرْ لِي مَغْفِرَةً مِنْ عِنْدِكَ وَ ارْحَمْنِي، إِنَّكَ أَنْتَ الْغَفُورُ الرَّحِيمُ\n ⠀ \nПеревод: «О Аллах, поистине, я поступал несправедливо по отношению к себе (совершая прегрешения; я не безгрешен), а никто не простит грехов помимо Тебя, прости же меня Своим всепрощением и помилуй. Ведь Ты – Всепрощающий, Всемилостивый». \n ⠀ \nДуа 3: «Аллаахумма-нкульни мин зуллиль-ма‘сыяти иля ‘иззит-таа‘а, вакфини бихаляяликя ‘ан хараамикь, ва эгнини бифадликя ‘амман сиваакь, ва наввир кальби ва кабри, вахдини ва э‘изни минаш-шарри куллихь, ваджма‘ лияль-хайр».\n ⠀ \nاَللَّهُمَّ انْقُلْنِي مِنْ ذُلِّ الْمَعْصِيَةِ إِلَى عِزِّ الطَّاعَةِ ، وَ اكْفِنِي بِحَلاَلِكَ عَنْ حَرَامِكَ وَ أَغْنِنِي بِفَضْلِكَ عَمَّنْ سِوَاكَ، وَ نَوِّرْ قَلْبِي وَ قَبْرِي وَ اهْدِنِي وَ أَعِذْنِي مِنَ الشَّرِّ كُلِّهِ ، وَ اجْمَعْ لِيَ الْخَيْرَ\n ⠀ \nПеревод: «О Аллах, выведи меня из униженности греха к величию покорности Тебе. Избавь от запрещенного Тобой, предоставив мне то, что Ты разрешил. Обогати меня Своей милостью так, чтобы я ни в ком, помимо Тебя, не нуждался. Освети мое сердце и то место, где упокоится мое тело. Направь меня на праведный путь и защити от всех форм зла. Объемли для меня благо». \n ⠀ \nДуа 4: «Аллаахумма инни эс’элюкяль-худаа ват-тукаа валь-‘афаафа валь-гынаа».\n ⠀ \nاَللَّهُمَّ إِنِّي أَسْأَلُكَ الْهُدَى وَ التُّقَى وَ الْعَفَافَ وَ الْغِنَى\n ⠀ \nПеревод: «О Аллах, я прошу у Тебя праведности, набожности, целомудрия и достатка». Желательно просить благ и прощения прегрешений как для себя, так и для всех верующих. Пророк Мухаммад молил: «О Всевышний, прости паломника и того, для кого просит он прощения!»", 
+        "Prays_Data_Transcription_8":"", 
+        "Prays_Data_Translate_8":"", 
+        
+        "Prays_Data_Title_9":"Дуа, которые можно читать по дороге к Мина", 
+        "Prays_Data_When_9":"Читать по дороге к Мина", 
+        "Prays_Data_Content_9":"Дуа 1: «Раббанаа ээтина фид-дунья хасанатан ва филь-ээхырати хасанатан ва кынаа ‘азаабан-нар».\n ⠀ \nرَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَ فِي الآخِرَةِ حَسَنَةً وَ قِنَا عَذَابَ النَّارِ\n ⠀ \nПеревод: «Господи, дай нам благо в этой и последующей жизни и убереги нас от мук огня». \n ⠀ \nПосле чего паломник добавляет: \n ⠀ \nДуа 2: «Аллаахумма кямаа эвкафтанаа фиихи ва эрайтанаа ийяяху фаваффикнаа лизикрикя кяма хадайтанаа, вагфир лянаа вархамнаа кямаа ва‘адтанаа бикавликя, ва кавлюкяль-хакку: фаиза эфадтум мин ‘арафаатин фазкурул-лаха ‘индаль-маш‘ариль-хараам, вазкурууху кяма хадаакум ва ин кунтум мин каблихи ляминаддооллин. Сумма афииду мин хайсу афаадан-наасу вастагфирулла, иннал-лаха гафуурур-рахиим».\n ⠀ \nاَللَّهُمَّ كَمَا أَوْقَفْتَنَا فِيهِ وَ أَرَيْتَنَا إِيَّاهُ فَوَفِّقْنَا لِذِكْرِكَ كَمَا هَدَيْتَنَا ، وَ اغْفِرْ لَنَا وَ ارْحَمْنَا كَمَا وَعَدْتَنَا بِقَوْلِكَ وَ قَوْلُكَ الْحَقُّ فَإِذَا أَفَضْتُمْ مِنْ عَرَفَاتٍ  فَاذْكُرُوا اللَّهَ عِنْدَ الْمَشْعَرِ الْحَرَامِ وَ اذْكُرُوهُ كَمَا هَدَاكُمْ وَ إِنْ كُنْتُمْ مِنْ قَبْلِهِ لَمِنَ الضَّالِّينَ . ثُمَّ أَفِيضُوا مِنْ حَيْثُ أَفَاضَ النَّاسُ وَ اسْتَغْفِرُوا اللَّهَ إِنَّ اللَّهَ غَفُورٌ رَحِيمٌ\n ⠀ \nПеревод: «О Аллах, подобно тому, как Ты дал нам возможность находиться и видеть эти места, подобно легкости того, как Ты направил нас на правильный путь, помоги нам помнить, вспоминать о Тебе. Прости нас и помилуй в соответствии с обещанием Твоим. Ведь Твое слово истинно: «И когда вы огромной толпой покинете ‘Арафат, то упоминайте Всевышнего возле священного места «Маш‘ар» [то есть возле горы Казх, которая находится в конце Муздалифы], ведь Он наставил вас на верный путь, после того как вы были заблудившимися. Покидайте огромной толпой [местность ‘Арафат], подобно другим [пусть никто не выделяется и не выбирает для себя «особые» места], и просите прощения у Всевышнего. Он может все простить и [Он] Всемилостив». \n ⠀ \nТакже паломник произносит: «Аллаху акбар (трижды). Ля иляхя иллял-лаху, вал-лаху акбар, аллаху акбару ва лил-ляхиль-хамд».\n ⠀ \nاَللَّهُ أَكْبَرُ  لا إِلَهَ إِلاَّ اللَّهُ وَ اللَّهُ أَكْبَرُ، اَللَّهُ أَكْبَرُ وَ لِلَّهِ الْحَمْدُ\n ⠀ \nПеревод: «Аллах превыше всего (трижды). Нет бога, кроме одного Всевышнего. Он превыше всего. Превыше всего, и лишь Ему принадлежит хвала». Затем незадолго до восхода солнца паломники направляются в Мина, произнося «тальбию». Проходя через долину Мухассир, желательно ускорить шаг.", 
+        "Prays_Data_Transcription_9":"", 
+        "Prays_Data_Translate_9":"", 
+        
+        "Prays_Data_Title_10":"Дуа во время бросания камней в Мина", 
+        "Prays_Data_When_10":"", 
+        "Prays_Data_Content_10":"Каждый паломник после восхода солнца в день жертвоприношения должен бросить семь камней в «джамратуль-‘акаба» – ближайший столб от Мекки. Бросание камешков в этот день является ритуалом приветствия Мина. С началом бросания прекращается произнесение «тальбии». В соответствии с Сунной, паломник обращается лицом к месту бросания камней так, чтобы Мекка была по левую сторону, а Мина – по правую. Бросая каждый камешек, паломник вместо «тальбии» произносит «такбир»: «Аллаху акбар (трижды). Ля иляхя иллял-лаху вал-лаху акбар, ва лил-ляхиль-хамд».\n ⠀ \nاَللَّهُ أَكْبَرُ  لا إِلَهَ إِلاَّ اللَّهُ وَ اللَّهُ أَكْبَرُ، وَ لِلَّهِ الْحَمْدُ\n ⠀ \nПеревод: «Аллах превыше всего (трижды). Нет бога, кроме одного Всевышнего. Аллах превыше всего, и лишь Ему принадлежит хвала». \n ⠀ \nВ день жертвоприношения желательно соблюсти очередность между следующими четырьмя действиями, совершение которых наступает с полуночи: бросание камней в «джамратуль-‘акаба», жертвоприношение, сбривание или укорачивание волос на голове, а затем «обход устремления». \n ⠀ \nВ последующие три дня (с момента минования солнцем зенита и до его захода) паломник бросает по семь камешков в каждый из трех столбов, начиная с «джамра сугра», затем «джамра вуста» и заканчивая «джамратуль-‘акаба». Лучше всего, если камешки будут небольшими, величиной чуть больше горошины. Все шесть описанных пунктов относятся богословами-шафиитами к желательным действиям, сопровождающим основополагающие положения хаджа. Как видим из приведенных выше желательных действий, упоминаемых учеными ханафитского и шафиитского мазхабов с некоторой разницей в классификации, они являются  взаимодополняющими и не противоречат друг другу.", 
+        "Prays_Data_Transcription_10":"", 
+        "Prays_Data_Translate_10":"", 
+
+ 
+         
+        "Prays_Umrah_Data_Title":"Тальбия", 
+        "Prays_Umrah_Data_When":"Произносится перед умрой", 
+        "Prays_Umrah_Data_Content":"Повторяемая многократно паломниками во время всего хаджа, когда они находится в состоянии ихрама.", 
+        "Prays_Umrah_Data_Transcription":"Ляббейк, Аллахумма ляббейк, ляббейка, ля шарика лака ляббейк. Инналь-хамда ван-ни`мата лака вальмульк, ля шарика ляк", 
+        "Prays_Umrah_Data_Translate":"Вот я перед тобой, о Аллах! Вот я перед тобой! Вот я перед тобой, и нет у тебя сотоварища! Вот я перед тобой! Поистине, тебе надлежит хвала, и тебе принадлежат милости и владычество! Нет у тебя сотоварища!", 
+ 
+        "settings_gender_male":"Мужской", 
+        "settings_gender_female":"Женский",
+
+        "hotel_contacts":"Контакты моего отеля",
+        "language":"Язык в приложении",
+        "gender":"Ваш пол",
+        "hotel_adress":"Адрес отеля",
+        "hotel_phone":"Номер телефона отеля",
+        "site":"Адрес сайта",
+        "hotel_name":"Название отеля",
+
+        "personal_data_placeholder_name":"Имя",
+        "personal_data_placeholder_surname":"Фамилия",
+        "personal_data_placeholder_phone_number":"Номер телефона",
+        "personal_data_placeholder_email":"Электронная почта",
+        "personal_data_placeholder_city":"Ваш город",
+
+        "button_save_data":"Сохранить данные",
+        "button_delete_data":"Удалить аккаунт",
+        "button_send_data":"Отправить сообщение",
+
+        "settings_notifications_title":"Уведомления",
+        "settings_app_news_switch_title":"Новости приложения",
+        "settings_poll_participation_switch_title":"Участие в опросах",
+        "settings_push_notification_switch_title":"PUSH уведомления",
+
+        "settings_switch_description_on_email":"На элктронную почту",
+        "settings_switch_description_app_actions":"Действия в приложении",
+
+        "report_a_bug_input_title_name":"Ваше имя",
+        "report_a_bug_input_title_phone_number":"Номер телефона",
+        "report_a_bug_input_title_email":"Электронная почта",
+        "report_a_bug_input_title_message":"Ваше сообщение",
+
+        "report_a_bug_input_message_placeholder":"В приложении есть один момент...",
+
+        "support_and_info":"Связь и информация",
+        "referencial":"Справочная",
+        "airport_referencial":"Справочная аэропорта",
+        "Water_supply_service":"Служба обеспечения водой",
+        "payphone_text":"В Мекке и Медине вы найдете таксофоны, работающие по телекартам и монетам. Карточки стоят около 120 SR. Позвонить можно также из гостиницы, предварительно сообщив об этом администратору. В Джидде, Мекке, Медине работает сотовая связь, обслуживаемая операторами Saudi Telecom и Thuraya.",
+        "telephone_communications":"Код телефонной связи с Россией – 7,\nкод Москвы – 495, Санкт-Петербурга – 812,\nКазани – 8432, Уфы – 3472, Махачкалы – 8722, Нижнего Новгорода – 8312.",
+
+        "legal_documents":"Политика в отношении обработки персональных данных\n1. Общие положения  \nНастоящая политика обработки персональных данных составлена в соответствии с требованиями Федерального закона от 27.07.2006. № 152-ФЗ «О персональных данных» (далее — Закон о персональных данных) и определяет порядок обработки персональных данных и меры по обеспечению безопасности персональных данных, предпринимаемые Михайловым Иваном Сергеевичем (далее — Оператор).\n1.1. Оператор ставит своей важнейшей целью и условием осуществления своей деятельности соблюдение прав и свобод человека и гражданина при обработке его персональных данных, в том числе защиты прав на неприкосновенность частной жизни, личную и семейную тайну.\n1.2. Настоящая политика Оператора в отношении обработки персональных данных (далее — Политика) применяется ко всей информации, которую Оператор может получить о посетителях веб-сайта https://thismywebsite.com.\n2. Основные понятия, используемые в Политике\n2.1. Автоматизированная обработка персональных данных — обработка персональных данных с помощью средств вычислительной техники.\n2.2. Блокирование персональных данных — временное прекращение обработки персональных данных (за исключением случаев, если обработка необходима для уточнения персональных данных).\n2.3. Веб-сайт — совокупность графических и информационных материалов, а также программ для ЭВМ и баз данных, обеспечивающих их доступность в сети интернет по сетевому адресу https://thismywebsite.com.\n2.4. Информационная система персональных данных — совокупность содержащихся в базах данных персональных данных и обеспечивающих их обработку информационных технологий и технических средств.\n2.5. Обезличивание персональных данных — действия, в результате которых невозможно определить\n2.6. Обработка персональных данных — любое действие (операция) или совокупность действий (операций), совершаемых с использованием средств автоматизации или без использования таких средств с персональными данными, включая сбор, запись, систематизацию, накопление, хранение, уточнение (обновление, изменение), извлечение, использование, передачу (распространение, предоставление, доступ), обезличивание, блокирование, удаление, уничтожение персональных данных.\n2.7. Оператор — государственный орган, муниципальный орган, юридическое или физическое лицо, самостоятельно или совместно с другими лицами организующие и/или осуществляющие обработку персональных данных, а также определяющие цели обработки персональных данных, состав персональных данных, подлежащих обработке, действия (операции), совершаемые с персональными данными.\n2.8. Персональные данные — любая информация, относящаяся прямо или косвенно к определенному или определяемому Пользователю веб-сайта httpsː//thismywebsite·com.\n2.9. Персональные данные, разрешенные субъектом персональных данных для распространения, — персональные данные, доступ неограниченного круга лиц к которым предоставлен субъектом персональных данных путем дачи согласия на обработку персональных данных, разрешенных субъектом персональных данных для распространения в порядке, предусмотренном Законом о персональных данных (далее — персональные данные, разрешенные для распространения).\n2.10. Пользователь — любой посетитель веб-сайта httpsː//thismywebsite·com.\n2.11. Предоставление персональных данных — действия, направленные на раскрытие персональных данных определенному лицу или определенному кругу лиц.\n2.12. Распространение персональных данных — любые действия, направленные на раскрытие персональных данных неопределенному кругу лиц (передача персональных данных) или на ознакомление с персональными данными неограниченного круга лиц, в том числе обнародование персональных данных в средствах массовой информации, размещение в информационно-телекоммуникационных сетях или предоставление доступа к персональным данным каким-либо иным способом.\n2.13. Трансграничная передача персональных данных — передача персональных данных на территорию иностранного государства органу власти иностранного государства, иностранному физическому или иностранному юридическому лицу.\n2.14. Уничтожение персональных данных — любые действия, в результате которых персональные данные уничтожаются безвозвратно с невозможностью дальнейшего восстановления содержания персональных данных в информационной системе персональных данных и/или уничтожаются материальные носители персональных данных.\n3. Основные права и обязанности Оператора\n3.1. Оператор имеет право:\n— получать от субъекта персональных данных достоверные информацию и/или документы, содержащие персональные данные;\n— в случае отзыва субъектом персональных данных согласия на обработку персональных данных, а также, направления обращения с требованием о прекращении обработки персональных данных, Оператор вправе продолжить обработку персональных данных без согласия субъекта персональных данных при наличии оснований, указанных в Законе о персональных данных;\n2.1. Автоматизированная обработка персональных данных — обработка персональных данных с помощью средств вычислительной техники.\n3.2. Оператор обязан:\n— предоставлять субъекту персональных данных по его просьбе информацию, касающуюся обработки его персональных данных;\n— организовывать обработку персональных данных в порядке, установленном действующим законодательством РФ;\n— отвечать на обращения и запросы субъектов персональных данных и их законных представителей в соответствии с требованиями Закона о персональных данных;\n— сообщать в уполномоченный орган по защите прав субъектов персональных данных по запросу этого органа необходимую информацию в течение 30 дней с даты получения такого запроса;\n— публиковать или иным образом обеспечивать неограниченный доступ к настоящей Политике в отношении обработки персональных данных;\n— принимать правовые, организационные и технические меры для защиты персональных данных от неправомерного или случайного доступа к ним, уничтожения, изменения, блокирования, копирования, предоставления, распространения персональных данных, а также от иных неправомерных действий в отношении персональных данных;\n— прекратить передачу (распространение, предоставление, доступ) персональных данных, прекратить обработку и уничтожить персональные данные в порядке и случаях, предусмотренных Законом о персональных данных;\n— исполнять иные обязанности, предусмотренные Законом о персональных данных.\n4. Основные права и обязанности субъектов персональных данных\n4.1. Субъекты персональных данных имеют право:\n— получать информацию, касающуюся обработки его персональных данных, за исключением случаев, предусмотренных федеральными законами. Сведения предоставляются субъекту персональных данных Оператором в доступной форме, и в них не должны содержаться персональные данные, относящиеся к другим субъектам персональных данных, за исключением случаев, когда имеются законные основания для раскрытия таких персональных данных. Перечень информации и порядок ее получения установлен Законом о персональных данных;\n— требовать от оператора уточнения его персональных данных, их блокирования или уничтожения в случае, если персональные данные являются неполными, устаревшими, неточными, незаконно полученными или не являются необходимыми для заявленной цели обработки, а также принимать предусмотренные законом меры по защите своих прав;\n— выдвигать условие предварительного согласия при обработке персональных данных в целях продвижения на рынке товаров, работ и услуг;\n— на отзыв согласия на обработку персональных данных, а также, на направление требования о прекращении обработки персональных данных;\n— обжаловать в уполномоченный орган по защите прав субъектов персональных данных или в судебном порядке неправомерные действия или бездействие Оператора при обработке его персональных данных;\n— на осуществление иных прав, предусмотренных законодательством РФ.\n4.2. Субъекты персональных данных обязаны:\n— предоставлять Оператору достоверные данные о себе;\n— сообщать Оператору об уточнении (обновлении, изменении) своих персональных данных.\n4.3. Лица, передавшие Оператору недостоверные сведения о себе, либо сведения о другом субъекте персональных данных без согласия последнего, несут ответственность в соответствии с законодательством РФ.\n5. Принципы обработки персональных данных\n5.1. Обработка персональных данных осуществляется на законной и справедливой основе.\n5.2. Обработка персональных данных ограничивается достижением конкретных, заранее определенных и законных целей. Не допускается обработка персональных данных, несовместимая с целями сбора персональных данных.\n5.3. Не допускается объединение баз данных, содержащих персональные данные, обработка которых осуществляется в целях, несовместимых между собой.\n5.4. Обработке подлежат только персональные данные, которые отвечают целям их обработки.\n5.5. Содержание и объем обрабатываемых персональных данных соответствуют заявленным целям обработки. Не допускается избыточность обрабатываемых персональных данных по отношению к заявленным целям их обработки.\n5.6. При обработке персональных данных обеспечивается точность персональных данных, их достаточность, а в необходимых случаях и актуальность по отношению к целям обработки персональных данных. Оператор принимает необходимые меры и/или обеспечивает их принятие по удалению или уточнению неполных или неточных данных.\n5.7. Хранение персональных данных осуществляется в форме, позволяющей определить субъекта персональных данных, не дольше, чем этого требуют цели обработки персональных данных, если срок хранения персональных данных не установлен федеральным законом, договором, стороной которого, выгодоприобретателем или поручителем по которому является субъект персональных данных. Обрабатываемые персональные данные уничтожаются либо обезличиваются по достижении целей обработки или в случае утраты необходимости в достижении этих целей, если иное не предусмотрено федеральным законом.\n6. Цели обработки персональных данных\nЦель обработки информирование пользователя посредством отправки электронных писем\nПерсональные данные\nфилософские убеждения\nПравовые основания\nФедеральный закон «Об информации, информационных технологиях и о защите информации» от 27.07.2006 N 149-ФЗ\nВиды обработки персональных данных\nПередача персональных данных\n7. Условия обработки персональных данных\n7.1. Обработка персональных данных осуществляется с согласия субъекта персональных данных на обработку его персональных данных.\n7.2. Обработка персональных данных необходима для достижения целей, предусмотренных международным договором Российской Федерации или законом, для осуществления возложенных законодательством Российской Федерации на оператора функций, полномочий и обязанностей.\n7.3. Обработка персональных данных необходима для осуществления правосудия, исполнения судебного акта, акта другого органа или должностного лица, подлежащих исполнению в соответствии с законодательством Российской Федерации об исполнительном производстве.\n7.4. Обработка персональных данных необходима для исполнения договора, стороной которого либо выгодоприобретателем или поручителем по которому является субъект персональных данных, а также для заключения договора по инициативе субъекта персональных данных или договора, по которому субъект персональных данных будет являться выгодоприобретателем или поручителем.\n7.5. Обработка персональных данных необходима для осуществления прав и законных интересов оператора или третьих лиц либо для достижения общественно значимых целей при условии, что при этом не нарушаются права и свободы субъекта персональных данных.\n7.6. Осуществляется обработка персональных данных, доступ неограниченного круга лиц к которым предоставлен субъектом персональных данных либо по его просьбе (далее — общедоступные персональные данные).\n7.7. Осуществляется обработка персональных данных, подлежащих опубликованию или обязательному раскрытию в соответствии с федеральным законом."
+        }
+    }
+
+
+        
+        
+        
+        

@@ -1,13 +1,16 @@
-import react, { useState, useCallback } from 'react'
+import react, { useState, useCallback,useEffect } from 'react'
 import { StyleSheet, View, Text, ScrollView, SafeAreaView, RefreshControl} from 'react-native';
 import { QuestionsBlock } from '../Components/QuestionsBlock'
 import { Category } from '../Components/Category';
 import { QuestionsPopUp } from '../Components/Pop-Up';
-import { Title } from '../Components/Title';
-import { useGetCategoryTheoryMainQuery, useGetPopularQuestionsQuery } from '../api/apiSlice'
+import { NoInternet } from '../Components/NoInternet';
+import { useGetCategoryTheoryMainQuery,useGetCategoryTheoryWhatTakeQuery, useGetPopularQuestionsQuery } from '../api/apiSlice'
 import { useNavigation } from '@react-navigation/native';
+import { useTranslation } from 'react-i18next';
+import i18n from 'i18next'
 
 export const TheoryScreen = (props) => {
+  const {t} = useTranslation()
   const [refreshing, setRefreshing] = useState(false);
   const [SelectedQuestion, setSelectedQuestion] = useState(0)
   const [isVisible, setVisible] = useState(false);
@@ -16,11 +19,20 @@ export const TheoryScreen = (props) => {
     isLoading,
     isSuccess,
     isError,
+    refetch,
     error
-  } = useGetCategoryTheoryMainQuery()
-  console.log(Categories);
+  } = useGetCategoryTheoryMainQuery(i18n.language)
 
-  const {data: PopularQuestions} = useGetPopularQuestionsQuery()
+  const {
+    data: WhatToTake,
+  } = useGetCategoryTheoryWhatTakeQuery(i18n.language)
+
+
+  useEffect(() => {
+    refetch();
+  }, [i18n.language]);
+
+  const {data: PopularQuestions} = useGetPopularQuestionsQuery(i18n.language)
   const navigate = useNavigation()
   const delay = (ms) => new Promise(
     resolve => setTimeout(resolve, ms)
@@ -36,11 +48,10 @@ const onRefresh = useCallback(() => {
     delay(2000).then(() => setRefreshing(false))
 }, [])
 
-  if (isLoading) {
-    <Text>loading...</Text>
-  }
-  else if (isError) {
-    <Text>{error}</Text>
+  if (Categories == undefined || undefined) {
+    return (
+      <NoInternet/>
+    )
   }
   else if (Categories && PopularQuestions) {
     return (
@@ -53,82 +64,50 @@ const onRefresh = useCallback(() => {
               onRefresh={onRefresh}
             />}>
 
-      <Text style={styles.Title}>Основное</Text>
+      <Text style={styles.Title}>{t('main')}</Text>
       <View style={styles.CategoryWrapper}>
-        <Category type={'Horizontal'} 
-          title={Categories[0].title} 
-          icon={require('../assets/Icons/Cube.png')} 
-          borderColor={'#FBF1A3'} 
-          description={Categories[0].category}
-          onPress={() => navigate.navigate('WhatIsUmrah', {
-            CategoryTitle: Categories[0].title,
-            CategoryId: 1
-          })} />
+        {Categories?.map((theory) => {
+          return (
+            <Category type={'Horizontal'} 
+              key={theory.id}
+              title={theory.title} 
+              icon={{uri :`http://oralbekov.dias19.fvds.ru${theory.upload}`}} 
+              borderColor={'#FBF1A3'} 
+              description={theory.category}
+              onPress={() => navigate.navigate('WhatIsHajj', {
+                CategoryTitle: theory.title,
+                CategoryId: theory.id
+              })} />
+          );
+        })}
+        </View>
 
-        <Category type={'Horizontal'}
-          title={Categories[1].title} 
-          icon={require('../assets/Icons/Stack.png')} 
-          borderColor={'#A1F6FB'} 
-          description={Categories[1].category}
-          onPress={() => navigate.navigate('WhatIsHajj', {
-            CategoryTitle: props.title,
-            CategoryId: 2
-          })} />
-
-        <Category type={'Horizontal'} 
-          title={Categories[2].title} 
-          icon={require('../assets/Icons/Users.png')} 
-          borderColor={'#E8F0F0'}
-          description={Categories[2].category}
-          onPress={() => navigate.navigate('HajjAndUmrah', {
-            CategoryTitle: Categories[2].title,
-            CategoryId: 3
-          })} />
-
-        <Category type={'Horizontal'} 
-          title={Categories[3].title} 
-          icon={require('../assets/Icons/ThumbsUp.png')} 
-          borderColor={'#FFC8C8'} 
-          description={Categories[3].category}
-          onPress={() => navigate.navigate('BenefitsAndPurposes', {
-            CategoryTitle: Categories[3].title,
-            CategoryId: 4
-          })} />         
-      </View>     
-    
-      <Text style={styles.Title}>Что нужно взять</Text>
-      <View style={styles.CategoryWrapper}>
-        <Category 
-          type={'Horizontal'} 
-          title={`Обязательные вещи`} 
-          icon={require('../assets/Icons/TShirt.png')} 
-          borderColor={'#E8F0F0'} 
-          description='Список'
-          onPress={() => navigate.navigate('TheoryGuide')} />         
-        <Category type={'Horizontal'} 
-          title={`Желательные вещи`} 
-          icon={require('../assets/Icons/ShoppingBagOpen.png')} 
-          borderColor={'#FFC8C8'} 
-          description='Список'
-          onPress={() => navigate.navigate('TheoryGuide')} />         
-        <Category type={'Horizontal'} 
-          title={`Правила пребывания`} 
-          icon={require('../assets/Icons/Note.png')} 
-          borderColor={'#A1F6FB'} 
-          description='Статья'
-          onPress={() => navigate.navigate('TheoryGuide')} />         
-        <Category type={'Horizontal'} 
-          title={`Запрещено делать`} 
-          icon={require('../assets/Icons/WarningOctagon.png')} 
-          borderColor={'#FBF1A3'} 
-          description='Статья'
-          onPress={() => navigate.navigate('TheoryGuide')} />         
+        <Text style={styles.Title}>{t('what_take')}</Text>
+        <View style={styles.CategoryWrapper}>
+          {WhatToTake?.map((theory) => {
+            return (
+              <Category type={'Horizontal'} 
+                key={theory.id}
+                title={theory.title} 
+                icon={{uri :`http://oralbekov.dias19.fvds.ru${theory.upload}`}} 
+                borderColor={'#FBF1A3'} 
+                description={theory.category}
+                onPress={() => navigate.navigate('WhatIsHajj', {
+                  CategoryTitle: theory.title,
+                  CategoryId: theory.id
+                })} />
+            );
+          })}
         </View>
           
+        {PopularQuestions ? 
         <QuestionsBlock 
           data={PopularQuestions} 
-          title={'Частые Вопросы'}
+          title={t('faq')}
           onPressItem={(index) => onPressQuestion(index)}/>
+          :
+          <NoInternet/>
+        } 
 
         <QuestionsPopUp
           visible={isVisible}
@@ -143,11 +122,11 @@ const onRefresh = useCallback(() => {
 
 const styles = StyleSheet.create({
   Container: {
-    marginHorizontal:'6,66%',
+    marginHorizontal:'6%',
+    marginTop: 20,
   },
   CategoryWrapper: {
-    marginTop: 12,
-    marginTop: 15,
+    marginBottom: 12,
     flexDirection:'row',
     flexWrap: 'wrap',
     justifyContent:'space-between'

@@ -1,20 +1,22 @@
 import React, { Component } from 'react';
-import { View, Text, Image, StyleSheet } from 'react-native';
+import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 export const RiteTextLesson = (props) => {
     return (
-      <View style={styles.Container}>
+      <TouchableOpacity onPress={props.onPress} style={styles.Container}>
         <View style={styles.Left}>
             <Text style={styles.Title}>{props.item.title}</Text>
-            <Text style={styles.Description}>{props.item.description}</Text>
+            <Text style={styles.Description}>{props.item.when}</Text>
         </View>
 
         <Image style={styles.Icon} source={require('../assets/Icons/List.png')}/>
-      </View>
+      </TouchableOpacity>
     );
 }
 const styles = StyleSheet.create({
     Container: {
+        marginHorizontal: '6%',
         borderWidth: 1,
         borderColor: '#E9E9E9',
         borderRadius: 20,
@@ -37,13 +39,11 @@ const styles = StyleSheet.create({
         fontFamily: 'GolosMedium',
         fontSize: 10,
         color: '#1C1C1E',
-        opacity: 0.3
+        opacity: 0.3,
+        marginTop:4,
     },
     Icon: {
         width: 22,
         height: 22,
     }
 });
-
-
-

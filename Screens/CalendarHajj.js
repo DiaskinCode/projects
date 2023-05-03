@@ -4,21 +4,29 @@ import { StartTable } from '../Components/StartTable';
 import { CalendarDate } from '../Components/CalendarDate';
 import { useGetHajjStartDateQuery } from '../api/apiSlice'
 import { useGetHajjDaysQuery } from '../api/apiSlice'
+import i18n from 'i18next'
+import { useTranslation } from 'react-i18next';
+import { NoInternet } from '../Components/NoInternet';
 
 export default function CalendarHajj(props) {
+  const {t} = useTranslation()
     const {data: HajjStartDate,
         isLoading,
         isSuccess,
         isError,
-        error} = useGetHajjStartDateQuery()
+        error} = useGetHajjStartDateQuery(i18n.language)
 
-    const {data: HajjDays} = useGetHajjDaysQuery()
+    const {data: HajjDays} = useGetHajjDaysQuery(i18n.language)
 
       if (isLoading) {
-        <Text>loading...</Text>
+        return(
+          <NoInternet/>
+        )
       }
       else if (isError) {
-        <Text>{error}</Text>
+        return(
+          <NoInternet/>
+        )
       }
       else if (isSuccess) {
         const date = new Date(HajjStartDate.hajj_date_year, HajjStartDate.hajj_date_month - 1, HajjStartDate.hajj_date)
@@ -26,7 +34,7 @@ export default function CalendarHajj(props) {
             <View style={styles.Container}>
                 <StartTable 
                     date={date}
-                    description={'Дата начала вашего хаджа'}/>
+                    description={t('date_hajj_beggining')}/>
 
                     <FlatList style={styles.List}
                     data={HajjDays}

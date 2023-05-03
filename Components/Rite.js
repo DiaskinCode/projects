@@ -1,26 +1,26 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, StyleSheet, Image, Text, TouchableWithoutFeedback} from 'react-native';
-import { AsyncStorage } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export const Rite = (props) => {
   const [Checked, setChecked] = useState(false)
 
   
-  const fetchData = useCallback(async () => {
+  const fetchData = async () => {
 
     const data = await AsyncStorage.getItem(`rite${props.type}`);
     const Umrahdata = await AsyncStorage.getItem(`umrahRite${props.type}`);
 
     // AsyncStorage.removeItem('umrahRitetext')
     
-    if(data != null){
+    if(data != null || undefined){
       if (data.includes(props.item.id)) {
         setChecked(true);
       } else if(!data.includes(props.item.id)) {
         setChecked(false);
       }
     } 
-    if(Umrahdata != null){
+    if(Umrahdata != null || undefined){
       if (data.includes(props.item.id)) {
         setChecked(true);
       } else if(!data.includes(props.item.id)) {
@@ -30,11 +30,11 @@ export const Rite = (props) => {
     else{
       setChecked(false);
     }
-  }, [])
+  }
   
   // the useEffect is only there to call `fetchData` at the right time
   useEffect(() => {
-    setInterval(fetchData,2000);
+    setInterval(fetchData,3000);
     fetchData()
       // make sure to catch any error
       .catch(console.error);
@@ -51,7 +51,7 @@ export const Rite = (props) => {
                 <Text style={styles[`Number${Checked ? 'Checked' : ''}`]}>{props.item.id.toString().length < 2 ? '0' : ''}{props.item.id}</Text>
             </View>
             <View style ={styles.riteContent}>
-                <Text style={styles.Title}>{props.item.title}</Text>
+                <Text numberOfLines={2} ellipsizeMode="tail" style={styles.Title}>{props.item.title}</Text>
                 <Text style={styles.Description}  numberOfLines={1} ellipsizeMode="tail">{props.item.description}</Text>
             </View>
           </View>
@@ -85,6 +85,7 @@ const styles = StyleSheet.create({
       justifyContent: 'space-between',
       width: '100%',
       height: 56,
+      maxHeight:56,
       borderRadius: 20 ,
       paddingHorizontal: 15,
       paddingVertical: 7,
@@ -98,6 +99,7 @@ const styles = StyleSheet.create({
     Count: {
       width:36,
       height:36,
+      marginVertical:10,
       justifyContent:'center',
       alignItems:'center',
       borderRadius:10,
@@ -107,6 +109,7 @@ const styles = StyleSheet.create({
     },
     CountChecked: {
       borderWidth: 1,
+      marginVertical:10,
       backgroundColor: 'transparent',
       borderColor: '#000000',
       width:36,
@@ -127,7 +130,8 @@ const styles = StyleSheet.create({
       color: '#1C1C1E'
     },
     Title : {
-      fontSize: 15,
+      marginTop:10,
+      fontSize: 14,
       fontFamily: 'GolosBold'
     },
     Description : {

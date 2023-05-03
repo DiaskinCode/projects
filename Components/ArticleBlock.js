@@ -3,16 +3,18 @@ import { View, FlatList, StyleSheet, Image, TouchableOpacity, Text} from 'react-
 import { TouchableWithoutFeedback } from 'react-native-gesture-handler';
 import { Description } from './Description';
 import { useNavigation } from '@react-navigation/native';
+import { useTranslation } from 'react-i18next';
 
 export const ArticleBlock = (props) => {
     const Navigation = useNavigation()
+    const { t } = useTranslation();
     return (
       <View style={styles.Container}>
         <View style={styles.Header}>
-          <Text style={styles.Title}>Статьи и новости</Text>
+          <Text style={styles.Title}>{t('articles')}</Text>
 
           <TouchableOpacity onPress={props.onPressAll}>
-            <Text style={styles.ShowAllButton}>Все</Text>
+            <Text style={styles.ShowAllButton}>{t('all')}</Text>
           </TouchableOpacity>
         </View>
         
@@ -22,16 +24,22 @@ export const ArticleBlock = (props) => {
           showsHorizontalScrollIndicator={false}
           bounces={false}
           ItemSeparatorComponent={() => <View style={{width: 10}}/>}
-          renderItem={({item, index}) => <Article item={item} onPress={() => {
+          renderItem={({item, index}) =>
+          <TouchableWithoutFeedback onPress={() => {
             Navigation.navigate('ArticleScreen', {
               itemId:index + 1,
             })
-          }}/>}
+          }}>
+          <View style={{width: 154, minHeight: 150}}>
+            <Image source={{uri :`http://oralbekov.dias19.fvds.ru${item.upload}`}} style={styles.Image}/>
+            <Description text={item.created_at}/>
+            <Text style={styles.ArticleText}>{item.title}</Text>
+          </View>
+        </TouchableWithoutFeedback>}
           />
       </View>
     );
   }
-
   const Article = (props) => {
     return (
     <TouchableWithoutFeedback onPress={props.onPress}>
@@ -46,7 +54,8 @@ export const ArticleBlock = (props) => {
 
   const styles = StyleSheet.create({
     Container: {
-      marginBottom: 15
+      marginBottom: 15,
+      marginTop:10,
     },
     Header: {
       flexDirection:'row', 

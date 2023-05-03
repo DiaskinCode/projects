@@ -6,14 +6,15 @@ import { useNavigation } from '@react-navigation/native';
 import { QuestionsScreen } from '../Screens/QuestionsScreen';
 import { CategoryQuestionsScreen } from '../Screens/CategoryQuestionsScreen'
 import PopularQuestionsScreen from '../Screens/PopularQuestionsScreen';
+import { useTranslation } from 'react-i18next';
 
 const Questions = createNativeStackNavigator();
 
 export default function QuestionsStackNavigator() {
-    const Navigation = useNavigation()
-
+    const {t} = useTranslation()
     return (
-        <Questions.Navigator>
+        <Questions.Navigator
+            initialRouteName='QuestionsScreen'>
             <Questions.Screen 
                 name='QuestionsScreen'
                 component={QuestionsScreen}
@@ -22,10 +23,7 @@ export default function QuestionsStackNavigator() {
                     headerShadowVisible: false,
                     title: null,
                     headerLeft: () => (
-                        <Title text='Вопросы'/>
-                    ),
-                    headerRight: () => (
-                        <HeaderIcon source={require('../assets/Icons/MagnifyingGlass.png')}/>
+                        <Title text={t('questions')}/>
                     ),
                 }}/>
             <Questions.Screen
@@ -33,9 +31,6 @@ export default function QuestionsStackNavigator() {
                 component={CategoryQuestionsScreen}
                 options={({ navigation }) => ({
                     headerShadowVisible: false,
-                    headerRight: () => (
-                        <HeaderIcon source={require('../assets/Icons/MagnifyingGlass.png')}/>
-                    ),
                     headerLeft: () => (
                         <HeaderIcon source={require('../assets/Icons/ArrowLeft.png')} onPress={() => navigation.goBack()}/>
                     )
@@ -48,11 +43,10 @@ export default function QuestionsStackNavigator() {
                     headerTitle: () => (
                         <Text style={styles.HeaderTitle}>Частые вопросы</Text>
                     ),
-                    headerRight: () => (
-                        <HeaderIcon source={require('../assets/Icons/MagnifyingGlass.png')}/>
-                    ),
                     headerLeft: () => (
-                        <HeaderIcon source={require('../assets/Icons/ArrowLeft.png')} onPress={() => navigation.goBack()}/>
+                        <HeaderIcon source={require('../assets/Icons/ArrowLeft.png')} onPress={() => {
+                            navigation.goBack()
+                        }}/>
                     )
                     })}
                 />
@@ -73,5 +67,9 @@ const styles = StyleSheet.create({
         width: 26,
         height: 26,
         resizeMode: 'contain'
+    },
+    HeaderTitle: {
+        fontFamily: 'GolosBold',
+        fontSize: 18
     }
 });

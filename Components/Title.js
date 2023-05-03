@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     },
     TitlePlayer: {
       color: "#FFFFFF",
-      fontSize: 20,
+      fontSize: 17,
       fontFamily: 'GolosBold',
     },
     ContainerPlayer: {

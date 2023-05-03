@@ -34,7 +34,8 @@ export const TabSwitch = ({SelectionMode, onSelectSwitch, TabOneTitle, TabTwoTit
   }
   const styles = StyleSheet.create({
     Container: {
-      width: '100%',
+      alignSelf: 'center',
+      width: '88%',
       height: 36,
       backgroundColor: '#F6F6F6',
       paddingHorizontal: '2%',

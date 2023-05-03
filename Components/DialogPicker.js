@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React from 'react';
 import { 
     Text,
     View, 
@@ -39,7 +39,6 @@ export const ModalWindow = (props) => {
                     <View style={styles.ModalContent}>
                         <ModalHeader Close={props.onRequestClose} type='Settings'/>
                         <Picker
-                            ref={props.ref}
                             style={styles.Picker}
                             selectedValue={props.selectedValue}
                             onValueChange={(itemValue, itemIndex) => props.onValueChange(itemIndex)}
@@ -102,7 +101,7 @@ const styles = StyleSheet.create({
     FlagIcon: {
         width: 26,
         height: 26,
-        BorderRadius: '50%'
+        BorderRadius: 50
     },
     Right: {
         width: 26,
@@ -139,3 +138,4 @@ const styles = StyleSheet.create({
     },
     
 });
+

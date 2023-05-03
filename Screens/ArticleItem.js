@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text, Image, StyleSheet, TouchableWithoutFeedback} from 'react-native';
 import { Description } from '../Components/Description';
-import { Separator } from '../Components/Separator';
 
 export const ArticleItem = (props) => {
     return (
@@ -12,20 +11,21 @@ export const ArticleItem = (props) => {
             <Description text={props.item.created_at}/>
         </View>
         <Text style={styles.Title}>{props.item.title}</Text>
-        <Separator/>
       </View>
     </TouchableWithoutFeedback>
     );
 }
 const styles = StyleSheet.create({
-    Container: {
-
+    Container: {    
+        borderBottomWidth: 1,
+        borderColor: '#E9E9E9'
     },
     Title: {
         lineHeight: 24,
         fontFamily: 'GolosBold',
         fontSize: 18,
-        width: '80%'
+        width: '80%',
+        marginBottom: 15
     },
     Image: {
         resizeMode: 'cover',
