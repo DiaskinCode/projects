@@ -106,7 +106,7 @@ export const RiteTabTwo = () => {
   }, [])
 
   return (
-    <SafeAreaView style={{ flex: 1 }}>
+    <SafeAreaView edges={["right", "top", "left"]} style={{flex: 1,paddingBottom: 36}} forceInset={{ top: "always", bottom: "never" }}>
     <ScrollView 
       style={styles.Container}
       showsVerticalScrollIndicator={false}

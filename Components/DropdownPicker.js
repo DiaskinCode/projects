@@ -139,7 +139,7 @@ const styles = StyleSheet.create({
         marginHorizontal: '6%',
         borderBottomWidth: 1,
         borderLeftWidth: 1,
-        marginTop:-35,
+        marginTop:0,
         borderRightWidth: 1,
         borderColor: '#E9E9E9',
         zIndex: 2,

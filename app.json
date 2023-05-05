@@ -2,7 +2,7 @@
   "expo": {
     "name": "Hajjum",
     "slug": "hajjum",
-    "version": "1.0.0",
+    "version": "1.0.2",
     "orientation": "portrait",
     "icon": "./assets/logoicon.png",
     "userInterfaceStyle": "light",
@@ -18,10 +18,11 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "ru.hadj-umra.app"
     },
     "android": {
-      "package": "ttpc.hajjum",
+      "package": "ru.hadj-umra.app",
       "versionCode": 1,
       "config": {
         "googleMaps": {
@@ -38,7 +39,7 @@
     },
     "extra": {
       "eas": {
-        "projectId": "59691135-99be-40cd-aa7d-8eedf8092fe1"
+        "projectId": "8cdefdec-531c-40c0-b31a-8be370f13a1f"
       }
     }
   }

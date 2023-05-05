@@ -101,7 +101,7 @@ export const RiteTabOne = () => {
     }, [i18n.language]);
     
   return (
-    <SafeAreaView style={{flex: 1, height: 674, paddingBottom: 36}}>
+    <SafeAreaView edges={["right", "top", "left"]} style={{flex: 1,paddingBottom: 36}} forceInset={{ top: "always", bottom: "never" }}>
     <ScrollView 
       style={styles.Container}
       showsVerticalScrollIndicator={false}
@@ -176,7 +176,7 @@ export const RiteTabOne = () => {
 const styles = StyleSheet.create({
   Container: {
     flex: 1,
-    marginHorizontal: '6.66%'
+    marginHorizontal: '6.66%',
   },
   Wrapper: {
     flexDirection: 'row',
