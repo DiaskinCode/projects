@@ -1,14 +1,24 @@
 import React, { useLayoutEffect, useEffect } from 'react';
 import { View,ScrollView, Text, StyleSheet, Image } from 'react-native';
 import i18n from 'i18next';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useNavigation } from '@react-navigation/native';
 
-export default function RiteViewScreen (props) {
+import { useSelector,useDispatch } from 'react-redux';
+import { increment } from '../reducers/riteReducer';
+
+function RiteViewScreen (props) {
   const HeaderTitle = props.route.params.HeaderTitle
   const RiteInstructionId = props.route.params.id
-  const RiteAsyncStorageType = props.route.params.type
   const Navigation = useNavigation()
+
+  const dispatch = useDispatch()
+  const rites = useSelector((state) => state.rite);
+
+  console.log("state",rites);
+  useEffect(() => {
+    dispatch(increment({type:'hajjText',id:RiteInstructionId}))
+  },[RiteInstructionId])
+  
 
   const InstructionsData = [
     {
@@ -147,29 +157,12 @@ export default function RiteViewScreen (props) {
 
   const Rite = InstructionsData[RiteInstructionId - 1]
 
-  AsyncStorage.getItem(`rite${RiteAsyncStorageType}`,(err, previousRite) => {
-    let riteProgress = []
-    if(previousRite == null) {
-      riteProgress.push(props.route.params.id)
-      AsyncStorage.setItem(`rite${RiteAsyncStorageType}`,JSON.stringify(riteProgress));
-    } else{
-      if (!previousRite.includes(props.route.params.id)){
-        riteProgress.push(props.route.params.id)
-      }
-      JSON.parse(previousRite).map((item) => {
-          riteProgress.push(item)
-      })
-      AsyncStorage.setItem(`rite${RiteAsyncStorageType}`,JSON.stringify(riteProgress));
-    }
-  }); 
-  
-  // AsyncStorage.removeItem('rite')
-    
     useLayoutEffect(() => {
       Navigation.setOptions({
         headerTitle: () => (<Text numberOfLines={1} ellipsizeMode="tail" style={{fontFamily: 'GolosBold', fontSize: 18,flex:0.8}}>{HeaderTitle}</Text>)
       });
     }, [Navigation]);
+
     return (
       <ScrollView>
         <View style = {styles.container}>
@@ -179,6 +172,13 @@ export default function RiteViewScreen (props) {
       </ScrollView>
     );
   }
+
+  // const mapStateToProps = (state) => {
+  //   const { rites } = state
+  //   return { rites }
+  // };
+
+  export default RiteViewScreen;
 
   const styles = StyleSheet.create({
     container: {

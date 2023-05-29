@@ -1,9 +1,11 @@
-import React, { useLayoutEffect,useCallback,useState } from 'react';
+import React, { useLayoutEffect,useCallback,useState,useEffect } from 'react';
 import i18n from 'i18next';
 import { View,ScrollView,Dimensions,TouchableWithoutFeedback, Text, StyleSheet, Image,ImageBackground } from 'react-native';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useNavigation } from '@react-navigation/native';
 import YoutubePlayer from "react-native-youtube-iframe";
+
+import { useSelector,useDispatch } from 'react-redux';
+import { increment } from '../reducers/riteReducer';
 
 export default function UmrahRiteViewVideoScreen (props) {
   const UmrahInstructionsVideoData = [
@@ -28,30 +30,17 @@ export default function UmrahRiteViewVideoScreen (props) {
     }
   }, []);
   const [playing, setPlaying] = useState(false);
-  const Data = props.route.params.Data
-  const RiteAsyncStorageType = props.route.params.type
   const Navigation = useNavigation()
   const Rite = UmrahInstructionsVideoData[RiteInstructionId - 1]
   const ScreenWidth = Dimensions.get('window').width
-  
 
-  AsyncStorage.getItem(`umrahRite${RiteAsyncStorageType}`,(err, previousRite) => {
-    let riteProgress = []
-    if(previousRite == null) {
-      riteProgress.push(props.route.params.id)
-      AsyncStorage.setItem(`umrahRite${RiteAsyncStorageType}`,JSON.stringify(riteProgress));
-    } else{
-      if (!previousRite.includes(props.route.params.id)){
-        riteProgress.push(props.route.params.id)
-      }
-      JSON.parse(previousRite).map((item) => {
-          riteProgress.push(item)
-      })
-      AsyncStorage.setItem(`umrahRite${RiteAsyncStorageType}`,JSON.stringify(riteProgress));
-    }
-  }); 
+  // add rite to redux 
+  const dispatch = useDispatch()
   
-  // AsyncStorage.removeItem('rite')
+  useEffect(() => {
+    dispatch(increment({type:'umrahVideo',id:RiteInstructionId}))
+  },[RiteInstructionId])
+  
   useLayoutEffect(() => {
     Navigation.setOptions({
       headerTitle: () => (<Text style={{fontFamily: 'GolosBold', fontSize: 18}}>{HeaderTitle}</Text>)

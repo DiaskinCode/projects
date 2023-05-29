@@ -5,9 +5,13 @@ import { useNavigation } from '@react-navigation/native';
 import { Rite } from '../Components/Rite';
 import { useTranslation } from 'react-i18next';
 
+import { useSelector } from 'react-redux';
+
 export default function RiteVideoInstructionScreen (props) {
   const Navigation = useNavigation()
   const {t} = useTranslation()
+
+  const rites = useSelector((state) => state.rite.hajjText);
 
   const InstructionsVideoData = [
     {
@@ -27,7 +31,7 @@ export default function RiteVideoInstructionScreen (props) {
       <View style={styles.Container}>
         <FlatList data={InstructionsVideoData}
           showsVerticalScrollIndicator={false}
-          renderItem={({item}) => <Rite type={'video'} item={item}
+          renderItem={({item}) => <Rite checked={rites.includes(item.id)} type={'video'} item={item}
           onPress={() => Navigation.navigate('RiteViewVideoScreen', {
             HeaderTitle: item.title,
             type:'video',

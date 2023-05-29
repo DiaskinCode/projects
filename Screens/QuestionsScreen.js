@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { View, StyleSheet, SafeAreaView, Text, TouchableOpacity, ScrollView, RefreshControl } from 'react-native';
-import { useGetQuestionCategoryQuery, useGetPopularQuestionsQuery } from '../api/apiSlice'
 import { useNavigation } from '@react-navigation/native';
 import { Category } from '../Components/Category';
 import { QuestionsBlock } from '../Components/QuestionsBlock';
 import { QuestionsPopUp } from '../Components/Pop-Up';
 import i18n from 'i18next'
+import { useGetPopularQuestionsQuery,useGetQuestionCategoryQuery } from '../api/apiSlice'
 import { useTranslation } from 'react-i18next';
 import { NoInternet } from '../Components/NoInternet';
 

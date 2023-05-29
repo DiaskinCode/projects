@@ -1,56 +1,48 @@
-import React, {useState, useCallback, useMemo} from 'react';
-import { View, StyleSheet, SafeAreaView,TouchableOpacity,TouchableWithoutFeedback,FlatList, ScrollView, RefreshControl, Dimensions,Image,Text } from 'react-native';
+import React, { useState, useCallback, useMemo } from 'react';
+import { View, StyleSheet, SafeAreaView, TouchableOpacity, TouchableWithoutFeedback, FlatList, ScrollView, RefreshControl, Dimensions, Image, Text } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { Carousel } from '../Components/Carousel';
 import { Category } from '../Components/Category';
-import { ArticleBlock } from '../Components/ArticleBlock';
 import { Description } from '../Components/Description';
 import { Button } from '../Components/Button';
 import { PlayerItem } from '../Components/PlayerItem';
 import { NoInternet } from '../Components/NoInternet';
-import { useGetArticlesQuery } from '../api/apiSlice'
-import QuestionsStackNavigator from '../navigation/QuestionsStackNavigator';
+import { useGetArticlesQuery } from '../api/apiSlice';
 import { useTranslation } from 'react-i18next';
 import i18n from 'i18next';
 
 export const MainScreen = () => {
-    const { t } = useTranslation();
-    const Navigation = useNavigation()
-    const ScreenWidth = Dimensions.get('window').width
-    const [refreshing, setRefreshing] = useState(false);
-    const {
-    data: Articles,
-    isLoading,
-    isSuccess,
-    isError,
-    error
-    } = useGetArticlesQuery(i18n.language)
-    
-    const delay = (ms) => new Promise(
-        resolve => setTimeout(resolve, ms)
-      );
+  const { t } = useTranslation();
+  const Navigation = useNavigation();
+  const ScreenWidth = Dimensions.get('window').width;
+  const [refreshing, setRefreshing] = useState(false);
+  const { data: Articles, isLoading, isSuccess, isError, error } = useGetArticlesQuery(i18n.language);
 
-    const onRefresh = useCallback(() => {
-        setRefreshing(true);
-        delay(2000).then(() => setRefreshing(false))
-    }, [])
+  const delay = (ms) => new Promise(
+    resolve => setTimeout(resolve, ms)
+  );
 
-    const PlayerData = [
-        {
-            id: 1,
-            youtubeId:"3loPeQnJKk4",
-            status: 'Online',
-            title: t('player_from_makkah'),
-            image: require('../assets/images/PlayerBackground.png')
-        },
-        {
-            id: 2,
-            youtubeId:"bRSKpb_xzq0",
-            status: 'Online',
-            title: t('player_from_medina'),
-            image: require('../assets/images/medina.jpg')
-        }
-    ]
+  const onRefresh = useCallback(() => {
+    setRefreshing(true);
+    delay(2000).then(() => setRefreshing(false));
+  }, []);
+
+  const PlayerData = [
+    {
+      id: 1,
+      youtubeId: "3loPeQnJKk4",
+      status: 'Online',
+      title: t('player_from_makkah'),
+      image: require('../assets/images/PlayerBackground.png')
+    },
+    {
+      id: 2,
+      youtubeId: "bRSKpb_xzq0",
+      status: 'Online',
+      title: t('player_from_medina'),
+      image: require('../assets/images/medina.jpg')
+    }
+  ];
 
     return (
         <SafeAreaView style={styles.Container}>

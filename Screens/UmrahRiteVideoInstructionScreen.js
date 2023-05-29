@@ -1,13 +1,14 @@
-import React, { useState } from 'react';
-import { View,Text, StyleSheet, FlatList } from 'react-native';
+import React from 'react';
+import { View, StyleSheet, FlatList } from 'react-native';
 import i18n from 'i18next';
 import { useNavigation } from '@react-navigation/native';
 import { Rite } from '../Components/Rite';
-import { useTranslation } from 'react-i18next';
+import { useSelector } from 'react-redux';
 
 export default function UmrahRiteVideoInstructionScreen (props) {
   const Navigation = useNavigation()
-  const {t} = useTranslation()
+  const rites = useSelector((state) => state.rite.umrahVideo);
+
   const UmrahInstructionsVideoData = [
     {
         id: 1,
@@ -26,7 +27,7 @@ export default function UmrahRiteVideoInstructionScreen (props) {
       <View style={styles.Container}>
         <FlatList data={UmrahInstructionsVideoData}
           showsVerticalScrollIndicator={false}
-          renderItem={({item}) => <Rite type={'video'} item={item}
+          renderItem={({item}) => <Rite checked={rites.includes(item.id)} type={'video'} item={item}
           onPress={() => Navigation.navigate('UmrahRiteViewVideoScreen', {
             HeaderTitle: item.title,
             type:'video',

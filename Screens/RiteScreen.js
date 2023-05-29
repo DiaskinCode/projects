@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react';
-import { View, Text, StyleSheet, TouchableWithoutFeedback, SafeAreaView, ScrollView, RefreshControl } from 'react-native';
-import { Title } from '../Components/Title'
+import { StyleSheet, SafeAreaView, ScrollView, RefreshControl } from 'react-native';
+import i18n from 'i18next';
 import { TabSwitch } from '../Components/TabSwitch'
 import { RiteTabOne } from './RiteTabOne';
 import { RiteTabTwo } from './RiteTabTwo';
@@ -30,8 +30,8 @@ export default function RiteScreen () {
       <TabSwitch 
         onSelectSwitch={onSelectSwitch} 
         SelectionMode={SelectionMode}
-        TabOneTitle={'Совершить Хадж'}
-        TabTwoTitle={'Совершить Умру'}
+        TabOneTitle={i18n.t('do_hajj')}
+        TabTwoTitle={i18n.t('do_umrah')}
       />
 
       {SelectionMode == 1 ? <RiteTabOne/> : <RiteTabTwo/>}

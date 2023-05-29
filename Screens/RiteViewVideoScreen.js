@@ -1,10 +1,12 @@
-import React, { useLayoutEffect,useCallback,useState } from 'react';
+import React, { useLayoutEffect,useCallback,useState,useEffect } from 'react';
 import i18n from 'i18next';
 import { View,ScrollView,Dimensions,TouchableWithoutFeedback, Text, StyleSheet, Image,ImageBackground } from 'react-native';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useNavigation } from '@react-navigation/native';
 import YoutubePlayer from "react-native-youtube-iframe";
 import { useTranslation } from 'react-i18next';
+
+import { useSelector,useDispatch } from 'react-redux';
+import { increment } from '../reducers/riteReducer';
 
 export default function RiteViewVideoScreen (props) {
   const HeaderTitle = props.route.params.HeaderTitle
@@ -15,6 +17,15 @@ export default function RiteViewVideoScreen (props) {
       setPlaying(true);
     }
   }, []);
+
+  const dispatch = useDispatch()
+  const rites = useSelector((state) => state.rite);
+
+  console.log("state",rites);
+  useEffect(() => {
+    dispatch(increment({type:'hajjVideo',id:RiteInstructionId}))
+  },[RiteInstructionId])
+
   const InstructionsVideoData = [
     {
         id: 1,
@@ -34,27 +45,6 @@ export default function RiteViewVideoScreen (props) {
   const Navigation = useNavigation()
   const Rite = InstructionsVideoData[RiteInstructionId - 1]
   const ScreenWidth = Dimensions.get('window').width
-  
-
-  AsyncStorage.getItem(`rite${RiteAsyncStorageType}`,(err, previousRite) => {
-    let riteProgress = []
-    if(previousRite == null) {
-      riteProgress.push(props.route.params.id)
-      AsyncStorage.setItem(`rite${RiteAsyncStorageType}`, JSON.stringify(riteProgress));
-    } else{
-      if (!previousRite.includes(props.route.params.id)){
-        riteProgress.push(props.route.params.id)
-      }
-      JSON.parse(previousRite).map((item) => {
-          riteProgress.push(item)
-      })
-      AsyncStorage.setItem(`rite${RiteAsyncStorageType}`, JSON.stringify(riteProgress));
-    }
-
-    console.log(riteProgress);
-  }); 
-  
-  // AsyncStorage.removeItem('rite')
     
     useLayoutEffect(() => {
       Navigation.setOptions({

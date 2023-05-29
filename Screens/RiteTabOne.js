@@ -4,8 +4,7 @@ import {View,
         ScrollView,
         SafeAreaView,
         RefreshControl, 
-        StyleSheet,Image} from 'react-native';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+        StyleSheet} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { Category } from '../Components/Category';
 import { RiteProgress } from '../Components/RiteProgress';
@@ -15,68 +14,97 @@ import { useGetPopularQuestionsHajjQuery } from '../api/apiSlice'
 import i18n from 'i18next';
 import { useTranslation } from 'react-i18next';
 import { NoInternet } from '../Components/NoInternet';
+import { useSelector } from 'react-redux';
 
 export const RiteTabOne = () => {
   const { t } = useTranslation();
   const Navigation = useNavigation()
   const [SelectedQuestion, setSelectedQuestion] = useState(0)
   const [isVisible, setVisible] = useState(false);
-  const [CurrentRite, setCurrentRite] = useState()
-  const [CurrentRiteVideo, setCurrentRiteVideo] = useState()
   const [refreshing, setRefreshing] = useState(false);
+
+  const rites = useSelector((state) => state.rite);
+  const CurrentRiteText = Math.max(...rites.hajjText)
+  const CurrentRiteVideo = Math.max(...rites.hajjVideo)
 
   const InstructionsVideoData = [
     {
         id: 1,
         title: i18n.t("Hajj_Instructions_Video_Data_Title"),
-        youtubeId:"61vh-4dGRgE",
-        description: i18n.t("Hajj_Instructions_Video_Data_Description"),
-        image: require('../assets/images/RiteImg.png'),
-        desc:i18n.t("Hajj_Instructions_Video_Data_Desc"),
-        arabText:'إِنَّ الصَّفَا وَ الْمَرْوَةَ مِنْ شَعَائِرِ اللهِ فَمَنْ حَجَّ الْبَيْتَ أَوِ اعْتَمَرَ فَلاَ جُنَاحَ عَلَيْهِ أَن يَطَّوَّفَ بِهِمَا',
-        translatedArabText:i18n.t("Hajj_Instructions_Video_Data_TranslatedArabText"),
-        borderColor: '#A1F6FB'
     },
   ]
 
   const InstructionsData = [
-    {
-        id: 1,
-        title: i18n.t("Instructions_Data_Title"),
-        description: i18n.t("Instructions_Data_Description"),
-        image: require('../assets/images/RiteImg.png'),
-        desc: i18n.t("Instructions_Data_Desc"),
-        arabText:'إِنَّ الصَّفَا وَ الْمَرْوَةَ مِنْ شَعَائِرِ اللهِ فَمَنْ حَجَّ الْبَيْتَ أَوِ اعْتَمَرَ فَلاَ جُنَاحَ عَلَيْهِ أَن يَطَّوَّفَ بِهِمَا',
-        translatedArabText: i18n.t("Instructions_Data_TranslatedArabText"),
-        borderColor: '#A1F6FB'
-    },
+  {
+            id: 1,
+            title: i18n.t("Umrah_Instructions_Data_Title"),
+        },
+        {
+          id: 2,
+          title: i18n.t("Umrah_Instructions_Data_Title_5"),
+        },
+        {
+            id: 3,
+            title: i18n.t("Instructions_Data_Title_2"),
+        },
+        {
+            id: 4,
+            title: i18n.t("Umrah_Instructions_Data_Title_2"),
+        },
+        {
+            id: 5,
+            title: i18n.t("Umrah_Instructions_Data_Title_6"),
+        },
+        {
+          id: 6,
+          title: i18n.t("Umrah_Instructions_Data_Title_7"),
+        },
+        {
+            id: 7,
+            title: i18n.t("Umrah_Instructions_Data_Title_3"),
+        },
+        {
+            id: 8,
+            title: i18n.t("Instructions_Data_Title_5"),
+        },
+        {
+            id: 9,
+            title: i18n.t("Instructions_Data_Title_14"),
+        },
+        {
+            id: 10,
+            title: i18n.t("Instructions_Data_Title_6"),
+        },
+        {
+            id: 11,
+            title: i18n.t("Instructions_Data_Title_7"),
+        },
+        {
+            id: 12,
+            title: i18n.t("Instructions_Data_Title_9"),
+        },
+        {
+            id: 13,
+            title: i18n.t("Instructions_Data_Title_8"),
+        },
+        {
+            id: 14,
+            title: i18n.t("Instructions_Data_Title_10"),
+        },
+        {
+            id:15,
+            title: i18n.t("Instructions_Data_Title_11"),
+        },
+        {
+            id: 16,
+            title: i18n.t("Instructions_Data_Title_12"),
+        },
+        {
+            id: 17,
+            title: i18n.t("Instructions_Data_Title_13"),
+        },
   ]
 
-  const fetchData = useCallback(async () => {
-    const data = await AsyncStorage.getItem('ritetext');
-    const dataVideo = await AsyncStorage.getItem('ritevideo');
-    if(data != null){
-      setCurrentRite(InstructionsData[Math.max.apply(null, JSON.parse(data)) - 1] );
-    } else if (InstructionsData[0] != null){
-      setCurrentRite(InstructionsData[0]);
-    } else {
-      setCurrentRite(undefined);
-    }
-    if(dataVideo != null){
-      setCurrentRiteVideo(InstructionsVideoData[JSON.parse(dataVideo).sort((a,b) => b-a)[0] - 1] );
-    } else if (InstructionsVideoData[0] != null){
-      setCurrentRiteVideo(InstructionsVideoData[0]);
-    } else {
-      setCurrentRiteVideo(undefined);
-    }
-  }, [])
-  // the useEffect is only there to call `fetchData` at the right time
-  useEffect(() => {
-    setInterval(fetchData, 4000);
-    fetchData()
-      // make sure to catch any error
-      .catch(console.error);
-  }, [fetchData])
 
   const onPressQuestion = async (index) => {
     setSelectedQuestion(PopularQuestions[index])
@@ -90,11 +118,8 @@ export const RiteTabOne = () => {
     delay(2000).then(() => setRefreshing(false))
 }, [])
   const {data: PopularQuestions,
-    isLoading,
-    isSuccess,
-    isError,
     refetch,
-    error} = useGetPopularQuestionsHajjQuery(i18n.language)
+    } = useGetPopularQuestionsHajjQuery(i18n.language)
 
     useEffect(() => {
       refetch();
@@ -129,7 +154,7 @@ export const RiteTabOne = () => {
           title={t('instructions_performing_hajj')}
           description={t('rites')}
           icon={require('../assets/Icons/Path.png')}
-          currentRiteTitle={CurrentRite != undefined ? CurrentRite.title : t('go')}
+          currentRiteTitle={CurrentRiteText != undefined ? InstructionsData[CurrentRiteText - 1].title : t('go')}
           count={InstructionsData.length}
           onPress={() => Navigation.navigate('RiteInstructionScreen')}
           />
@@ -137,7 +162,7 @@ export const RiteTabOne = () => {
           background={require('../assets/images/RiteBackground2.png')}
           title={t('video_instructions_performing_hajj')}
           description={t('rites')}
-          currentRiteTitle={CurrentRiteVideo != undefined ? CurrentRiteVideo.title : t('go')}
+          currentRiteTitle={CurrentRiteVideo != undefined ? InstructionsVideoData[CurrentRiteVideo - 1].title : t('go')}
           icon={require('../assets/Icons/PlayCircle.png')}
           count={InstructionsVideoData.length}
           onPress={() => Navigation.navigate('RiteVideoInstructionScreen')}/>

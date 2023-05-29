@@ -8,6 +8,7 @@ import {createApi,fetchBaseQuery} from '@reduxjs/toolkit/query/react'
 const baseUrl = `http://oralbekov.dias19.fvds.ru/`;
   
 export const apiSlice = createApi({
+    reducerPath: 'apiSlice',
     baseQuery: fetchBaseQuery({baseUrl}),
     tagTypes: [
         'PopularQuestions',

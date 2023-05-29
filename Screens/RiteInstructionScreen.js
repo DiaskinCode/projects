@@ -1,11 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { View, StyleSheet, FlatList } from 'react-native';
 import i18n from 'i18next';
 import { useNavigation } from '@react-navigation/native';
 import { Rite } from '../Components/Rite';
 
+import { useSelector } from 'react-redux';
+
 export default function RiteInstructionScreen (props) {
     const Navigation = useNavigation()
+    const rites = useSelector((state) => state.rite.hajjText);
+
     const InstructionsData = [
         {
             id: 1,
@@ -143,7 +147,7 @@ export default function RiteInstructionScreen (props) {
       <View style={styles.Container}>
         <FlatList data={InstructionsData}
           showsVerticalScrollIndicator={false}
-          renderItem={({item}) => <Rite type={'text'} item={item}
+          renderItem={({item}) => <Rite checked={rites.includes(item.id)} type={'text'} item={item}
           onPress={() => Navigation.navigate('RiteViewScreen', {
             HeaderTitle: item.title,
             type:'text',

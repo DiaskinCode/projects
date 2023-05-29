@@ -1,16 +1,21 @@
-import React, { useLayoutEffect } from 'react';
+import React, { useLayoutEffect,useEffect } from 'react';
 import i18n from 'i18next';
 import { View,ScrollView, Text, StyleSheet, Image,ImageBackground } from 'react-native';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useNavigation } from '@react-navigation/native';
-import { useEffect } from 'react'
+
+import { useDispatch } from 'react-redux';
+import { increment } from '../reducers/riteReducer';
 
 export default function UmrahRiteViewScreen (props) {
   const HeaderTitle = props.route.params.HeaderTitle
   const RiteInstructionId = props.route.params.id
-  const RiteAsyncStorageType = props.route.params.type
-  const Data = props.route.params.Data
   const Navigation = useNavigation()
+
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(increment({type:'umrahText',id:RiteInstructionId}))
+  },[RiteInstructionId])
   
   const UmrahInstructionsData = [
     {
@@ -72,23 +77,6 @@ export default function UmrahRiteViewScreen (props) {
 ]
 
   const Rite = UmrahInstructionsData[RiteInstructionId - 1]
-
-  AsyncStorage.getItem(`umrahRite${RiteAsyncStorageType}`,(err, previousRite) => {
-    let riteProgress = []
-    if(previousRite == null) {
-      riteProgress.push(props.route.params.id)
-      AsyncStorage.setItem(`umrahRite${RiteAsyncStorageType}`,JSON.stringify(riteProgress));
-    } else{
-      if (!previousRite.includes(props.route.params.id)){
-        riteProgress.push(props.route.params.id)
-      }
-      JSON.parse(previousRite).map((item) => {
-          riteProgress.push(item)
-      })
-
-      AsyncStorage.setItem(`umrahRite${RiteAsyncStorageType}`,JSON.stringify(riteProgress));
-    }
-  }); 
 
   useLayoutEffect(() => {
     Navigation.setOptions({

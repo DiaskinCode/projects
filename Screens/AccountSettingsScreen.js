@@ -24,7 +24,7 @@ import i18n from 'i18next';
         flagIcon: require('../assets/Icons/EnglishFlagIcon.png')
         }
     ]
-    console.log('gender',i18n.t("settings_gender_male"));
+
     let gender = [
         { value:i18n.t("settings_gender_male"), label:i18n.t("settings_gender_male"), id: 1},
         { value:i18n.t("settings_gender_female"), label:i18n.t("settings_gender_female"), id: 2 }
@@ -63,13 +63,11 @@ const UserSettingsData = createStore({
             }
             setState({ SelectedUserGender: gender[index] });
             AsyncStorage.setItem('Gender', JSON.stringify(index));
-            console.log(index)
           },
     
         toggleSwitch: (switchName) => ({ getState, setState }) => {
             setState({ [switchName]: !getState()[switchName] });
             AsyncStorage.setItem(`${switchName}Switch`, JSON.stringify(getState()[switchName]));
-            console.log(`${switchName}Switch value:` + getState()[switchName])
           },
 
         getSwitchValue: (switchName) => ({ getState, setState }) => {
@@ -78,7 +76,6 @@ const UserSettingsData = createStore({
                   setState({ [switchName]: false})
                  } else
                 setState({ [switchName]: JSON.parse(data) })
-                console.log(data)
             })
           }
     }
@@ -93,6 +90,9 @@ export default function AccountSettingsScreen() {
     const [ isModalVisible, setModalVisible ] = useState(false);
     const [ isDropdownVisible, setDropdownVisible ] = useState(false);
     const { t } = useTranslation();
+
+    const [ state1, actions1 ] = useUserSettingsData();
+    const [isDropdownVisible1, setDropdownVisible1] = useState(false);
 
     const phoneLanguage =
     Platform.OS === 'ios'
@@ -115,7 +115,6 @@ export default function AccountSettingsScreen() {
                         actions.setSelectedUserGender(0)
                     } else
                     actions.setSelectedUserGender(JSON.parse(data))
-                    console.log('data',data)
                 }),
 
                 actions.getSwitchValue('News'),
@@ -136,12 +135,15 @@ export default function AccountSettingsScreen() {
     return (
         <View style={styles.Container}>
           <View style={{marginBottom: 38}}>
-            <DialogPicker 
-                description={i18n.t('language')} 
-                title={state.SelectedLanguage.label}
-                flagIcon={state.SelectedLanguage.flagIcon}
-                type='language'
-                onPress={() => setModalVisible(true)}/>
+          <DropdownPicker 
+                    description={i18n.t('language')}
+                    title={state1.SelectedLanguage.label}
+                    flagIcon={state1.SelectedLanguage.flagIcon}
+                    data={language}
+                    isVisible={isDropdownVisible1}
+                    setDropdownVisible={() => setDropdownVisible1(true)}
+                    onRequestClose={() => setDropdownVisible1(false)}
+                    onItemPress={(index) => actions1.setSelectedLanguage(index)}/>
 
             <DropdownPicker 
                 description={i18n.t('gender')}

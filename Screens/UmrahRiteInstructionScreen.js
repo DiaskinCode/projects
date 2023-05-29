@@ -3,9 +3,11 @@ import { View, StyleSheet, FlatList } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import i18n from 'i18next';
 import { Rite } from '../Components/Rite';
+import { useSelector } from 'react-redux';
 
 export default function UmrahRiteInstructionScreen (props) {
   const Navigation = useNavigation()
+  const rites = useSelector((state) => state.rite.umrahText);
 
   const UmrahInstructionsData = [
     {
@@ -71,7 +73,7 @@ export default function UmrahRiteInstructionScreen (props) {
       <View style={styles.Container}>
         <FlatList data={UmrahInstructionsData}
           showsVerticalScrollIndicator={false}
-          renderItem={({item}) => <Rite category={'umrah'} type={'text'} item={item}
+          renderItem={({item}) => <Rite checked={rites.includes(item.id)} category={'umrah'} type={'text'} item={item}
           onPress={() => Navigation.navigate('UmrahRiteViewScreen', {
             HeaderTitle: item.title,
             type:'text',
