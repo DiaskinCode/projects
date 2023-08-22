@@ -222,7 +222,7 @@ export const MapScreen = ({navigation, route}) => {
               style={styles.map}
               customMapStyle={mapStyle}
               showsUserLocation={true}
-              apiKey={"AIzaSyBQPaK7vaLhe6fAXh53K__nC1BGYsV193g"}
+              apiKey={""}
               initialRegion={{
                 latitude: 21.422510,
                 longitude:39.826168,
@@ -254,7 +254,7 @@ export const MapScreen = ({navigation, route}) => {
                 <MapViewDirections
                   origin={coordinates[0]}
                   destination={coordinates[1]}
-                  apikey={"AIzaSyCKKn8KVrLBr5jiIIgAC0mNpeWnZCObYq4"}
+                  apikey={""}
                   strokeWidth={3}
                   lineDashPattern={[47.12]}
                   strokeColor="#1C1C1E"
