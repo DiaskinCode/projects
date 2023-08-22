@@ -13,7 +13,7 @@ export const Rite = (props) => {
               <Text style={styles[`Number${Checked ? 'Checked' : ''}`]}>{props.item.id.toString().length < 2 ? '0' : ''}{props.item.id}</Text>
           </View>
           <View style ={styles.riteContent}>
-              <Text numberOfLines={1} ellipsizeMode="tail" style={styles.Title}>{props.item.title}</Text>
+              <Text numberOfLines={2} ellipsizeMode="tail" style={styles.Title}>{props.item.title}</Text>
               <Text style={styles.Description}  numberOfLines={1} ellipsizeMode="tail">{props.item.description}</Text>
           </View>
         </View>
@@ -33,29 +33,30 @@ const styles = StyleSheet.create({
     alignItems:'center',
     justifyContent: 'space-between',
     width: '100%',
-    height: 56,
+    height: 65,
     borderColor: '#E9E9E9',
     borderWidth: 1,
     borderRadius: 20 ,
     paddingHorizontal: 15,
     paddingVertical: 7,
-    marginTop: 15,
+    marginTop: 10,
   },
   ContainerChecked: {
     flexDirection:'row',
     alignItems:'center',
     justifyContent: 'space-between',
     width: '100%',
-    height: 56,
-    maxHeight:56,
+    height: 65,
+    maxHeight:65,
     borderRadius: 20 ,
     paddingHorizontal: 15,
     paddingVertical: 7,
-    marginTop: 15,
+    marginTop: 10,
     backgroundColor: '#F6F6F6'
   },
   Left: {
     width: '79%',
+    height:65,
     position:'relative',
     flexDirection: 'row'
   },

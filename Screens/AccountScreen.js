@@ -5,7 +5,7 @@ import { useNavigation } from '@react-navigation/native';
 import { PlayerItem } from '../Components/PlayerItem';
 import i18n from 'i18next';
 import { ProfileItem } from '../Components/ProfileItem';
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import { TouchableOpacity } from 'react-native';
 import { useTranslation } from 'react-i18next';
 
 export const AccountScreen = () => {

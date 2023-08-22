@@ -154,7 +154,7 @@ export const RiteTabOne = () => {
           title={t('instructions_performing_hajj')}
           description={t('rites')}
           icon={require('../assets/Icons/Path.png')}
-          currentRiteTitle={CurrentRiteText != undefined ? InstructionsData[CurrentRiteText - 1].title : t('go')}
+          currentRiteTitle={CurrentRiteText == -Infinity ? t('go') : InstructionsData[CurrentRiteText - 1].title}
           count={InstructionsData.length}
           onPress={() => Navigation.navigate('RiteInstructionScreen')}
           />
@@ -162,7 +162,7 @@ export const RiteTabOne = () => {
           background={require('../assets/images/RiteBackground2.png')}
           title={t('video_instructions_performing_hajj')}
           description={t('rites')}
-          currentRiteTitle={CurrentRiteVideo != undefined ? InstructionsVideoData[CurrentRiteVideo - 1].title : t('go')}
+          currentRiteTitle={CurrentRiteVideo == -Infinity ? t('go') : InstructionsVideoData[CurrentRiteVideo - 1].title}
           icon={require('../assets/Icons/PlayCircle.png')}
           count={InstructionsVideoData.length}
           onPress={() => Navigation.navigate('RiteVideoInstructionScreen')}/>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, FlatList, StyleSheet, Image, TouchableOpacity, Text} from 'react-native';
-import { TouchableWithoutFeedback } from 'react-native-gesture-handler';
+import { TouchableWithoutFeedback } from 'react-native';
 import { Description } from './Description';
 import { useNavigation } from '@react-navigation/native';
 import { useTranslation } from 'react-i18next';

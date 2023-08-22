@@ -105,7 +105,7 @@ export const RiteTabTwo = () => {
           title={t('instructions_performing_umrah')}
           description={t('rites')}
           icon={require('../assets/Icons/Path.png')}
-          currentRiteTitle={CurrentRiteText != undefined ? UmrahInstructionsData[CurrentRiteText - 1].title : t('go')}
+          currentRiteTitle={CurrentRiteText == -Infinity ? t('go') : UmrahInstructionsData[CurrentRiteText - 1].title}
           count={UmrahInstructionsData.length}
           onPress={() => Navigation.navigate('UmrahRiteInstructionScreen')}
           />
@@ -113,7 +113,7 @@ export const RiteTabTwo = () => {
           background={require('../assets/images/RiteBackground2.png')}
           title={t('video_instructions_performing_umrah')}
           description={t('rites')}
-          currentRiteTitle={CurrentRiteVideo != undefined ? UmrahInstructionsVideoData[CurrentRiteVideo - 1].title : t('go')}
+          currentRiteTitle={CurrentRiteVideo !== -Infinity ? UmrahInstructionsVideoData[CurrentRiteVideo - 1].title : t('go')}
           icon={require('../assets/Icons/PlayCircle.png')}
           count={UmrahInstructionsVideoData.length}
           onPress={() => Navigation.navigate('UmrahRiteVideoInstructionScreen')}/>

@@ -98,7 +98,14 @@ export default function AccountSettingsScreen() {
     Platform.OS === 'ios'
         ? NativeModules.SettingsManager.settings.AppleLocale
         : NativeModules.I18nManager.localeIdentifier;
-    const selectedLanguage = phoneLanguage.split('_')[0] === 'ru' ? 0 : 1;
+
+    let selectedLanguage;
+
+    if (phoneLanguage !== undefined){
+        selectedLanguage = phoneLanguage.split('_')[0] === 'ru' ? 0 : 1;
+    } else {
+        selectedLanguage = 1
+    }
 
     useEffect(() => {
         const fetchData = async () => {

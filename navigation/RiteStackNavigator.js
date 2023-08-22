@@ -200,7 +200,12 @@ export default function RiteStackNavigator() {
                 ({ headerTitle: () => (
                     <Text></Text>),
                 headerShadowVisible: false,
-
+                headerLeft: () => (
+                    <HeaderIcon source={require('../assets/Icons/ArrowLeft.png')} onPress={() => {
+                        navigation.goBack()
+                    }}/>
+                )
+                    
                 })
             }/>
             <Rite.Screen name='RiteTextLessonScreen' component={RiteTextLessonScreen}
