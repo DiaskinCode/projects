@@ -37,13 +37,4 @@
       }
     }
   },
-  "submit": {
-    "production": {
-      "ios":{
-        "appleId":"kasimov.airat@gmail.com",
-        "ascAppId":"1670320098",
-        "appleTeamId":"46ZR8VFCV3"
-      }
-    }
-  }
 }
