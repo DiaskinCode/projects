@@ -26,7 +26,7 @@
       "versionCode": 1,
       "config": {
         "googleMaps": {
-          "apiKey": "AIzaSyBQPaK7vaLhe6fAXh53K__nC1BGYsV193g"
+          "apiKey": ""
         }
       },
       "adaptiveIcon": {
